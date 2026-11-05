@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>活跃</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>非活跃</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>空闲</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>已锁定</value>
+  </data>
+  <data name="Sleeping" xml:space="preserve">
+    <value>睡眠中</value>
+  </data>
+  <data name="PoweredOff" xml:space="preserve">
+    <value>已关机</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="NotRecorded" xml:space="preserve">
+    <value>未记录</value>
+  </data>
+  <data name="NoAwakeData" xml:space="preserve">
+    <value>无唤醒状态记录</value>
+  </data>
+  <data name="SelectedDay" xml:space="preserve">
+    <value>所选日期</value>
+  </data>
+  <data name="Today.Content" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="PreviousDayName" xml:space="preserve">
+    <value>前一天</value>
+  </data>
+  <data name="PreviousDayTooltip" xml:space="preserve">
+    <value>前一天 (Alt+Left)</value>
+  </data>
+  <data name="NextDayName" xml:space="preserve">
+    <value>后一天</value>
+  </data>
+  <data name="NextDayTooltip" xml:space="preserve">
+    <value>后一天 (Alt+Right)</value>
+  </data>
+  <data name="RefreshName" xml:space="preserve">
+    <value>刷新活动</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>刷新 (F5)</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>跟踪设置</value>
+  </data>
+  <data name="IdleThreshold.Header" xml:space="preserve">
+    <value>空闲判定时间（秒）</value>
+  </data>
+  <data name="RunAtSignIn.Header" xml:space="preserve">
+    <value>登录时运行</value>
+  </data>
+  <data name="RunAtSignIn.OnContent" xml:space="preserve">
+    <value>已启用</value>
+  </data>
+  <data name="RunAtSignIn.OffContent" xml:space="preserve">
+    <value>已禁用</value>
+  </data>
+  <data name="StartupExplanation.Text" xml:space="preserve">
+    <value>登录时启动无窗口采集器。关闭仪表板不会停止采集器。</value>
+  </data>
+  <data name="OpenDataFolder.Content" xml:space="preserve">
+    <value>打开本地数据文件夹</value>
+  </data>
+  <data name="AboutName" xml:space="preserve">
+    <value>关于这些分析</value>
+  </data>
+  <data name="AboutTooltip" xml:space="preserve">
+    <value>活动分析的计算方式</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>了解您的活动</value>
+  </data>
+  <data name="AboutActive.Text" xml:space="preserve">
+    <value>活跃表示跟踪期间近期存在输入。这只是交互时间的参考，并非工作成果的衡量标准。</value>
+  </data>
+  <data name="AboutMissing.Text" xml:space="preserve">
+    <value>无法解释的空档保持为未记录，不视为非活跃。排名按已记录的唤醒时间中的活跃比例比较，卡片详情显示依据。</value>
+  </data>
+  <data name="AboutPeriods.Text" xml:space="preserve">
+    <value>时段和连续时长卡片使用所选日期的数据。星期模式使用截至该日期的28天数据。部分记录可能影响比较结果。</value>
+  </data>
+  <data name="AboutTime.Text" xml:space="preserve">
+    <value>显示本地时间，时间戳按UTC存储。切换应用和不超过3秒的采样空档可属于同一连续时段，但观测到的非活跃状态会中断活跃时段。</value>
+  </data>
+  <data name="AboutPrivacy.Text" xml:space="preserve">
+    <value>数据仅保存在本机，不记录窗口标题、网址、按键、屏幕截图或剪贴板内容。</value>
+  </data>
+  <data name="AboutSystemTime.Text" xml:space="preserve">
+    <value>锁定、睡眠及有可靠依据的关机时段计入非活跃总时长和图表。睡眠及关机时间不参与活跃比例和时段/星期排名。电源历史依据Windows事件；事件缺失或含糊时保持未知。</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>活动仪表板</value>
+  </data>
+  <data name="PatternsHeading.Text" xml:space="preserve">
+    <value>28天模式</value>
+  </data>
+  <data name="PatternsDisclaimer.Text" xml:space="preserve">
+    <value>活跃不等于产出。排名不包含睡眠及关机时间。</value>
+  </data>
+  <data name="ActivityHeading.Text" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="ChartRangeName" xml:space="preserve">
+    <value>图表范围</value>
+  </data>
+  <data name="WeekMode.Text" xml:space="preserve">
+    <value>7天</value>
+  </data>
+  <data name="HourlyMode.Text" xml:space="preserve">
+    <value>按小时</value>
+  </data>
+  <data name="DayAxis.Label" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="HoursAxis.Label" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="LocalHourAxis.Label" xml:space="preserve">
+    <value>本地小时</value>
+  </data>
+  <data name="MinutesAxis.Label" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="ChartEmptyExplanation.Text" xml:space="preserve">
+    <value>仅记录采样活动及有可靠依据的Windows电源事件。</value>
+  </data>
+  <data name="ShowWeek.Content" xml:space="preserve">
+    <value>显示7天趋势</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>活动时间线</value>
+  </data>
+  <data name="TimelineEmptyTitle.Text" xml:space="preserve">
+    <value>此日期没有已记录的时段</value>
+  </data>
+  <data name="TimelineEmptyExplanation.Text" xml:space="preserve">
+    <value>缺失的时间不计为非活跃。</value>
+  </data>
+  <data name="StartColumn.Header" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="EndColumn.Header" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="ApplicationColumn.Header" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="DurationColumn.Header" xml:space="preserve">
+    <value>时长</value>
+  </data>
+  <data name="StateColumn.Header" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ActiveShareTitle" xml:space="preserve">
+    <value>活跃占比</value>
+  </data>
+  <data name="MostActiveHourTitle" xml:space="preserve">
+    <value>最活跃时段</value>
+  </data>
+  <data name="LeastActiveHourTitle" xml:space="preserve">
+    <value>最不活跃时段</value>
+  </data>
+  <data name="LongestActiveTitle" xml:space="preserve">
+    <value>最长连续活跃时长</value>
+  </data>
+  <data name="LongestInactiveTitle" xml:space="preserve">
+    <value>最长连续非活跃时长</value>
+  </data>
+  <data name="MostActiveWeekdayTitle" xml:space="preserve">
+    <value>最活跃星期</value>
+  </data>
+  <data name="LeastActiveWeekdayTitle" xml:space="preserve">
+    <value>最不活跃星期</value>
+  </data>
+  <data name="CardAutomationSummary" xml:space="preserve">
+    <value>{0}：{1}。{2}。{3}</value>
+  </data>
+  <data name="SessionCountFormat" xml:space="preserve">
+    <value>时段数：{0}</value>
+  </data>
+  <data name="SelectedDayRecordedFormat" xml:space="preserve">
+    <value>{0} | 已记录{1} | {2}</value>
+  </data>
+  <data name="SelectedDayUnrecordedFormat" xml:space="preserve">
+    <value>{0} | 未记录</value>
+  </data>
+  <data name="NoTopApp" xml:space="preserve">
+    <value>未记录到活跃的前台应用。</value>
+  </data>
+  <data name="TopAppFormat" xml:space="preserve">
+    <value>最常用应用：{0}（活跃{1}）</value>
+  </data>
+  <data name="InactiveBreakdownFormat" xml:space="preserve">
+    <value>非活跃{0} | 空闲{1} | 锁定{2} | 睡眠{3} | 关机{4}</value>
+  </data>
+  <data name="BackgroundPaused" xml:space="preserve">
+    <value>后台跟踪已暂停</value>
+  </data>
+  <data name="BackgroundActive" xml:space="preserve">
+    <value>后台跟踪中</value>
+  </data>
+  <data name="TrackingHere" xml:space="preserve">
+    <value>此应用正在跟踪</value>
+  </data>
+  <data name="TrackingPaused" xml:space="preserve">
+    <value>跟踪已暂停</value>
+  </data>
+  <data name="NoActiveInteraction" xml:space="preserve">
+    <value>无活跃交互</value>
+  </data>
+  <data name="ActiveAwakeFormat" xml:space="preserve">
+    <value>活跃{0} / 已记录唤醒时间{1}</value>
+  </data>
+  <data name="PowerExcluded" xml:space="preserve">
+    <value>不包含睡眠及关机时间。</value>
+  </data>
+  <data name="NoActiveHour" xml:space="preserve">
+    <value>无活跃时段</value>
+  </data>
+  <data name="NoDifference" xml:space="preserve">
+    <value>无明显差异</value>
+  </data>
+  <data name="NoActiveStretch" xml:space="preserve">
+    <value>无连续活跃时段</value>
+  </data>
+  <data name="NoInactiveStretch" xml:space="preserve">
+    <value>无连续非活跃时段</value>
+  </data>
+  <data name="NoActiveWeekday" xml:space="preserve">
+    <value>无活跃的星期</value>
+  </data>
+  <data name="InsightPeriodFormat" xml:space="preserve">
+    <value>{0} - {1} | 有唤醒记录的天数：{2}</value>
+  </data>
+  <data name="HourRangeFormat" xml:space="preserve">
+    <value>{0:00}:00 - {1:00}:00</value>
+  </data>
+  <data name="TimeRangeFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="ActivePercentFormat" xml:space="preserve">
+    <value>活跃{0:P0}</value>
+  </data>
+  <data name="HourRankingExplanation" xml:space="preserve">
+    <value>不包含未记录和休眠/关机时段；占比相同不排名。</value>
+  </data>
+  <data name="ObservedIntervalsOnly" xml:space="preserve">
+    <value>仅统计有依据的时段。</value>
+  </data>
+  <data name="StretchGapExplanation" xml:space="preserve">
+    <value>超过3秒的空档会中断连续时段。</value>
+  </data>
+  <data name="WeekdayComparison" xml:space="preserve">
+    <value>28天比较</value>
+  </data>
+  <data name="WeekdayShareFormat" xml:space="preserve">
+    <value>活跃{0:P0} | 记录天数：{1}</value>
+  </data>
+  <data name="WeekdayRankingExplanation" xml:space="preserve">
+    <value>需要更多唤醒状态的记录天数或不同的活跃占比。</value>
+  </data>
+  <data name="WeekdayAverageFormat" xml:space="preserve">
+    <value>平均活跃{0} / 唤醒记录{1}</value>
+  </data>
+  <data name="AllDaysRecorded" xml:space="preserve">
+    <value>全部7天都有记录。</value>
+  </data>
+  <data name="MissingDaysFormat" xml:space="preserve">
+    <value>无记录：{0}。</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="WeeklyChartAutomationFormat" xml:space="preserve">
+    <value>截至{0:D}的7天活跃和非活跃小时数</value>
+  </data>
+  <data name="HourlyChartAutomationFormat" xml:space="preserve">
+    <value>{0:D}按小时统计的活跃和非活跃分钟数</value>
+  </data>
+  <data name="WeekEndingFormat" xml:space="preserve">
+    <value>截至{0}的7天</value>
+  </data>
+  <data name="EmptyDayChartFormat" xml:space="preserve">
+    <value>{0}没有活动记录</value>
+  </data>
+  <data name="EmptyWeekChart" xml:space="preserve">
+    <value>此7天范围内没有记录</value>
+  </data>
+  <data name="HourlyFootnote" xml:space="preserve">
+    <value>空档表示未记录。夏令时重复的小时会合并。</value>
+  </data>
+  <data name="DurationHoursFormat" xml:space="preserve">
+    <value>{0}小时{1}分钟</value>
+  </data>
+  <data name="DurationMinutesFormat" xml:space="preserve">
+    <value>{0}分钟{1}秒</value>
+  </data>
+  <data name="DurationSecondsFormat" xml:space="preserve">
+    <value>{0}秒</value>
+  </data>
+  <data name="SelectedDayNotificationFormat" xml:space="preserve">
+    <value>{0:D}。已记录时段数：{1}。</value>
+  </data>
+  <data name="StartupUpdateFailed" xml:space="preserve">
+    <value>无法更新登录启动设置</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>桌面</value>
+  </data>
+  <data name="ModernWindowsApp" xml:space="preserve">
+    <value>Windows应用</value>
+  </data>
+  <data name="WindowsExplorer" xml:space="preserve">
+    <value>Windows资源管理器</value>
+  </data>
+  <data name="Notepad" xml:space="preserve">
+    <value>记事本</value>
+  </data>
+  <data name="WindowsShell" xml:space="preserve">
+    <value>Windows外壳</value>
+  </data>
+  <data name="StartMenu" xml:space="preserve">
+    <value>开始菜单</value>
+  </data>
+  <data name="WindowsSearch" xml:space="preserve">
+    <value>Windows搜索</value>
+  </data>
+  <data name="LockScreen" xml:space="preserve">
+    <value>锁屏</value>
+  </data>
+  <data name="SaveDataErrorFormat" xml:space="preserve">
+    <value>无法保存使用数据：{0}</value>
+  </data>
+  <data name="ReadDataErrorFormat" xml:space="preserve">
+    <value>无法读取使用数据：{0}</value>
+  </data>
+  <data name="MissingSegmentsError" xml:space="preserve">
+    <value>使用数据中没有时段集合。</value>
+  </data>
+  <data name="ExecutableNotFound" xml:space="preserve">
+    <value>找不到当前应用的可执行文件。</value>
+  </data>
+  <data name="StartupAlreadyDisabled" xml:space="preserve">
+    <value>登录时运行已处于禁用状态。</value>
+  </data>
+  <data name="StartupFallbackCreatedFormat" xml:space="preserve">
+    <value>计划任务创建被阻止，已改为创建当前用户的启动项：{0}</value>
+  </data>
+  <data name="StartupFallbackFailedFormat" xml:space="preserve">
+    <value>{0} 备用启动项也创建失败：{1}</value>
+  </data>
+  <data name="TaskSchedulerNotStarted" xml:space="preserve">
+    <value>无法启动Windows任务计划程序。</value>
+  </data>
+  <data name="TaskSchedulerExitCodeFormat" xml:space="preserve">
+    <value>任务计划程序返回退出代码{0}。</value>
+  </data>
+  <data name="TaskSchedulerAccessErrorFormat" xml:space="preserve">
+    <value>无法访问Windows任务计划程序：{0}</value>
+  </data>
+  <data name="SystemNotificationsUnavailable" xml:space="preserve">
+    <value>系统状态通知不可用。</value>
+  </data>
+  <data name="PowerHistoryUnavailable" xml:space="preserve">
+    <value>Windows电源历史不可用；无法解释的空档保持未记录。</value>
+  </data>
+  <data name="DashboardDateFormat" xml:space="preserve">
+    <value>yyyy年M月d日 ddd</value>
+  </data>
+  <data name="MonthDayFormat" xml:space="preserve">
+    <value>M月d日</value>
+  </data>
+  <data name="ChartDayFormat" xml:space="preserve">
+    <value>M/d ddd</value>
+  </data>
+  <data name="DayDetailFormat" xml:space="preserve">
+    <value>M月d日 dddd</value>
+  </data>
+  <data name="BrandTitle.Text" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>前一天</value>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>前一天 (Alt+Left)</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>后一天</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>后一天 (Alt+Right)</value>
+  </data>
+  <data name="UsageDatePicker.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>所选日期</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>刷新活动</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>刷新 (F5)</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>跟踪设置</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>跟踪设置</value>
+  </data>
+  <data name="SettingsHeading.Text" xml:space="preserve">
+    <value>跟踪设置</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>关于这些分析</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>活动分析的计算方式</value>
+  </data>
+  <data name="Dashboard.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>活动仪表板</value>
+  </data>
+  <data name="SelectedDayHeading.Text" xml:space="preserve">
+    <value>所选日期</value>
+  </data>
+  <data name="ChartRange.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>图表范围</value>
+  </data>
+  <data name="ActiveTrend.Title" xml:space="preserve">
+    <value>活跃</value>
+  </data>
+  <data name="InactiveTrend.Title" xml:space="preserve">
+    <value>非活跃</value>
+  </data>
+  <data name="ActiveHourly.Title" xml:space="preserve">
+    <value>活跃</value>
+  </data>
+  <data name="InactiveHourly.Title" xml:space="preserve">
+    <value>非活跃</value>
+  </data>
+  <data name="TimelineHeading.Text" xml:space="preserve">
+    <value>活动时间线</value>
+  </data>
+  <data name="ActivityTable.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>活动时间线</value>
+  </data>
+  <data name="LanguageTag" xml:space="preserve">
+    <value>zh-CN</value>
+  </data>
+  <data name="Root.Language" xml:space="preserve">
+    <value>zh-CN</value>
+  </data>
+  <data name="Root.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="MostUsedAppTitle" xml:space="preserve"><value>最常用应用</value></data>
+  <data name="AppActiveTimeFormat" xml:space="preserve"><value>活跃{0}</value></data>
+  <data name="AppActiveShareFormat" xml:space="preserve"><value>占活跃时间的{0:P0}</value></data>
+  <data name="ChartPointFormat" xml:space="preserve"><value>{0}：{1} {2:0.#} / {3} {4:0.#}（{5}）</value></data>
+</root>

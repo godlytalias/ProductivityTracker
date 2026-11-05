@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Win32.SystemEvents" Version="8.0.0" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+    <Compile Include="..\..\Models.cs" Link="Models.cs" />
+    <Compile Include="..\..\StorageJsonContext.cs" Link="StorageJsonContext.cs" />
+    <Compile Include="..\..\UsageAnalytics.cs" Link="UsageAnalytics.cs" />
+    <Compile Include="..\..\ActivityChartData.cs" Link="ActivityChartData.cs" />
+    <Compile Include="..\..\SystemInactivity.cs" Link="SystemInactivity.cs" />
+    <Compile Include="..\..\SystemActivityMonitor.cs" Link="SystemActivityMonitor.cs" />
+    <Compile Include="..\..\SystemEventHistory.cs" Link="SystemEventHistory.cs" />
+  </ItemGroup>
+</Project>

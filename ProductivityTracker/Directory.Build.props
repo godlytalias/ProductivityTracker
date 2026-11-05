@@ -1,0 +1,18 @@
+<Project>
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'ProductivityTracker'">
+    <WindowsAppSDKSelfContained Condition="'$(WindowsAppSDKSelfContained)' == ''">true</WindowsAppSDKSelfContained>
+    <UseExperimentalActivityControls Condition="'$(UseExperimentalActivityControls)' == ''">false</UseExperimentalActivityControls>
+    <PublishAot Condition="'$(PublishAot)' == '' and '$(Configuration)' == 'Release' and '$(Platform)' != 'x86' and '$(RuntimeIdentifier)' != 'win-x86'">true</PublishAot>
+    <PublishAot Condition="'$(PublishAot)' == ''">false</PublishAot>
+    <_ActivityControlsFlavor Condition="'$(UseExperimentalActivityControls)' == 'true'">experimental</_ActivityControlsFlavor>
+    <_ActivityControlsFlavor Condition="'$(_ActivityControlsFlavor)' == ''">stable</_ActivityControlsFlavor>
+    <_SdkDeploymentFlavor Condition="'$(WindowsAppSDKSelfContained)' == 'false' and '$(WindowsAppSdkBootstrapInitialize)' == 'false'">packaged</_SdkDeploymentFlavor>
+    <_SdkDeploymentFlavor Condition="'$(WindowsAppSDKSelfContained)' == 'false' and '$(_SdkDeploymentFlavor)' == ''">framework</_SdkDeploymentFlavor>
+    <_SdkDeploymentFlavor Condition="'$(_SdkDeploymentFlavor)' == ''">self-contained</_SdkDeploymentFlavor>
+    <_AotOutputSuffix Condition="'$(PublishAot)' == 'true'">aot\</_AotOutputSuffix>
+    <!-- Different module initializers and native payloads must never reuse compiler or restore outputs. -->
+    <BaseOutputPath>bin\$(_ActivityControlsFlavor)\$(_SdkDeploymentFlavor)\$(_AotOutputSuffix)</BaseOutputPath>
+    <BaseIntermediateOutputPath>obj\$(_ActivityControlsFlavor)\$(_SdkDeploymentFlavor)\$(_AotOutputSuffix)</BaseIntermediateOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);bin\**;obj\**</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

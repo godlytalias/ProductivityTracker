@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="Sleeping" xml:space="preserve">
+    <value>Suspendido</value>
+  </data>
+  <data name="PoweredOff" xml:space="preserve">
+    <value>Apagado</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pausar</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>Reanudar</value>
+  </data>
+  <data name="NotRecorded" xml:space="preserve">
+    <value>Sin registrar</value>
+  </data>
+  <data name="NoAwakeData" xml:space="preserve">
+    <value>Sin registros con el PC despierto</value>
+  </data>
+  <data name="SelectedDay" xml:space="preserve">
+    <value>Día seleccionado</value>
+  </data>
+  <data name="Today.Content" xml:space="preserve">
+    <value>Hoy</value>
+  </data>
+  <data name="PreviousDayName" xml:space="preserve">
+    <value>Día anterior</value>
+  </data>
+  <data name="PreviousDayTooltip" xml:space="preserve">
+    <value>Día anterior (Alt+Izquierda)</value>
+  </data>
+  <data name="NextDayName" xml:space="preserve">
+    <value>Día siguiente</value>
+  </data>
+  <data name="NextDayTooltip" xml:space="preserve">
+    <value>Día siguiente (Alt+Derecha)</value>
+  </data>
+  <data name="RefreshName" xml:space="preserve">
+    <value>Actualizar actividad</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>Actualizar (F5)</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Configuración del seguimiento</value>
+  </data>
+  <data name="IdleThreshold.Header" xml:space="preserve">
+    <value>Inactivo después de (segundos)</value>
+  </data>
+  <data name="RunAtSignIn.Header" xml:space="preserve">
+    <value>Ejecutar al iniciar sesión</value>
+  </data>
+  <data name="RunAtSignIn.OnContent" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="RunAtSignIn.OffContent" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="StartupExplanation.Text" xml:space="preserve">
+    <value>Inicia el recopilador sin ventana al iniciar sesión. Cerrar el panel no lo detiene.</value>
+  </data>
+  <data name="OpenDataFolder.Content" xml:space="preserve">
+    <value>Abrir carpeta de datos locales</value>
+  </data>
+  <data name="AboutName" xml:space="preserve">
+    <value>Acerca de estos indicadores</value>
+  </data>
+  <data name="AboutTooltip" xml:space="preserve">
+    <value>Cómo se calculan los indicadores de actividad</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>Comprender tu actividad</value>
+  </data>
+  <data name="AboutActive.Text" xml:space="preserve">
+    <value>Activo significa que hubo entrada reciente durante el seguimiento. Indica tiempo de interacción, no trabajo realizado.</value>
+  </data>
+  <data name="AboutMissing.Text" xml:space="preserve">
+    <value>Los huecos sin explicación quedan sin registrar, no como inactividad. Los rankings comparan el porcentaje activo del tiempo registrado con el PC despierto; las tarjetas muestran los datos.</value>
+  </data>
+  <data name="AboutPeriods.Text" xml:space="preserve">
+    <value>Las tarjetas de horas y períodos continuos usan el día seleccionado. Los patrones semanales usan los 28 días hasta esa fecha. Los registros parciales pueden influir en las comparaciones.</value>
+  </data>
+  <data name="AboutTime.Text" xml:space="preserve">
+    <value>Las horas son locales y las marcas de tiempo se guardan en UTC. Cambiar de aplicación y los huecos de muestreo de hasta 3 segundos pueden formar un solo período; la inactividad observada lo interrumpe.</value>
+  </data>
+  <data name="AboutPrivacy.Text" xml:space="preserve">
+    <value>Los datos permanecen en este PC. No se registran títulos de ventanas, URL, pulsaciones, capturas de pantalla ni contenido del portapapeles.</value>
+  </data>
+  <data name="AboutSystemTime.Text" xml:space="preserve">
+    <value>El bloqueo, la suspensión y el apagado confirmado cuentan como inactividad en totales y gráficos. La suspensión y el apagado se excluyen de porcentajes y rankings de horas y días. El historial usa eventos de Windows; los eventos ausentes o ambiguos quedan como desconocidos.</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>Panel de actividad</value>
+  </data>
+  <data name="PatternsHeading.Text" xml:space="preserve">
+    <value>Patrones de 28 días</value>
+  </data>
+  <data name="PatternsDisclaimer.Text" xml:space="preserve">
+    <value>Actividad no equivale a resultados. Los rankings excluyen suspensión y apagado.</value>
+  </data>
+  <data name="ActivityHeading.Text" xml:space="preserve">
+    <value>Actividad</value>
+  </data>
+  <data name="ChartRangeName" xml:space="preserve">
+    <value>Intervalo del gráfico</value>
+  </data>
+  <data name="WeekMode.Text" xml:space="preserve">
+    <value>7 días</value>
+  </data>
+  <data name="HourlyMode.Text" xml:space="preserve">
+    <value>Por hora</value>
+  </data>
+  <data name="DayAxis.Label" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="HoursAxis.Label" xml:space="preserve">
+    <value>Horas</value>
+  </data>
+  <data name="LocalHourAxis.Label" xml:space="preserve">
+    <value>Hora local</value>
+  </data>
+  <data name="MinutesAxis.Label" xml:space="preserve">
+    <value>Minutos</value>
+  </data>
+  <data name="ChartEmptyExplanation.Text" xml:space="preserve">
+    <value>Solo se registran la actividad muestreada y los eventos de energía confirmados de Windows.</value>
+  </data>
+  <data name="ShowWeek.Content" xml:space="preserve">
+    <value>Mostrar tendencia de 7 días</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>Cronología de actividad</value>
+  </data>
+  <data name="TimelineEmptyTitle.Text" xml:space="preserve">
+    <value>No hay sesiones registradas en esta fecha</value>
+  </data>
+  <data name="TimelineEmptyExplanation.Text" xml:space="preserve">
+    <value>El tiempo sin registrar no cuenta como inactividad.</value>
+  </data>
+  <data name="StartColumn.Header" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="EndColumn.Header" xml:space="preserve">
+    <value>Fin</value>
+  </data>
+  <data name="ApplicationColumn.Header" xml:space="preserve">
+    <value>Aplicación</value>
+  </data>
+  <data name="DurationColumn.Header" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="StateColumn.Header" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="ActiveShareTitle" xml:space="preserve">
+    <value>Porcentaje activo</value>
+  </data>
+  <data name="MostActiveHourTitle" xml:space="preserve">
+    <value>Hora más activa</value>
+  </data>
+  <data name="LeastActiveHourTitle" xml:space="preserve">
+    <value>Hora menos activa</value>
+  </data>
+  <data name="LongestActiveTitle" xml:space="preserve">
+    <value>Período activo más largo</value>
+  </data>
+  <data name="LongestInactiveTitle" xml:space="preserve">
+    <value>Período inactivo más largo</value>
+  </data>
+  <data name="MostActiveWeekdayTitle" xml:space="preserve">
+    <value>Día semanal más activo</value>
+  </data>
+  <data name="LeastActiveWeekdayTitle" xml:space="preserve">
+    <value>Día semanal menos activo</value>
+  </data>
+  <data name="CardAutomationSummary" xml:space="preserve">
+    <value>{0}: {1}. {2}. {3}</value>
+  </data>
+  <data name="SessionCountFormat" xml:space="preserve">
+    <value>Sesiones: {0}</value>
+  </data>
+  <data name="SelectedDayRecordedFormat" xml:space="preserve">
+    <value>{0} | {1} registrados | {2}</value>
+  </data>
+  <data name="SelectedDayUnrecordedFormat" xml:space="preserve">
+    <value>{0} | Sin registrar</value>
+  </data>
+  <data name="NoTopApp" xml:space="preserve">
+    <value>No se registró ninguna aplicación activa en primer plano.</value>
+  </data>
+  <data name="TopAppFormat" xml:space="preserve">
+    <value>Aplicación principal: {0} ({1} activa)</value>
+  </data>
+  <data name="InactiveBreakdownFormat" xml:space="preserve">
+    <value>Inactivo {0} | Sin uso {1} | Bloqueado {2} | Suspensión {3} | Apagado {4}</value>
+  </data>
+  <data name="BackgroundPaused" xml:space="preserve">
+    <value>Seguimiento en segundo plano pausado</value>
+  </data>
+  <data name="BackgroundActive" xml:space="preserve">
+    <value>Seguimiento en segundo plano activo</value>
+  </data>
+  <data name="TrackingHere" xml:space="preserve">
+    <value>Seguimiento en esta aplicación</value>
+  </data>
+  <data name="TrackingPaused" xml:space="preserve">
+    <value>Seguimiento pausado</value>
+  </data>
+  <data name="NoActiveInteraction" xml:space="preserve">
+    <value>Sin interacción activa</value>
+  </data>
+  <data name="ActiveAwakeFormat" xml:space="preserve">
+    <value>{0} activo / {1} despierto registrado</value>
+  </data>
+  <data name="PowerExcluded" xml:space="preserve">
+    <value>Se excluyen suspensión y apagado.</value>
+  </data>
+  <data name="NoActiveHour" xml:space="preserve">
+    <value>Sin hora activa</value>
+  </data>
+  <data name="NoDifference" xml:space="preserve">
+    <value>Sin diferencia clara</value>
+  </data>
+  <data name="NoActiveStretch" xml:space="preserve">
+    <value>Sin período activo</value>
+  </data>
+  <data name="NoInactiveStretch" xml:space="preserve">
+    <value>Sin período inactivo</value>
+  </data>
+  <data name="NoActiveWeekday" xml:space="preserve">
+    <value>Sin día semanal activo</value>
+  </data>
+  <data name="InsightPeriodFormat" xml:space="preserve">
+    <value>{0} - {1} | Días con actividad registrada: {2}</value>
+  </data>
+  <data name="HourRangeFormat" xml:space="preserve">
+    <value>{0:00}:00 - {1:00}:00</value>
+  </data>
+  <data name="TimeRangeFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="ActivePercentFormat" xml:space="preserve">
+    <value>{0:P0} activo</value>
+  </data>
+  <data name="HourRankingExplanation" xml:space="preserve">
+    <value>Se excluyen horas sin registrar o sin energía; los porcentajes iguales no se ordenan.</value>
+  </data>
+  <data name="ObservedIntervalsOnly" xml:space="preserve">
+    <value>Solo cuentan los intervalos observados.</value>
+  </data>
+  <data name="StretchGapExplanation" xml:space="preserve">
+    <value>Los huecos de más de 3 segundos interrumpen el período.</value>
+  </data>
+  <data name="WeekdayComparison" xml:space="preserve">
+    <value>Comparación de 28 días</value>
+  </data>
+  <data name="WeekdayShareFormat" xml:space="preserve">
+    <value>{0:P0} activo | Días registrados: {1}</value>
+  </data>
+  <data name="WeekdayRankingExplanation" xml:space="preserve">
+    <value>Se necesitan más días registrados con el PC despierto o porcentajes distintos.</value>
+  </data>
+  <data name="WeekdayAverageFormat" xml:space="preserve">
+    <value>Media {0} activo / {1} despierto registrado</value>
+  </data>
+  <data name="AllDaysRecorded" xml:space="preserve">
+    <value>Los siete días tienen registros.</value>
+  </data>
+  <data name="MissingDaysFormat" xml:space="preserve">
+    <value>Sin registros: {0}.</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="WeeklyChartAutomationFormat" xml:space="preserve">
+    <value>Horas activas e inactivas de los siete días hasta {0:D}</value>
+  </data>
+  <data name="HourlyChartAutomationFormat" xml:space="preserve">
+    <value>Minutos activos e inactivos por hora de {0:D}</value>
+  </data>
+  <data name="WeekEndingFormat" xml:space="preserve">
+    <value>7 días hasta {0}</value>
+  </data>
+  <data name="EmptyDayChartFormat" xml:space="preserve">
+    <value>Sin actividad registrada el {0}</value>
+  </data>
+  <data name="EmptyWeekChart" xml:space="preserve">
+    <value>Sin registros en estos 7 días</value>
+  </data>
+  <data name="HourlyFootnote" xml:space="preserve">
+    <value>Huecos = sin registrar. Se combinan las horas repetidas por el cambio horario.</value>
+  </data>
+  <data name="DurationHoursFormat" xml:space="preserve">
+    <value>{0}h {1}min</value>
+  </data>
+  <data name="DurationMinutesFormat" xml:space="preserve">
+    <value>{0}min {1}s</value>
+  </data>
+  <data name="DurationSecondsFormat" xml:space="preserve">
+    <value>{0}s</value>
+  </data>
+  <data name="SelectedDayNotificationFormat" xml:space="preserve">
+    <value>{0:D}. Sesiones registradas: {1}.</value>
+  </data>
+  <data name="StartupUpdateFailed" xml:space="preserve">
+    <value>No se pudo actualizar el inicio de sesión</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>Desconocido</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>Escritorio</value>
+  </data>
+  <data name="ModernWindowsApp" xml:space="preserve">
+    <value>Aplicación de Windows</value>
+  </data>
+  <data name="WindowsExplorer" xml:space="preserve">
+    <value>Explorador de Windows</value>
+  </data>
+  <data name="Notepad" xml:space="preserve">
+    <value>Bloc de notas</value>
+  </data>
+  <data name="WindowsShell" xml:space="preserve">
+    <value>Shell de Windows</value>
+  </data>
+  <data name="StartMenu" xml:space="preserve">
+    <value>Menú Inicio</value>
+  </data>
+  <data name="WindowsSearch" xml:space="preserve">
+    <value>Búsqueda de Windows</value>
+  </data>
+  <data name="LockScreen" xml:space="preserve">
+    <value>Pantalla de bloqueo</value>
+  </data>
+  <data name="SaveDataErrorFormat" xml:space="preserve">
+    <value>No se pudieron guardar los datos de uso: {0}</value>
+  </data>
+  <data name="ReadDataErrorFormat" xml:space="preserve">
+    <value>No se pudieron leer los datos de uso: {0}</value>
+  </data>
+  <data name="MissingSegmentsError" xml:space="preserve">
+    <value>Los datos de uso no contienen una colección de segmentos.</value>
+  </data>
+  <data name="ExecutableNotFound" xml:space="preserve">
+    <value>No se encontró el ejecutable de la aplicación actual.</value>
+  </data>
+  <data name="StartupAlreadyDisabled" xml:space="preserve">
+    <value>La ejecución al iniciar sesión ya estaba desactivada.</value>
+  </data>
+  <data name="StartupFallbackCreatedFormat" xml:space="preserve">
+    <value>Se bloqueó la tarea programada. Se creó un iniciador de arranque para este usuario: {0}</value>
+  </data>
+  <data name="StartupFallbackFailedFormat" xml:space="preserve">
+    <value>{0} También falló el iniciador alternativo: {1}</value>
+  </data>
+  <data name="TaskSchedulerNotStarted" xml:space="preserve">
+    <value>No se pudo iniciar el Programador de tareas de Windows.</value>
+  </data>
+  <data name="TaskSchedulerExitCodeFormat" xml:space="preserve">
+    <value>El Programador de tareas devolvió el código de salida {0}.</value>
+  </data>
+  <data name="TaskSchedulerAccessErrorFormat" xml:space="preserve">
+    <value>No se pudo acceder al Programador de tareas de Windows: {0}</value>
+  </data>
+  <data name="SystemNotificationsUnavailable" xml:space="preserve">
+    <value>Las notificaciones de estado del sistema no están disponibles.</value>
+  </data>
+  <data name="PowerHistoryUnavailable" xml:space="preserve">
+    <value>El historial de energía de Windows no está disponible; los huecos sin explicación quedan sin registrar.</value>
+  </data>
+  <data name="DashboardDateFormat" xml:space="preserve">
+    <value>ddd, d MMM yyyy</value>
+  </data>
+  <data name="MonthDayFormat" xml:space="preserve">
+    <value>d MMM</value>
+  </data>
+  <data name="ChartDayFormat" xml:space="preserve">
+    <value>ddd d/M</value>
+  </data>
+  <data name="DayDetailFormat" xml:space="preserve">
+    <value>dddd, d MMM</value>
+  </data>
+  <data name="BrandTitle.Text" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Día anterior</value>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Día anterior (Alt+Izquierda)</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Día siguiente</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Día siguiente (Alt+Derecha)</value>
+  </data>
+  <data name="UsageDatePicker.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Día seleccionado</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Actualizar actividad</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Actualizar (F5)</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Configuración del seguimiento</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Configuración del seguimiento</value>
+  </data>
+  <data name="SettingsHeading.Text" xml:space="preserve">
+    <value>Configuración del seguimiento</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Acerca de estos indicadores</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cómo se calculan los indicadores de actividad</value>
+  </data>
+  <data name="Dashboard.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Panel de actividad</value>
+  </data>
+  <data name="SelectedDayHeading.Text" xml:space="preserve">
+    <value>Día seleccionado</value>
+  </data>
+  <data name="ChartRange.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Intervalo del gráfico</value>
+  </data>
+  <data name="ActiveTrend.Title" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="InactiveTrend.Title" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="ActiveHourly.Title" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="InactiveHourly.Title" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="TimelineHeading.Text" xml:space="preserve">
+    <value>Cronología de actividad</value>
+  </data>
+  <data name="ActivityTable.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Cronología de actividad</value>
+  </data>
+  <data name="LanguageTag" xml:space="preserve">
+    <value>es-ES</value>
+  </data>
+  <data name="Root.Language" xml:space="preserve">
+    <value>es-ES</value>
+  </data>
+  <data name="Root.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="MostUsedAppTitle" xml:space="preserve"><value>Aplicación más utilizada</value></data>
+  <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} activo</value></data>
+  <data name="AppActiveShareFormat" xml:space="preserve"><value>{0:P0} del tiempo activo</value></data>
+  <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+</root>

@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>نشط</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>غير نشط</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>خامل</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>مقفل</value>
+  </data>
+  <data name="Sleeping" xml:space="preserve">
+    <value>سكون</value>
+  </data>
+  <data name="PoweredOff" xml:space="preserve">
+    <value>مطفأ</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>إيقاف مؤقت</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>استئناف</value>
+  </data>
+  <data name="NotRecorded" xml:space="preserve">
+    <value>غير مسجّل</value>
+  </data>
+  <data name="NoAwakeData" xml:space="preserve">
+    <value>لا تسجيلات أثناء اليقظة</value>
+  </data>
+  <data name="SelectedDay" xml:space="preserve">
+    <value>اليوم المحدد</value>
+  </data>
+  <data name="Today.Content" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="PreviousDayName" xml:space="preserve">
+    <value>اليوم السابق</value>
+  </data>
+  <data name="PreviousDayTooltip" xml:space="preserve">
+    <value>اليوم السابق (Alt+Left)</value>
+  </data>
+  <data name="NextDayName" xml:space="preserve">
+    <value>اليوم التالي</value>
+  </data>
+  <data name="NextDayTooltip" xml:space="preserve">
+    <value>اليوم التالي (Alt+Right)</value>
+  </data>
+  <data name="RefreshName" xml:space="preserve">
+    <value>تحديث النشاط</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>تحديث (F5)</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>إعدادات التتبّع</value>
+  </data>
+  <data name="IdleThreshold.Header" xml:space="preserve">
+    <value>الخمول بعد (ثوانٍ)</value>
+  </data>
+  <data name="RunAtSignIn.Header" xml:space="preserve">
+    <value>التشغيل عند تسجيل الدخول</value>
+  </data>
+  <data name="RunAtSignIn.OnContent" xml:space="preserve">
+    <value>مفعّل</value>
+  </data>
+  <data name="RunAtSignIn.OffContent" xml:space="preserve">
+    <value>معطّل</value>
+  </data>
+  <data name="StartupExplanation.Text" xml:space="preserve">
+    <value>يشغّل أداة الجمع دون نافذة عند تسجيل الدخول. إغلاق لوحة المعلومات لا يوقفها.</value>
+  </data>
+  <data name="OpenDataFolder.Content" xml:space="preserve">
+    <value>فتح مجلد البيانات المحلي</value>
+  </data>
+  <data name="AboutName" xml:space="preserve">
+    <value>حول هذه المؤشرات</value>
+  </data>
+  <data name="AboutTooltip" xml:space="preserve">
+    <value>كيفية حساب مؤشرات النشاط</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>فهم نشاطك</value>
+  </data>
+  <data name="AboutActive.Text" xml:space="preserve">
+    <value>النشاط يعني وجود إدخال حديث أثناء التتبّع. إنه مؤشر لوقت التفاعل، وليس مقياسًا للإنجاز.</value>
+  </data>
+  <data name="AboutMissing.Text" xml:space="preserve">
+    <value>تظل الفجوات غير المفسّرة غير مسجّلة، ولا تُعد خمولًا. تقارن الترتيبات نسبة النشاط من وقت اليقظة المسجّل، وتعرض البطاقات البيانات الداعمة.</value>
+  </data>
+  <data name="AboutPeriods.Text" xml:space="preserve">
+    <value>تستخدم بطاقات الساعات والفترات المتصلة اليوم المحدد. وتستخدم أنماط أيام الأسبوع آخر 28 يومًا حتى ذلك التاريخ. قد تؤثر التسجيلات الجزئية في المقارنة.</value>
+  </data>
+  <data name="AboutTime.Text" xml:space="preserve">
+    <value>تُعرض الأوقات محليًا وتُحفظ الطوابع الزمنية بتوقيت UTC. قد ينتمي تبديل التطبيقات وفجوات أخذ العينات حتى 3 ثوانٍ إلى فترة واحدة، لكن الخمول المرصود يقطع فترة النشاط.</value>
+  </data>
+  <data name="AboutPrivacy.Text" xml:space="preserve">
+    <value>تبقى البيانات على هذا الكمبيوتر. لا تُسجّل عناوين النوافذ أو الروابط أو ضغطات المفاتيح أو لقطات الشاشة أو محتويات الحافظة.</value>
+  </data>
+  <data name="AboutSystemTime.Text" xml:space="preserve">
+    <value>تُحسب فترات القفل والسكون وإيقاف التشغيل المؤكدة ضمن عدم النشاط في الإجماليات والمخططات. يُستبعد السكون وإيقاف التشغيل من نسب النشاط وترتيب الساعات وأيام الأسبوع. يعتمد سجل الطاقة على أحداث Windows؛ وتظل الأحداث الغائبة أو الملتبسة مجهولة.</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>لوحة النشاط</value>
+  </data>
+  <data name="PatternsHeading.Text" xml:space="preserve">
+    <value>أنماط 28 يومًا</value>
+  </data>
+  <data name="PatternsDisclaimer.Text" xml:space="preserve">
+    <value>النشاط ليس إنجازًا. يُستبعد السكون وإيقاف التشغيل من الترتيب.</value>
+  </data>
+  <data name="ActivityHeading.Text" xml:space="preserve">
+    <value>النشاط</value>
+  </data>
+  <data name="ChartRangeName" xml:space="preserve">
+    <value>نطاق المخطط</value>
+  </data>
+  <data name="WeekMode.Text" xml:space="preserve">
+    <value>7 أيام</value>
+  </data>
+  <data name="HourlyMode.Text" xml:space="preserve">
+    <value>حسب الساعة</value>
+  </data>
+  <data name="DayAxis.Label" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="HoursAxis.Label" xml:space="preserve">
+    <value>ساعات</value>
+  </data>
+  <data name="LocalHourAxis.Label" xml:space="preserve">
+    <value>الساعة المحلية</value>
+  </data>
+  <data name="MinutesAxis.Label" xml:space="preserve">
+    <value>دقائق</value>
+  </data>
+  <data name="ChartEmptyExplanation.Text" xml:space="preserve">
+    <value>يُسجّل النشاط المرصود وأحداث طاقة Windows المؤكدة فقط.</value>
+  </data>
+  <data name="ShowWeek.Content" xml:space="preserve">
+    <value>عرض اتجاه 7 أيام</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>الخط الزمني للنشاط</value>
+  </data>
+  <data name="TimelineEmptyTitle.Text" xml:space="preserve">
+    <value>لا جلسات مسجّلة في هذا التاريخ</value>
+  </data>
+  <data name="TimelineEmptyExplanation.Text" xml:space="preserve">
+    <value>لا يُحسب الوقت غير المسجّل خمولًا.</value>
+  </data>
+  <data name="StartColumn.Header" xml:space="preserve">
+    <value>البداية</value>
+  </data>
+  <data name="EndColumn.Header" xml:space="preserve">
+    <value>النهاية</value>
+  </data>
+  <data name="ApplicationColumn.Header" xml:space="preserve">
+    <value>التطبيق</value>
+  </data>
+  <data name="DurationColumn.Header" xml:space="preserve">
+    <value>المدة</value>
+  </data>
+  <data name="StateColumn.Header" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="ActiveShareTitle" xml:space="preserve">
+    <value>نسبة النشاط</value>
+  </data>
+  <data name="MostActiveHourTitle" xml:space="preserve">
+    <value>الساعة الأكثر نشاطًا</value>
+  </data>
+  <data name="LeastActiveHourTitle" xml:space="preserve">
+    <value>الساعة الأقل نشاطًا</value>
+  </data>
+  <data name="LongestActiveTitle" xml:space="preserve">
+    <value>أطول فترة نشاط</value>
+  </data>
+  <data name="LongestInactiveTitle" xml:space="preserve">
+    <value>أطول فترة عدم نشاط</value>
+  </data>
+  <data name="MostActiveWeekdayTitle" xml:space="preserve">
+    <value>أكثر أيام الأسبوع نشاطًا</value>
+  </data>
+  <data name="LeastActiveWeekdayTitle" xml:space="preserve">
+    <value>أقل أيام الأسبوع نشاطًا</value>
+  </data>
+  <data name="CardAutomationSummary" xml:space="preserve">
+    <value>{0}: {1}. {2}. {3}</value>
+  </data>
+  <data name="SessionCountFormat" xml:space="preserve">
+    <value>الجلسات: {0}</value>
+  </data>
+  <data name="SelectedDayRecordedFormat" xml:space="preserve">
+    <value>{0} | {1} مسجّل | {2}</value>
+  </data>
+  <data name="SelectedDayUnrecordedFormat" xml:space="preserve">
+    <value>{0} | غير مسجّل</value>
+  </data>
+  <data name="NoTopApp" xml:space="preserve">
+    <value>لا تطبيق نشط في المقدمة مسجّل.</value>
+  </data>
+  <data name="TopAppFormat" xml:space="preserve">
+    <value>أبرز تطبيق: {0} (نشط لمدة {1})</value>
+  </data>
+  <data name="InactiveBreakdownFormat" xml:space="preserve">
+    <value>غير نشط {0} | خمول {1} | قفل {2} | سكون {3} | إيقاف {4}</value>
+  </data>
+  <data name="BackgroundPaused" xml:space="preserve">
+    <value>تتبّع الخلفية متوقف مؤقتًا</value>
+  </data>
+  <data name="BackgroundActive" xml:space="preserve">
+    <value>تتبّع الخلفية نشط</value>
+  </data>
+  <data name="TrackingHere" xml:space="preserve">
+    <value>التتبّع جارٍ في هذا التطبيق</value>
+  </data>
+  <data name="TrackingPaused" xml:space="preserve">
+    <value>التتبّع متوقف مؤقتًا</value>
+  </data>
+  <data name="NoActiveInteraction" xml:space="preserve">
+    <value>لا تفاعل نشط</value>
+  </data>
+  <data name="ActiveAwakeFormat" xml:space="preserve">
+    <value>{0} نشاط / {1} يقظة مسجّلة</value>
+  </data>
+  <data name="PowerExcluded" xml:space="preserve">
+    <value>يُستبعد السكون وإيقاف التشغيل.</value>
+  </data>
+  <data name="NoActiveHour" xml:space="preserve">
+    <value>لا ساعة نشطة</value>
+  </data>
+  <data name="NoDifference" xml:space="preserve">
+    <value>لا فرق واضح</value>
+  </data>
+  <data name="NoActiveStretch" xml:space="preserve">
+    <value>لا فترة نشاط متصلة</value>
+  </data>
+  <data name="NoInactiveStretch" xml:space="preserve">
+    <value>لا فترة خمول متصلة</value>
+  </data>
+  <data name="NoActiveWeekday" xml:space="preserve">
+    <value>لا يوم أسبوع نشط</value>
+  </data>
+  <data name="InsightPeriodFormat" xml:space="preserve">
+    <value>{0} - {1} | أيام اليقظة المسجّلة: {2}</value>
+  </data>
+  <data name="HourRangeFormat" xml:space="preserve">
+    <value>{0:00}:00 - {1:00}:00</value>
+  </data>
+  <data name="TimeRangeFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="ActivePercentFormat" xml:space="preserve">
+    <value>{0:P0} نشاط</value>
+  </data>
+  <data name="HourRankingExplanation" xml:space="preserve">
+    <value>تُستبعد الساعات غير المسجّلة والسكون والإيقاف؛ لا تُرتّب النسب المتساوية.</value>
+  </data>
+  <data name="ObservedIntervalsOnly" xml:space="preserve">
+    <value>تُحسب الفترات المرصودة فقط.</value>
+  </data>
+  <data name="StretchGapExplanation" xml:space="preserve">
+    <value>الفجوات الأطول من 3 ثوانٍ تنهي الفترة المتصلة.</value>
+  </data>
+  <data name="WeekdayComparison" xml:space="preserve">
+    <value>مقارنة 28 يومًا</value>
+  </data>
+  <data name="WeekdayShareFormat" xml:space="preserve">
+    <value>{0:P0} نشاط | أيام مسجّلة: {1}</value>
+  </data>
+  <data name="WeekdayRankingExplanation" xml:space="preserve">
+    <value>يلزم مزيد من أيام اليقظة المسجّلة أو نسب نشاط مختلفة.</value>
+  </data>
+  <data name="WeekdayAverageFormat" xml:space="preserve">
+    <value>المتوسط {0} نشاط / {1} يقظة مسجّلة</value>
+  </data>
+  <data name="AllDaysRecorded" xml:space="preserve">
+    <value>توجد تسجيلات للأيام السبعة كلها.</value>
+  </data>
+  <data name="MissingDaysFormat" xml:space="preserve">
+    <value>لا تسجيلات: {0}.</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>، </value>
+  </data>
+  <data name="WeeklyChartAutomationFormat" xml:space="preserve">
+    <value>ساعات النشاط وعدم النشاط خلال الأيام السبعة حتى {0:D}</value>
+  </data>
+  <data name="HourlyChartAutomationFormat" xml:space="preserve">
+    <value>دقائق النشاط وعدم النشاط حسب الساعة ليوم {0:D}</value>
+  </data>
+  <data name="WeekEndingFormat" xml:space="preserve">
+    <value>7 أيام حتى {0}</value>
+  </data>
+  <data name="EmptyDayChartFormat" xml:space="preserve">
+    <value>لا نشاط مسجّل في {0}</value>
+  </data>
+  <data name="EmptyWeekChart" xml:space="preserve">
+    <value>لا تسجيلات في نطاق الأيام السبعة</value>
+  </data>
+  <data name="HourlyFootnote" xml:space="preserve">
+    <value>الفجوات تعني عدم التسجيل. تُدمج الساعات المتكررة بسبب التوقيت الصيفي.</value>
+  </data>
+  <data name="DurationHoursFormat" xml:space="preserve">
+    <value>{0}س {1}د</value>
+  </data>
+  <data name="DurationMinutesFormat" xml:space="preserve">
+    <value>{0}د {1}ث</value>
+  </data>
+  <data name="DurationSecondsFormat" xml:space="preserve">
+    <value>{0}ث</value>
+  </data>
+  <data name="SelectedDayNotificationFormat" xml:space="preserve">
+    <value>{0:D}. الجلسات المسجّلة: {1}.</value>
+  </data>
+  <data name="StartupUpdateFailed" xml:space="preserve">
+    <value>تعذّر تحديث التشغيل عند تسجيل الدخول</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>غير معروف</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>سطح المكتب</value>
+  </data>
+  <data name="ModernWindowsApp" xml:space="preserve">
+    <value>تطبيق Windows</value>
+  </data>
+  <data name="WindowsExplorer" xml:space="preserve">
+    <value>مستكشف Windows</value>
+  </data>
+  <data name="Notepad" xml:space="preserve">
+    <value>المفكرة</value>
+  </data>
+  <data name="WindowsShell" xml:space="preserve">
+    <value>واجهة Windows</value>
+  </data>
+  <data name="StartMenu" xml:space="preserve">
+    <value>قائمة ابدأ</value>
+  </data>
+  <data name="WindowsSearch" xml:space="preserve">
+    <value>بحث Windows</value>
+  </data>
+  <data name="LockScreen" xml:space="preserve">
+    <value>شاشة القفل</value>
+  </data>
+  <data name="SaveDataErrorFormat" xml:space="preserve">
+    <value>تعذّر حفظ بيانات الاستخدام: {0}</value>
+  </data>
+  <data name="ReadDataErrorFormat" xml:space="preserve">
+    <value>تعذّر قراءة بيانات الاستخدام: {0}</value>
+  </data>
+  <data name="MissingSegmentsError" xml:space="preserve">
+    <value>لا تحتوي بيانات الاستخدام على مجموعة فترات.</value>
+  </data>
+  <data name="ExecutableNotFound" xml:space="preserve">
+    <value>تعذّر العثور على ملف التطبيق التنفيذي.</value>
+  </data>
+  <data name="StartupAlreadyDisabled" xml:space="preserve">
+    <value>التشغيل عند تسجيل الدخول معطّل بالفعل.</value>
+  </data>
+  <data name="StartupFallbackCreatedFormat" xml:space="preserve">
+    <value>تم حظر إنشاء المهمة المجدولة. أُنشئ بديلًا عنها مشغّل بدء تشغيل للمستخدم الحالي: {0}</value>
+  </data>
+  <data name="StartupFallbackFailedFormat" xml:space="preserve">
+    <value>{0} فشل مشغّل بدء التشغيل البديل أيضًا: {1}</value>
+  </data>
+  <data name="TaskSchedulerNotStarted" xml:space="preserve">
+    <value>تعذّر تشغيل جدولة مهام Windows.</value>
+  </data>
+  <data name="TaskSchedulerExitCodeFormat" xml:space="preserve">
+    <value>أرجعت جدولة المهام رمز الخروج {0}.</value>
+  </data>
+  <data name="TaskSchedulerAccessErrorFormat" xml:space="preserve">
+    <value>تعذّر الوصول إلى جدولة مهام Windows: {0}</value>
+  </data>
+  <data name="SystemNotificationsUnavailable" xml:space="preserve">
+    <value>إشعارات حالة النظام غير متاحة.</value>
+  </data>
+  <data name="PowerHistoryUnavailable" xml:space="preserve">
+    <value>سجل طاقة Windows غير متاح؛ تظل الفجوات غير المفسّرة غير مسجّلة.</value>
+  </data>
+  <data name="DashboardDateFormat" xml:space="preserve">
+    <value>ddd، d MMM yyyy</value>
+  </data>
+  <data name="MonthDayFormat" xml:space="preserve">
+    <value>d MMM</value>
+  </data>
+  <data name="ChartDayFormat" xml:space="preserve">
+    <value>ddd d/M</value>
+  </data>
+  <data name="DayDetailFormat" xml:space="preserve">
+    <value>dddd، d MMM</value>
+  </data>
+  <data name="BrandTitle.Text" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>اليوم السابق</value>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>اليوم السابق (Alt+Left)</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>اليوم التالي</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>اليوم التالي (Alt+Right)</value>
+  </data>
+  <data name="UsageDatePicker.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>اليوم المحدد</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>تحديث النشاط</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>تحديث (F5)</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>إعدادات التتبّع</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>إعدادات التتبّع</value>
+  </data>
+  <data name="SettingsHeading.Text" xml:space="preserve">
+    <value>إعدادات التتبّع</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>حول هذه المؤشرات</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>كيفية حساب مؤشرات النشاط</value>
+  </data>
+  <data name="Dashboard.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>لوحة النشاط</value>
+  </data>
+  <data name="SelectedDayHeading.Text" xml:space="preserve">
+    <value>اليوم المحدد</value>
+  </data>
+  <data name="ChartRange.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>نطاق المخطط</value>
+  </data>
+  <data name="ActiveTrend.Title" xml:space="preserve">
+    <value>نشط</value>
+  </data>
+  <data name="InactiveTrend.Title" xml:space="preserve">
+    <value>غير نشط</value>
+  </data>
+  <data name="ActiveHourly.Title" xml:space="preserve">
+    <value>نشط</value>
+  </data>
+  <data name="InactiveHourly.Title" xml:space="preserve">
+    <value>غير نشط</value>
+  </data>
+  <data name="TimelineHeading.Text" xml:space="preserve">
+    <value>الخط الزمني للنشاط</value>
+  </data>
+  <data name="ActivityTable.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>الخط الزمني للنشاط</value>
+  </data>
+  <data name="LanguageTag" xml:space="preserve">
+    <value>ar-SA</value>
+  </data>
+  <data name="Root.Language" xml:space="preserve">
+    <value>ar-SA</value>
+  </data>
+  <data name="Root.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="MostUsedAppTitle" xml:space="preserve"><value>التطبيق الأكثر استخدامًا</value></data>
+  <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} نشاط</value></data>
+  <data name="AppActiveShareFormat" xml:space="preserve"><value>{0:P0} من وقت النشاط</value></data>
+  <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+</root>

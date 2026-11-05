@@ -1,0 +1,61 @@
+# Productivity Tracker Privacy Policy
+
+**Effective date: November 5, 2026**
+
+Productivity Tracker is maintained in the godlytalias/ProductivityTracker GitHub repository. This policy explains how the app handles information when you use it.
+
+## Information processed
+
+To display your PC-usage history and activity insights, the app processes:
+
+- Foreground application names and executable/process names.
+- Activity start and end times, durations, and active or inactive status.
+- Locked, sleeping, and confirmed powered-off periods, using Windows session/power notifications and available system power-event records.
+- Local preferences, such as the inactivity threshold and optional sign-in startup configuration.
+- Local diagnostic logs, which may contain error messages, timestamps, technical details, and file paths.
+
+Recent-input information is used to distinguish active time from inactivity. The app does not record individual keystrokes, typed text, window titles or contents, browser history, URLs, screenshots, clipboard contents, microphone audio, or camera video.
+
+No account is required.
+
+## How information is used
+
+Information is used on your PC to record usage intervals, display charts and timelines, calculate activity patterns, apply your tracking preferences, and diagnose application errors. Activity time is an interaction-time measure, not a measure of work output.
+
+The app runs with normal desktop-user permissions, declared as `runFullTrust` in its Windows package. This does not grant administrator privileges.
+
+## Local storage and retention
+
+Usage history, preferences, and diagnostic logs are stored locally, normally in `%LOCALAPPDATA%\ProductivityTracker`. Use **Tracking settings > Open local data folder** to find the app's data.
+
+There is no automatic expiration period. Information remains until you delete it. The app does not apply additional encryption to these files; protection depends on your Windows account, file permissions, and device security. Other software or users with sufficient access to your device may be able to read them.
+
+## Background tracking and your controls
+
+Tracking runs while the dashboard or windowless collector is running. Enabling **Run at sign-in** allows the collector to start automatically and continue after the dashboard closes.
+
+**Pause** stops foreground-application tracking. Inactive, lock, and power-state timing may still be recorded while the background collector remains running.
+
+To stop all app recording, disable **Run at sign-in**, close the dashboard, and stop any remaining Productivity Tracker collector process in Windows Task Manager. Disabling sign-in startup does not terminate an already-running collector.
+
+You can review your history in the app. To delete locally stored information, first stop the dashboard and collector, then delete the files in the local data folder. Uninstalling the app may leave this folder behind.
+
+Use the app only on your own account/device, or with the appropriate knowledge and permission of other affected users.
+
+## Sharing and platform services
+
+Productivity Tracker does not automatically upload your usage history or local log files to the developer. We do not sell or rent usage data or use it for advertising. The app does not provide cloud synchronization.
+
+Windows, Microsoft Store, and Windows App SDK components may separately process installation, update, and diagnostic information under your Windows settings and Microsoft's privacy policy. Crash diagnostics can include technical information or portions of application memory. Device backup or management software may also copy local files independently of this app.
+
+## Support communications
+
+If you contact the maintainers through GitHub, you choose what information to include. Public issues and their attachments are visible to others. Do not post private usage history, personal identifiers, credentials, or sensitive logs in public issues. The app does not automatically attach or submit usage data.
+
+## Changes and contact
+
+We may update this policy when the app or its information-handling practices change. The effective date above identifies the current version.
+
+For privacy questions, see the repository owner's GitHub profile. Do not include private information in public issues.
+
+[Repository owner](https://github.com/godlytalias)

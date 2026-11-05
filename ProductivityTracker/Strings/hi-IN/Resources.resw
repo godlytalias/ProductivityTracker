@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>सक्रिय</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>निष्क्रिय</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>निष्क्रिय</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>लॉक</value>
+  </data>
+  <data name="Sleeping" xml:space="preserve">
+    <value>स्लीप</value>
+  </data>
+  <data name="PoweredOff" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>रोकें</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>फिर शुरू करें</value>
+  </data>
+  <data name="NotRecorded" xml:space="preserve">
+    <value>रिकॉर्ड नहीं किया गया</value>
+  </data>
+  <data name="NoAwakeData" xml:space="preserve">
+    <value>जागृत अवस्था का रिकॉर्ड नहीं</value>
+  </data>
+  <data name="SelectedDay" xml:space="preserve">
+    <value>चुना गया दिन</value>
+  </data>
+  <data name="Today.Content" xml:space="preserve">
+    <value>आज</value>
+  </data>
+  <data name="PreviousDayName" xml:space="preserve">
+    <value>पिछला दिन</value>
+  </data>
+  <data name="PreviousDayTooltip" xml:space="preserve">
+    <value>पिछला दिन (Alt+Left)</value>
+  </data>
+  <data name="NextDayName" xml:space="preserve">
+    <value>अगला दिन</value>
+  </data>
+  <data name="NextDayTooltip" xml:space="preserve">
+    <value>अगला दिन (Alt+Right)</value>
+  </data>
+  <data name="RefreshName" xml:space="preserve">
+    <value>सक्रियता ताज़ा करें</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>ताज़ा करें (F5)</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>ट्रैकिंग सेटिंग्स</value>
+  </data>
+  <data name="IdleThreshold.Header" xml:space="preserve">
+    <value>इतने सेकंड बाद निष्क्रिय</value>
+  </data>
+  <data name="RunAtSignIn.Header" xml:space="preserve">
+    <value>साइन-इन पर चलाएँ</value>
+  </data>
+  <data name="RunAtSignIn.OnContent" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="RunAtSignIn.OffContent" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="StartupExplanation.Text" xml:space="preserve">
+    <value>साइन-इन पर बिना विंडो वाला डेटा संग्राहक शुरू होता है। डैशबोर्ड बंद करने पर वह चलता रहता है।</value>
+  </data>
+  <data name="OpenDataFolder.Content" xml:space="preserve">
+    <value>स्थानीय डेटा फ़ोल्डर खोलें</value>
+  </data>
+  <data name="AboutName" xml:space="preserve">
+    <value>इन जानकारियों के बारे में</value>
+  </data>
+  <data name="AboutTooltip" xml:space="preserve">
+    <value>सक्रियता संबंधी जानकारियाँ कैसे निकाली जाती हैं</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>अपनी सक्रियता को समझें</value>
+  </data>
+  <data name="AboutActive.Text" xml:space="preserve">
+    <value>सक्रिय का अर्थ है ट्रैकिंग के दौरान हाल में इनपुट मिलना। यह सहभागिता के समय का संकेत है, किए गए काम की मात्रा का माप नहीं।</value>
+  </data>
+  <data name="AboutMissing.Text" xml:space="preserve">
+    <value>जिन अंतरालों का कारण ज्ञात नहीं है वे रिकॉर्ड नहीं माने जाते, निष्क्रिय नहीं। रैंकिंग रिकॉर्ड किए गए जागृत समय में सक्रिय प्रतिशत की तुलना करती है। कार्ड पर आधारभूत डेटा दिखता है।</value>
+  </data>
+  <data name="AboutPeriods.Text" xml:space="preserve">
+    <value>घंटे और लगातार समय वाले कार्ड चुने गए दिन के हैं। सप्ताह के दिनों के रुझान उस तारीख तक के 28 दिनों पर आधारित हैं। अधूरे रिकॉर्ड तुलना को प्रभावित कर सकते हैं।</value>
+  </data>
+  <data name="AboutTime.Text" xml:space="preserve">
+    <value>समय स्थानीय समय में दिखता है और UTC में सहेजा जाता है। ऐप बदलना और 3 सेकंड तक का सैंपलिंग अंतराल एक ही सक्रिय अवधि में आ सकता है, लेकिन देखी गई निष्क्रियता उसे समाप्त कर देती है।</value>
+  </data>
+  <data name="AboutPrivacy.Text" xml:space="preserve">
+    <value>डेटा इसी PC पर रहता है। विंडो के शीर्षक, URL, दबाई गई कुंजियाँ, स्क्रीनशॉट या क्लिपबोर्ड की सामग्री रिकॉर्ड नहीं की जाती।</value>
+  </data>
+  <data name="AboutSystemTime.Text" xml:space="preserve">
+    <value>लॉक, स्लीप और पुष्ट बंद अवधि कुल समय और चार्ट में निष्क्रिय मानी जाती हैं। स्लीप और बंद समय सक्रिय प्रतिशत तथा घंटे/सप्ताह के दिन की रैंकिंग से बाहर हैं। पावर इतिहास Windows इवेंट पर आधारित है; अनुपलब्ध या अस्पष्ट इवेंट अज्ञात रहते हैं।</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>सक्रियता डैशबोर्ड</value>
+  </data>
+  <data name="PatternsHeading.Text" xml:space="preserve">
+    <value>28 दिनों के रुझान</value>
+  </data>
+  <data name="PatternsDisclaimer.Text" xml:space="preserve">
+    <value>सक्रियता काम के परिणाम का माप नहीं है। स्लीप और बंद समय रैंकिंग में शामिल नहीं हैं।</value>
+  </data>
+  <data name="ActivityHeading.Text" xml:space="preserve">
+    <value>सक्रियता</value>
+  </data>
+  <data name="ChartRangeName" xml:space="preserve">
+    <value>चार्ट की अवधि</value>
+  </data>
+  <data name="WeekMode.Text" xml:space="preserve">
+    <value>7 दिन</value>
+  </data>
+  <data name="HourlyMode.Text" xml:space="preserve">
+    <value>घंटे के अनुसार</value>
+  </data>
+  <data name="DayAxis.Label" xml:space="preserve">
+    <value>दिन</value>
+  </data>
+  <data name="HoursAxis.Label" xml:space="preserve">
+    <value>घंटे</value>
+  </data>
+  <data name="LocalHourAxis.Label" xml:space="preserve">
+    <value>स्थानीय घंटा</value>
+  </data>
+  <data name="MinutesAxis.Label" xml:space="preserve">
+    <value>मिनट</value>
+  </data>
+  <data name="ChartEmptyExplanation.Text" xml:space="preserve">
+    <value>केवल सैंपल की गई सक्रियता और पुष्ट Windows पावर इवेंट रिकॉर्ड होते हैं।</value>
+  </data>
+  <data name="ShowWeek.Content" xml:space="preserve">
+    <value>7 दिन का रुझान दिखाएँ</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>सक्रियता समयरेखा</value>
+  </data>
+  <data name="TimelineEmptyTitle.Text" xml:space="preserve">
+    <value>इस तारीख का कोई सत्र रिकॉर्ड नहीं है</value>
+  </data>
+  <data name="TimelineEmptyExplanation.Text" xml:space="preserve">
+    <value>बिना रिकॉर्ड वाले समय को निष्क्रिय नहीं माना जाता।</value>
+  </data>
+  <data name="StartColumn.Header" xml:space="preserve">
+    <value>शुरू</value>
+  </data>
+  <data name="EndColumn.Header" xml:space="preserve">
+    <value>समाप्त</value>
+  </data>
+  <data name="ApplicationColumn.Header" xml:space="preserve">
+    <value>ऐप</value>
+  </data>
+  <data name="DurationColumn.Header" xml:space="preserve">
+    <value>अवधि</value>
+  </data>
+  <data name="StateColumn.Header" xml:space="preserve">
+    <value>स्थिति</value>
+  </data>
+  <data name="ActiveShareTitle" xml:space="preserve">
+    <value>सक्रिय अनुपात</value>
+  </data>
+  <data name="MostActiveHourTitle" xml:space="preserve">
+    <value>सबसे सक्रिय घंटा</value>
+  </data>
+  <data name="LeastActiveHourTitle" xml:space="preserve">
+    <value>सबसे कम सक्रिय घंटा</value>
+  </data>
+  <data name="LongestActiveTitle" xml:space="preserve">
+    <value>सबसे लंबा सक्रिय समय</value>
+  </data>
+  <data name="LongestInactiveTitle" xml:space="preserve">
+    <value>सबसे लंबा निष्क्रिय समय</value>
+  </data>
+  <data name="MostActiveWeekdayTitle" xml:space="preserve">
+    <value>सप्ताह का सबसे सक्रिय दिन</value>
+  </data>
+  <data name="LeastActiveWeekdayTitle" xml:space="preserve">
+    <value>सप्ताह का सबसे कम सक्रिय दिन</value>
+  </data>
+  <data name="CardAutomationSummary" xml:space="preserve">
+    <value>{0}: {1}। {2}। {3}</value>
+  </data>
+  <data name="SessionCountFormat" xml:space="preserve">
+    <value>सत्र: {0}</value>
+  </data>
+  <data name="SelectedDayRecordedFormat" xml:space="preserve">
+    <value>{0} | {1} रिकॉर्ड | {2}</value>
+  </data>
+  <data name="SelectedDayUnrecordedFormat" xml:space="preserve">
+    <value>{0} | रिकॉर्ड नहीं किया गया</value>
+  </data>
+  <data name="NoTopApp" xml:space="preserve">
+    <value>कोई सक्रिय अग्रभूमि ऐप रिकॉर्ड नहीं है।</value>
+  </data>
+  <data name="TopAppFormat" xml:space="preserve">
+    <value>शीर्ष ऐप: {0} ({1} सक्रिय)</value>
+  </data>
+  <data name="InactiveBreakdownFormat" xml:space="preserve">
+    <value>निष्क्रिय {0} | खाली {1} | लॉक {2} | स्लीप {3} | बंद {4}</value>
+  </data>
+  <data name="BackgroundPaused" xml:space="preserve">
+    <value>पृष्ठभूमि ट्रैकिंग रुकी हुई है</value>
+  </data>
+  <data name="BackgroundActive" xml:space="preserve">
+    <value>पृष्ठभूमि ट्रैकिंग चालू है</value>
+  </data>
+  <data name="TrackingHere" xml:space="preserve">
+    <value>इस ऐप में ट्रैकिंग चालू है</value>
+  </data>
+  <data name="TrackingPaused" xml:space="preserve">
+    <value>ट्रैकिंग रुकी हुई है</value>
+  </data>
+  <data name="NoActiveInteraction" xml:space="preserve">
+    <value>कोई सक्रिय सहभागिता नहीं</value>
+  </data>
+  <data name="ActiveAwakeFormat" xml:space="preserve">
+    <value>{0} सक्रिय / {1} जागृत समय रिकॉर्ड</value>
+  </data>
+  <data name="PowerExcluded" xml:space="preserve">
+    <value>स्लीप और बंद समय शामिल नहीं है।</value>
+  </data>
+  <data name="NoActiveHour" xml:space="preserve">
+    <value>कोई सक्रिय घंटा नहीं</value>
+  </data>
+  <data name="NoDifference" xml:space="preserve">
+    <value>कोई स्पष्ट अंतर नहीं</value>
+  </data>
+  <data name="NoActiveStretch" xml:space="preserve">
+    <value>कोई लगातार सक्रिय समय नहीं</value>
+  </data>
+  <data name="NoInactiveStretch" xml:space="preserve">
+    <value>कोई लगातार निष्क्रिय समय नहीं</value>
+  </data>
+  <data name="NoActiveWeekday" xml:space="preserve">
+    <value>सप्ताह का कोई सक्रिय दिन नहीं</value>
+  </data>
+  <data name="InsightPeriodFormat" xml:space="preserve">
+    <value>{0} - {1} | जागृत समय वाले दिन: {2}</value>
+  </data>
+  <data name="HourRangeFormat" xml:space="preserve">
+    <value>{0:00}:00 - {1:00}:00</value>
+  </data>
+  <data name="TimeRangeFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="ActivePercentFormat" xml:space="preserve">
+    <value>{0:P0} सक्रिय</value>
+  </data>
+  <data name="HourRankingExplanation" xml:space="preserve">
+    <value>बिना रिकॉर्ड और स्लीप/बंद घंटे शामिल नहीं हैं; समान अनुपात की रैंकिंग नहीं होती।</value>
+  </data>
+  <data name="ObservedIntervalsOnly" xml:space="preserve">
+    <value>केवल देखे गए समय अंतराल गिने जाते हैं।</value>
+  </data>
+  <data name="StretchGapExplanation" xml:space="preserve">
+    <value>3 सेकंड से लंबे अंतराल लगातार अवधि समाप्त कर देते हैं।</value>
+  </data>
+  <data name="WeekdayComparison" xml:space="preserve">
+    <value>28 दिनों की तुलना</value>
+  </data>
+  <data name="WeekdayShareFormat" xml:space="preserve">
+    <value>{0:P0} सक्रिय | रिकॉर्ड वाले दिन: {1}</value>
+  </data>
+  <data name="WeekdayRankingExplanation" xml:space="preserve">
+    <value>अधिक रिकॉर्ड किए गए जागृत दिन या अलग सक्रिय अनुपात चाहिए।</value>
+  </data>
+  <data name="WeekdayAverageFormat" xml:space="preserve">
+    <value>औसत {0} सक्रिय / {1} जागृत रिकॉर्ड</value>
+  </data>
+  <data name="AllDaysRecorded" xml:space="preserve">
+    <value>सभी सात दिनों के रिकॉर्ड हैं।</value>
+  </data>
+  <data name="MissingDaysFormat" xml:space="preserve">
+    <value>रिकॉर्ड नहीं हैं: {0}।</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="WeeklyChartAutomationFormat" xml:space="preserve">
+    <value>{0:D} तक के सात दिनों के सक्रिय और निष्क्रिय घंटे</value>
+  </data>
+  <data name="HourlyChartAutomationFormat" xml:space="preserve">
+    <value>{0:D} के लिए घंटे के अनुसार सक्रिय और निष्क्रिय मिनट</value>
+  </data>
+  <data name="WeekEndingFormat" xml:space="preserve">
+    <value>{0} तक के 7 दिन</value>
+  </data>
+  <data name="EmptyDayChartFormat" xml:space="preserve">
+    <value>{0} को सक्रियता रिकॉर्ड नहीं है</value>
+  </data>
+  <data name="EmptyWeekChart" xml:space="preserve">
+    <value>इन 7 दिनों में कोई रिकॉर्ड नहीं है</value>
+  </data>
+  <data name="HourlyFootnote" xml:space="preserve">
+    <value>अंतराल = रिकॉर्ड नहीं है। डेलाइट सेविंग में दोहराए गए घंटे जोड़े जाते हैं।</value>
+  </data>
+  <data name="DurationHoursFormat" xml:space="preserve">
+    <value>{0}घं {1}मि</value>
+  </data>
+  <data name="DurationMinutesFormat" xml:space="preserve">
+    <value>{0}मि {1}से</value>
+  </data>
+  <data name="DurationSecondsFormat" xml:space="preserve">
+    <value>{0}से</value>
+  </data>
+  <data name="SelectedDayNotificationFormat" xml:space="preserve">
+    <value>{0:D}। रिकॉर्ड किए गए सत्र: {1}।</value>
+  </data>
+  <data name="StartupUpdateFailed" xml:space="preserve">
+    <value>साइन-इन पर शुरू होने की सेटिंग नहीं बदली जा सकी</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>ठीक है</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>अज्ञात</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>डेस्कटॉप</value>
+  </data>
+  <data name="ModernWindowsApp" xml:space="preserve">
+    <value>Windows ऐप</value>
+  </data>
+  <data name="WindowsExplorer" xml:space="preserve">
+    <value>Windows एक्सप्लोरर</value>
+  </data>
+  <data name="Notepad" xml:space="preserve">
+    <value>नोटपैड</value>
+  </data>
+  <data name="WindowsShell" xml:space="preserve">
+    <value>Windows शेल</value>
+  </data>
+  <data name="StartMenu" xml:space="preserve">
+    <value>स्टार्ट मेनू</value>
+  </data>
+  <data name="WindowsSearch" xml:space="preserve">
+    <value>Windows खोज</value>
+  </data>
+  <data name="LockScreen" xml:space="preserve">
+    <value>लॉक स्क्रीन</value>
+  </data>
+  <data name="SaveDataErrorFormat" xml:space="preserve">
+    <value>उपयोग डेटा सहेजा नहीं जा सका: {0}</value>
+  </data>
+  <data name="ReadDataErrorFormat" xml:space="preserve">
+    <value>उपयोग डेटा पढ़ा नहीं जा सका: {0}</value>
+  </data>
+  <data name="MissingSegmentsError" xml:space="preserve">
+    <value>उपयोग डेटा में समय खंडों का संग्रह नहीं है।</value>
+  </data>
+  <data name="ExecutableNotFound" xml:space="preserve">
+    <value>वर्तमान ऐप की निष्पादन फ़ाइल नहीं मिली।</value>
+  </data>
+  <data name="StartupAlreadyDisabled" xml:space="preserve">
+    <value>साइन-इन पर चलना पहले से बंद है।</value>
+  </data>
+  <data name="StartupFallbackCreatedFormat" xml:space="preserve">
+    <value>शेड्यूल किए गए कार्य का निर्माण अवरुद्ध था। इसकी जगह इस उपयोगकर्ता के लिए स्टार्टअप लॉन्चर बनाया गया: {0}</value>
+  </data>
+  <data name="StartupFallbackFailedFormat" xml:space="preserve">
+    <value>{0} वैकल्पिक स्टार्टअप लॉन्चर भी विफल रहा: {1}</value>
+  </data>
+  <data name="TaskSchedulerNotStarted" xml:space="preserve">
+    <value>Windows टास्क शेड्यूलर शुरू नहीं किया जा सका।</value>
+  </data>
+  <data name="TaskSchedulerExitCodeFormat" xml:space="preserve">
+    <value>टास्क शेड्यूलर ने निकास कोड {0} लौटाया।</value>
+  </data>
+  <data name="TaskSchedulerAccessErrorFormat" xml:space="preserve">
+    <value>Windows टास्क शेड्यूलर तक पहुँच नहीं मिली: {0}</value>
+  </data>
+  <data name="SystemNotificationsUnavailable" xml:space="preserve">
+    <value>सिस्टम स्थिति की सूचनाएँ उपलब्ध नहीं हैं।</value>
+  </data>
+  <data name="PowerHistoryUnavailable" xml:space="preserve">
+    <value>Windows पावर इतिहास उपलब्ध नहीं है; अज्ञात अंतराल रिकॉर्ड नहीं माने जाएँगे।</value>
+  </data>
+  <data name="DashboardDateFormat" xml:space="preserve">
+    <value>ddd, d MMM yyyy</value>
+  </data>
+  <data name="MonthDayFormat" xml:space="preserve">
+    <value>d MMM</value>
+  </data>
+  <data name="ChartDayFormat" xml:space="preserve">
+    <value>ddd d/M</value>
+  </data>
+  <data name="DayDetailFormat" xml:space="preserve">
+    <value>dddd, d MMM</value>
+  </data>
+  <data name="BrandTitle.Text" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>पिछला दिन</value>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>पिछला दिन (Alt+Left)</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>अगला दिन</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>अगला दिन (Alt+Right)</value>
+  </data>
+  <data name="UsageDatePicker.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>चुना गया दिन</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>सक्रियता ताज़ा करें</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>ताज़ा करें (F5)</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>ट्रैकिंग सेटिंग्स</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>ट्रैकिंग सेटिंग्स</value>
+  </data>
+  <data name="SettingsHeading.Text" xml:space="preserve">
+    <value>ट्रैकिंग सेटिंग्स</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>इन जानकारियों के बारे में</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>सक्रियता संबंधी जानकारियाँ कैसे निकाली जाती हैं</value>
+  </data>
+  <data name="Dashboard.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>सक्रियता डैशबोर्ड</value>
+  </data>
+  <data name="SelectedDayHeading.Text" xml:space="preserve">
+    <value>चुना गया दिन</value>
+  </data>
+  <data name="ChartRange.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>चार्ट की अवधि</value>
+  </data>
+  <data name="ActiveTrend.Title" xml:space="preserve">
+    <value>सक्रिय</value>
+  </data>
+  <data name="InactiveTrend.Title" xml:space="preserve">
+    <value>निष्क्रिय</value>
+  </data>
+  <data name="ActiveHourly.Title" xml:space="preserve">
+    <value>सक्रिय</value>
+  </data>
+  <data name="InactiveHourly.Title" xml:space="preserve">
+    <value>निष्क्रिय</value>
+  </data>
+  <data name="TimelineHeading.Text" xml:space="preserve">
+    <value>सक्रियता समयरेखा</value>
+  </data>
+  <data name="ActivityTable.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>सक्रियता समयरेखा</value>
+  </data>
+  <data name="LanguageTag" xml:space="preserve">
+    <value>hi-IN</value>
+  </data>
+  <data name="Root.Language" xml:space="preserve">
+    <value>hi-IN</value>
+  </data>
+  <data name="Root.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="MostUsedAppTitle" xml:space="preserve"><value>सबसे अधिक इस्तेमाल किया गया ऐप</value></data>
+  <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} सक्रिय</value></data>
+  <data name="AppActiveShareFormat" xml:space="preserve"><value>सक्रिय समय का {0:P0}</value></data>
+  <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+</root>

@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>アクティブ</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>非アクティブ</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>アイドル</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>ロック中</value>
+  </data>
+  <data name="Sleeping" xml:space="preserve">
+    <value>スリープ中</value>
+  </data>
+  <data name="PoweredOff" xml:space="preserve">
+    <value>電源オフ</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>一時停止</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>再開</value>
+  </data>
+  <data name="NotRecorded" xml:space="preserve">
+    <value>記録なし</value>
+  </data>
+  <data name="NoAwakeData" xml:space="preserve">
+    <value>起動中の記録なし</value>
+  </data>
+  <data name="SelectedDay" xml:space="preserve">
+    <value>選択した日</value>
+  </data>
+  <data name="Today.Content" xml:space="preserve">
+    <value>今日</value>
+  </data>
+  <data name="PreviousDayName" xml:space="preserve">
+    <value>前の日</value>
+  </data>
+  <data name="PreviousDayTooltip" xml:space="preserve">
+    <value>前の日 (Alt+左)</value>
+  </data>
+  <data name="NextDayName" xml:space="preserve">
+    <value>次の日</value>
+  </data>
+  <data name="NextDayTooltip" xml:space="preserve">
+    <value>次の日 (Alt+右)</value>
+  </data>
+  <data name="RefreshName" xml:space="preserve">
+    <value>アクティビティを更新</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>更新 (F5)</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>追跡の設定</value>
+  </data>
+  <data name="IdleThreshold.Header" xml:space="preserve">
+    <value>アイドルとみなすまで（秒）</value>
+  </data>
+  <data name="RunAtSignIn.Header" xml:space="preserve">
+    <value>サインイン時に実行</value>
+  </data>
+  <data name="RunAtSignIn.OnContent" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="RunAtSignIn.OffContent" xml:space="preserve">
+    <value>無効</value>
+  </data>
+  <data name="StartupExplanation.Text" xml:space="preserve">
+    <value>サインイン時にウィンドウなしの収集プロセスを起動します。ダッシュボードを閉じても収集は続きます。</value>
+  </data>
+  <data name="OpenDataFolder.Content" xml:space="preserve">
+    <value>ローカルデータフォルダーを開く</value>
+  </data>
+  <data name="AboutName" xml:space="preserve">
+    <value>インサイトについて</value>
+  </data>
+  <data name="AboutTooltip" xml:space="preserve">
+    <value>アクティビティ分析の計算方法</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>アクティビティの見方</value>
+  </data>
+  <data name="AboutActive.Text" xml:space="preserve">
+    <value>アクティブとは、追跡中に最近の入力があった状態です。操作時間の目安であり、仕事の成果を示すものではありません。</value>
+  </data>
+  <data name="AboutMissing.Text" xml:space="preserve">
+    <value>原因不明の空白は非アクティブではなく未記録のままです。順位は起動中の記録時間に対するアクティブ率を比較し、カードに根拠を表示します。</value>
+  </data>
+  <data name="AboutPeriods.Text" xml:space="preserve">
+    <value>時間帯と連続時間のカードは選択した日が対象です。曜日の傾向はその日までの28日間を使用します。記録が部分的な場合、比較結果に影響します。</value>
+  </data>
+  <data name="AboutTime.Text" xml:space="preserve">
+    <value>時刻は現地時間で表示し、UTCで保存します。アプリの切り替えや3秒以内のサンプリングの空白は連続時間に含められますが、観測された非アクティブ状態で連続した活動は終了します。</value>
+  </data>
+  <data name="AboutPrivacy.Text" xml:space="preserve">
+    <value>データはこのPCにのみ保存します。ウィンドウのタイトル、URL、キー入力の内容、スクリーンショット、クリップボードの内容は記録しません。</value>
+  </data>
+  <data name="AboutSystemTime.Text" xml:space="preserve">
+    <value>ロック、スリープ、および確認できた電源オフの時間は、合計とグラフで非アクティブに含めます。スリープと電源オフはアクティブ率と時間帯・曜日の順位から除きます。電源履歴はWindowsイベントに基づき、欠落や曖昧なイベントは不明のままです。</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>アクティビティダッシュボード</value>
+  </data>
+  <data name="PatternsHeading.Text" xml:space="preserve">
+    <value>28日間の傾向</value>
+  </data>
+  <data name="PatternsDisclaimer.Text" xml:space="preserve">
+    <value>活動は成果ではありません。順位からスリープと電源オフを除外します。</value>
+  </data>
+  <data name="ActivityHeading.Text" xml:space="preserve">
+    <value>アクティビティ</value>
+  </data>
+  <data name="ChartRangeName" xml:space="preserve">
+    <value>グラフの期間</value>
+  </data>
+  <data name="WeekMode.Text" xml:space="preserve">
+    <value>7日間</value>
+  </data>
+  <data name="HourlyMode.Text" xml:space="preserve">
+    <value>時間別</value>
+  </data>
+  <data name="DayAxis.Label" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="HoursAxis.Label" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="LocalHourAxis.Label" xml:space="preserve">
+    <value>現地時刻</value>
+  </data>
+  <data name="MinutesAxis.Label" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="ChartEmptyExplanation.Text" xml:space="preserve">
+    <value>サンプリングした活動と確認できたWindows電源イベントのみを記録します。</value>
+  </data>
+  <data name="ShowWeek.Content" xml:space="preserve">
+    <value>7日間の傾向を表示</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>アクティビティのタイムライン</value>
+  </data>
+  <data name="TimelineEmptyTitle.Text" xml:space="preserve">
+    <value>この日付には記録されたセッションがありません</value>
+  </data>
+  <data name="TimelineEmptyExplanation.Text" xml:space="preserve">
+    <value>未記録の時間は非アクティブに含めません。</value>
+  </data>
+  <data name="StartColumn.Header" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="EndColumn.Header" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="ApplicationColumn.Header" xml:space="preserve">
+    <value>アプリ</value>
+  </data>
+  <data name="DurationColumn.Header" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="StateColumn.Header" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="ActiveShareTitle" xml:space="preserve">
+    <value>アクティブ率</value>
+  </data>
+  <data name="MostActiveHourTitle" xml:space="preserve">
+    <value>最も活動的な時間帯</value>
+  </data>
+  <data name="LeastActiveHourTitle" xml:space="preserve">
+    <value>最も活動が少ない時間帯</value>
+  </data>
+  <data name="LongestActiveTitle" xml:space="preserve">
+    <value>最長の連続アクティブ時間</value>
+  </data>
+  <data name="LongestInactiveTitle" xml:space="preserve">
+    <value>最長の連続非アクティブ時間</value>
+  </data>
+  <data name="MostActiveWeekdayTitle" xml:space="preserve">
+    <value>最も活動的な曜日</value>
+  </data>
+  <data name="LeastActiveWeekdayTitle" xml:space="preserve">
+    <value>最も活動が少ない曜日</value>
+  </data>
+  <data name="CardAutomationSummary" xml:space="preserve">
+    <value>{0}：{1}。{2}。{3}</value>
+  </data>
+  <data name="SessionCountFormat" xml:space="preserve">
+    <value>セッション数：{0}</value>
+  </data>
+  <data name="SelectedDayRecordedFormat" xml:space="preserve">
+    <value>{0} | 記録済み {1} | {2}</value>
+  </data>
+  <data name="SelectedDayUnrecordedFormat" xml:space="preserve">
+    <value>{0} | 記録なし</value>
+  </data>
+  <data name="NoTopApp" xml:space="preserve">
+    <value>アクティブな最前面アプリの記録がありません。</value>
+  </data>
+  <data name="TopAppFormat" xml:space="preserve">
+    <value>最多利用アプリ：{0}（アクティブ {1}）</value>
+  </data>
+  <data name="InactiveBreakdownFormat" xml:space="preserve">
+    <value>非アクティブ {0} | アイドル {1} | ロック {2} | スリープ {3} | 電源オフ {4}</value>
+  </data>
+  <data name="BackgroundPaused" xml:space="preserve">
+    <value>バックグラウンド追跡を一時停止中</value>
+  </data>
+  <data name="BackgroundActive" xml:space="preserve">
+    <value>バックグラウンドで追跡中</value>
+  </data>
+  <data name="TrackingHere" xml:space="preserve">
+    <value>このアプリで追跡中</value>
+  </data>
+  <data name="TrackingPaused" xml:space="preserve">
+    <value>追跡を一時停止中</value>
+  </data>
+  <data name="NoActiveInteraction" xml:space="preserve">
+    <value>アクティブな操作なし</value>
+  </data>
+  <data name="ActiveAwakeFormat" xml:space="preserve">
+    <value>アクティブ {0} / 起動中の記録 {1}</value>
+  </data>
+  <data name="PowerExcluded" xml:space="preserve">
+    <value>スリープと電源オフを除外します。</value>
+  </data>
+  <data name="NoActiveHour" xml:space="preserve">
+    <value>活動的な時間帯なし</value>
+  </data>
+  <data name="NoDifference" xml:space="preserve">
+    <value>明確な差なし</value>
+  </data>
+  <data name="NoActiveStretch" xml:space="preserve">
+    <value>連続アクティブ時間なし</value>
+  </data>
+  <data name="NoInactiveStretch" xml:space="preserve">
+    <value>連続非アクティブ時間なし</value>
+  </data>
+  <data name="NoActiveWeekday" xml:space="preserve">
+    <value>活動的な曜日なし</value>
+  </data>
+  <data name="InsightPeriodFormat" xml:space="preserve">
+    <value>{0} - {1} | 起動中の記録がある日数：{2}</value>
+  </data>
+  <data name="HourRangeFormat" xml:space="preserve">
+    <value>{0:00}:00 - {1:00}:00</value>
+  </data>
+  <data name="TimeRangeFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="ActivePercentFormat" xml:space="preserve">
+    <value>アクティブ {0:P0}</value>
+  </data>
+  <data name="HourRankingExplanation" xml:space="preserve">
+    <value>未記録、スリープ、電源オフの時間帯を除外し、同率の場合は順位を付けません。</value>
+  </data>
+  <data name="ObservedIntervalsOnly" xml:space="preserve">
+    <value>確認できた区間のみを集計します。</value>
+  </data>
+  <data name="StretchGapExplanation" xml:space="preserve">
+    <value>3秒を超える空白で連続時間は終了します。</value>
+  </data>
+  <data name="WeekdayComparison" xml:space="preserve">
+    <value>28日間の比較</value>
+  </data>
+  <data name="WeekdayShareFormat" xml:space="preserve">
+    <value>アクティブ {0:P0} | 記録日数：{1}</value>
+  </data>
+  <data name="WeekdayRankingExplanation" xml:space="preserve">
+    <value>起動中の記録日数を増やすか、アクティブ率に差が必要です。</value>
+  </data>
+  <data name="WeekdayAverageFormat" xml:space="preserve">
+    <value>平均アクティブ {0} / 起動中の記録 {1}</value>
+  </data>
+  <data name="AllDaysRecorded" xml:space="preserve">
+    <value>7日間すべてに記録があります。</value>
+  </data>
+  <data name="MissingDaysFormat" xml:space="preserve">
+    <value>記録なし：{0}。</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="WeeklyChartAutomationFormat" xml:space="preserve">
+    <value>{0:D}までの7日間のアクティブ時間と非アクティブ時間</value>
+  </data>
+  <data name="HourlyChartAutomationFormat" xml:space="preserve">
+    <value>{0:D}の時間帯別アクティブ分数と非アクティブ分数</value>
+  </data>
+  <data name="WeekEndingFormat" xml:space="preserve">
+    <value>{0}までの7日間</value>
+  </data>
+  <data name="EmptyDayChartFormat" xml:space="preserve">
+    <value>{0}のアクティビティの記録はありません</value>
+  </data>
+  <data name="EmptyWeekChart" xml:space="preserve">
+    <value>この7日間には記録がありません</value>
+  </data>
+  <data name="HourlyFootnote" xml:space="preserve">
+    <value>空白は未記録です。夏時間で重複する時間帯は合算します。</value>
+  </data>
+  <data name="DurationHoursFormat" xml:space="preserve">
+    <value>{0}時間{1}分</value>
+  </data>
+  <data name="DurationMinutesFormat" xml:space="preserve">
+    <value>{0}分{1}秒</value>
+  </data>
+  <data name="DurationSecondsFormat" xml:space="preserve">
+    <value>{0}秒</value>
+  </data>
+  <data name="SelectedDayNotificationFormat" xml:space="preserve">
+    <value>{0:D}。記録されたセッション数：{1}。</value>
+  </data>
+  <data name="StartupUpdateFailed" xml:space="preserve">
+    <value>サインイン時の起動設定を更新できませんでした</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>デスクトップ</value>
+  </data>
+  <data name="ModernWindowsApp" xml:space="preserve">
+    <value>Windowsアプリ</value>
+  </data>
+  <data name="WindowsExplorer" xml:space="preserve">
+    <value>Windowsエクスプローラー</value>
+  </data>
+  <data name="Notepad" xml:space="preserve">
+    <value>メモ帳</value>
+  </data>
+  <data name="WindowsShell" xml:space="preserve">
+    <value>Windowsシェル</value>
+  </data>
+  <data name="StartMenu" xml:space="preserve">
+    <value>スタートメニュー</value>
+  </data>
+  <data name="WindowsSearch" xml:space="preserve">
+    <value>Windows検索</value>
+  </data>
+  <data name="LockScreen" xml:space="preserve">
+    <value>ロック画面</value>
+  </data>
+  <data name="SaveDataErrorFormat" xml:space="preserve">
+    <value>使用状況データを保存できませんでした：{0}</value>
+  </data>
+  <data name="ReadDataErrorFormat" xml:space="preserve">
+    <value>使用状況データを読み込めませんでした：{0}</value>
+  </data>
+  <data name="MissingSegmentsError" xml:space="preserve">
+    <value>使用状況データに区間のコレクションがありません。</value>
+  </data>
+  <data name="ExecutableNotFound" xml:space="preserve">
+    <value>現在のアプリの実行ファイルが見つかりませんでした。</value>
+  </data>
+  <data name="StartupAlreadyDisabled" xml:space="preserve">
+    <value>サインイン時の実行は既に無効です。</value>
+  </data>
+  <data name="StartupFallbackCreatedFormat" xml:space="preserve">
+    <value>スケジュールタスクの作成がブロックされたため、代わりにユーザー別のスタートアップ起動ファイルを作成しました：{0}</value>
+  </data>
+  <data name="StartupFallbackFailedFormat" xml:space="preserve">
+    <value>{0} 代替のスタートアップ起動ファイルの作成も失敗しました：{1}</value>
+  </data>
+  <data name="TaskSchedulerNotStarted" xml:space="preserve">
+    <value>Windowsタスクスケジューラを起動できませんでした。</value>
+  </data>
+  <data name="TaskSchedulerExitCodeFormat" xml:space="preserve">
+    <value>タスクスケジューラが終了コード{0}を返しました。</value>
+  </data>
+  <data name="TaskSchedulerAccessErrorFormat" xml:space="preserve">
+    <value>Windowsタスクスケジューラにアクセスできませんでした：{0}</value>
+  </data>
+  <data name="SystemNotificationsUnavailable" xml:space="preserve">
+    <value>システム状態の通知を利用できません。</value>
+  </data>
+  <data name="PowerHistoryUnavailable" xml:space="preserve">
+    <value>Windows電源履歴を利用できないため、原因不明の空白は未記録のままです。</value>
+  </data>
+  <data name="DashboardDateFormat" xml:space="preserve">
+    <value>yyyy年M月d日 (ddd)</value>
+  </data>
+  <data name="MonthDayFormat" xml:space="preserve">
+    <value>M月d日</value>
+  </data>
+  <data name="ChartDayFormat" xml:space="preserve">
+    <value>M/d ddd</value>
+  </data>
+  <data name="DayDetailFormat" xml:space="preserve">
+    <value>M月d日 (dddd)</value>
+  </data>
+  <data name="BrandTitle.Text" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>前の日</value>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>前の日 (Alt+左)</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>次の日</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>次の日 (Alt+右)</value>
+  </data>
+  <data name="UsageDatePicker.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>選択した日</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>アクティビティを更新</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>更新 (F5)</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>追跡の設定</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>追跡の設定</value>
+  </data>
+  <data name="SettingsHeading.Text" xml:space="preserve">
+    <value>追跡の設定</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>インサイトについて</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>アクティビティ分析の計算方法</value>
+  </data>
+  <data name="Dashboard.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>アクティビティダッシュボード</value>
+  </data>
+  <data name="SelectedDayHeading.Text" xml:space="preserve">
+    <value>選択した日</value>
+  </data>
+  <data name="ChartRange.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>グラフの期間</value>
+  </data>
+  <data name="ActiveTrend.Title" xml:space="preserve">
+    <value>アクティブ</value>
+  </data>
+  <data name="InactiveTrend.Title" xml:space="preserve">
+    <value>非アクティブ</value>
+  </data>
+  <data name="ActiveHourly.Title" xml:space="preserve">
+    <value>アクティブ</value>
+  </data>
+  <data name="InactiveHourly.Title" xml:space="preserve">
+    <value>非アクティブ</value>
+  </data>
+  <data name="TimelineHeading.Text" xml:space="preserve">
+    <value>アクティビティのタイムライン</value>
+  </data>
+  <data name="ActivityTable.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>アクティビティのタイムライン</value>
+  </data>
+  <data name="LanguageTag" xml:space="preserve">
+    <value>ja-JP</value>
+  </data>
+  <data name="Root.Language" xml:space="preserve">
+    <value>ja-JP</value>
+  </data>
+  <data name="Root.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="MostUsedAppTitle" xml:space="preserve"><value>最も使用したアプリ</value></data>
+  <data name="AppActiveTimeFormat" xml:space="preserve"><value>アクティブ {0}</value></data>
+  <data name="AppActiveShareFormat" xml:space="preserve"><value>アクティブ時間の{0:P0}</value></data>
+  <data name="ChartPointFormat" xml:space="preserve"><value>{0}：{1} {2:0.#} / {3} {4:0.#}（{5}）</value></data>
+</root>

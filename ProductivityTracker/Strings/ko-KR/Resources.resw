@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>활동</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>비활동</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>유휴</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>잠금</value>
+  </data>
+  <data name="Sleeping" xml:space="preserve">
+    <value>절전</value>
+  </data>
+  <data name="PoweredOff" xml:space="preserve">
+    <value>전원 꺼짐</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>일시 중지</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>다시 시작</value>
+  </data>
+  <data name="NotRecorded" xml:space="preserve">
+    <value>기록 없음</value>
+  </data>
+  <data name="NoAwakeData" xml:space="preserve">
+    <value>깨어 있는 시간 기록 없음</value>
+  </data>
+  <data name="SelectedDay" xml:space="preserve">
+    <value>선택한 날짜</value>
+  </data>
+  <data name="Today.Content" xml:space="preserve">
+    <value>오늘</value>
+  </data>
+  <data name="PreviousDayName" xml:space="preserve">
+    <value>이전 날짜</value>
+  </data>
+  <data name="PreviousDayTooltip" xml:space="preserve">
+    <value>이전 날짜 (Alt+왼쪽)</value>
+  </data>
+  <data name="NextDayName" xml:space="preserve">
+    <value>다음 날짜</value>
+  </data>
+  <data name="NextDayTooltip" xml:space="preserve">
+    <value>다음 날짜 (Alt+오른쪽)</value>
+  </data>
+  <data name="RefreshName" xml:space="preserve">
+    <value>활동 새로 고침</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>새로 고침 (F5)</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>추적 설정</value>
+  </data>
+  <data name="IdleThreshold.Header" xml:space="preserve">
+    <value>비활동 판단 기준(초)</value>
+  </data>
+  <data name="RunAtSignIn.Header" xml:space="preserve">
+    <value>로그인 시 실행</value>
+  </data>
+  <data name="RunAtSignIn.OnContent" xml:space="preserve">
+    <value>사용</value>
+  </data>
+  <data name="RunAtSignIn.OffContent" xml:space="preserve">
+    <value>사용 안 함</value>
+  </data>
+  <data name="StartupExplanation.Text" xml:space="preserve">
+    <value>로그인 시 창 없는 수집기를 시작합니다. 대시보드를 닫아도 수집기는 계속 실행됩니다.</value>
+  </data>
+  <data name="OpenDataFolder.Content" xml:space="preserve">
+    <value>로컬 데이터 폴더 열기</value>
+  </data>
+  <data name="AboutName" xml:space="preserve">
+    <value>인사이트 정보</value>
+  </data>
+  <data name="AboutTooltip" xml:space="preserve">
+    <value>활동 인사이트 계산 방법</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>내 활동 이해하기</value>
+  </data>
+  <data name="AboutActive.Text" xml:space="preserve">
+    <value>활동은 추적 중 최근 입력이 있었음을 뜻합니다. 상호 작용 시간을 나타낼 뿐 작업 성과를 측정하지 않습니다.</value>
+  </data>
+  <data name="AboutMissing.Text" xml:space="preserve">
+    <value>원인을 알 수 없는 공백은 비활동이 아닌 미기록으로 남습니다. 순위는 기록된 깨어 있는 시간 중 활동 비율을 비교하며 카드에 근거가 표시됩니다.</value>
+  </data>
+  <data name="AboutPeriods.Text" xml:space="preserve">
+    <value>시간대 및 연속 시간 카드는 선택한 날짜를 기준으로 합니다. 요일 패턴은 해당 날짜까지 28일을 사용합니다. 일부 시간만 기록되면 비교 결과가 달라질 수 있습니다.</value>
+  </data>
+  <data name="AboutTime.Text" xml:space="preserve">
+    <value>시간은 현지 시간으로 표시되며 UTC로 저장됩니다. 앱 전환과 최대 3초의 샘플링 공백은 하나의 연속 시간으로 볼 수 있지만 관측된 비활동은 연속 활동을 끊습니다.</value>
+  </data>
+  <data name="AboutPrivacy.Text" xml:space="preserve">
+    <value>데이터는 이 PC에만 저장됩니다. 창 제목, URL, 키 입력 내용, 스크린샷, 클립보드 내용은 기록하지 않습니다.</value>
+  </data>
+  <data name="AboutSystemTime.Text" xml:space="preserve">
+    <value>잠금, 절전 및 확인된 전원 꺼짐은 합계와 차트에서 비활동으로 계산됩니다. 절전 및 전원 꺼짐은 활동 비율과 시간대·요일 순위에서 제외됩니다. 전원 이력은 Windows 이벤트를 사용하며 누락되거나 모호한 이벤트는 알 수 없음으로 남습니다.</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>활동 대시보드</value>
+  </data>
+  <data name="PatternsHeading.Text" xml:space="preserve">
+    <value>28일 패턴</value>
+  </data>
+  <data name="PatternsDisclaimer.Text" xml:space="preserve">
+    <value>활동은 성과가 아닙니다. 절전 및 전원 꺼짐은 순위에서 제외됩니다.</value>
+  </data>
+  <data name="ActivityHeading.Text" xml:space="preserve">
+    <value>활동</value>
+  </data>
+  <data name="ChartRangeName" xml:space="preserve">
+    <value>차트 범위</value>
+  </data>
+  <data name="WeekMode.Text" xml:space="preserve">
+    <value>7일</value>
+  </data>
+  <data name="HourlyMode.Text" xml:space="preserve">
+    <value>시간별</value>
+  </data>
+  <data name="DayAxis.Label" xml:space="preserve">
+    <value>날짜</value>
+  </data>
+  <data name="HoursAxis.Label" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="LocalHourAxis.Label" xml:space="preserve">
+    <value>현지 시간</value>
+  </data>
+  <data name="MinutesAxis.Label" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="ChartEmptyExplanation.Text" xml:space="preserve">
+    <value>샘플링된 활동과 확인된 Windows 전원 이벤트만 기록됩니다.</value>
+  </data>
+  <data name="ShowWeek.Content" xml:space="preserve">
+    <value>7일 추세 보기</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>활동 타임라인</value>
+  </data>
+  <data name="TimelineEmptyTitle.Text" xml:space="preserve">
+    <value>이 날짜에 기록된 세션이 없습니다</value>
+  </data>
+  <data name="TimelineEmptyExplanation.Text" xml:space="preserve">
+    <value>기록되지 않은 시간은 비활동으로 계산하지 않습니다.</value>
+  </data>
+  <data name="StartColumn.Header" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="EndColumn.Header" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="ApplicationColumn.Header" xml:space="preserve">
+    <value>앱</value>
+  </data>
+  <data name="DurationColumn.Header" xml:space="preserve">
+    <value>기간</value>
+  </data>
+  <data name="StateColumn.Header" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="ActiveShareTitle" xml:space="preserve">
+    <value>활동 비율</value>
+  </data>
+  <data name="MostActiveHourTitle" xml:space="preserve">
+    <value>가장 활동적인 시간</value>
+  </data>
+  <data name="LeastActiveHourTitle" xml:space="preserve">
+    <value>가장 활동이 적은 시간</value>
+  </data>
+  <data name="LongestActiveTitle" xml:space="preserve">
+    <value>최장 연속 활동</value>
+  </data>
+  <data name="LongestInactiveTitle" xml:space="preserve">
+    <value>최장 연속 비활동</value>
+  </data>
+  <data name="MostActiveWeekdayTitle" xml:space="preserve">
+    <value>가장 활동적인 요일</value>
+  </data>
+  <data name="LeastActiveWeekdayTitle" xml:space="preserve">
+    <value>가장 활동이 적은 요일</value>
+  </data>
+  <data name="CardAutomationSummary" xml:space="preserve">
+    <value>{0}: {1}. {2}. {3}</value>
+  </data>
+  <data name="SessionCountFormat" xml:space="preserve">
+    <value>세션: {0}</value>
+  </data>
+  <data name="SelectedDayRecordedFormat" xml:space="preserve">
+    <value>{0} | 기록 {1} | {2}</value>
+  </data>
+  <data name="SelectedDayUnrecordedFormat" xml:space="preserve">
+    <value>{0} | 기록 없음</value>
+  </data>
+  <data name="NoTopApp" xml:space="preserve">
+    <value>기록된 활성 포그라운드 앱이 없습니다.</value>
+  </data>
+  <data name="TopAppFormat" xml:space="preserve">
+    <value>최다 사용 앱: {0}(활동 {1})</value>
+  </data>
+  <data name="InactiveBreakdownFormat" xml:space="preserve">
+    <value>비활동 {0} | 유휴 {1} | 잠금 {2} | 절전 {3} | 전원 꺼짐 {4}</value>
+  </data>
+  <data name="BackgroundPaused" xml:space="preserve">
+    <value>백그라운드 추적 일시 중지됨</value>
+  </data>
+  <data name="BackgroundActive" xml:space="preserve">
+    <value>백그라운드 추적 중</value>
+  </data>
+  <data name="TrackingHere" xml:space="preserve">
+    <value>이 앱에서 추적 중</value>
+  </data>
+  <data name="TrackingPaused" xml:space="preserve">
+    <value>추적 일시 중지됨</value>
+  </data>
+  <data name="NoActiveInteraction" xml:space="preserve">
+    <value>활성 상호 작용 없음</value>
+  </data>
+  <data name="ActiveAwakeFormat" xml:space="preserve">
+    <value>활동 {0} / 깨어 있는 기록 {1}</value>
+  </data>
+  <data name="PowerExcluded" xml:space="preserve">
+    <value>절전 및 전원 꺼짐은 제외됩니다.</value>
+  </data>
+  <data name="NoActiveHour" xml:space="preserve">
+    <value>활동 시간대 없음</value>
+  </data>
+  <data name="NoDifference" xml:space="preserve">
+    <value>뚜렷한 차이 없음</value>
+  </data>
+  <data name="NoActiveStretch" xml:space="preserve">
+    <value>연속 활동 없음</value>
+  </data>
+  <data name="NoInactiveStretch" xml:space="preserve">
+    <value>연속 비활동 없음</value>
+  </data>
+  <data name="NoActiveWeekday" xml:space="preserve">
+    <value>활동 요일 없음</value>
+  </data>
+  <data name="InsightPeriodFormat" xml:space="preserve">
+    <value>{0} - {1} | 깨어 있는 기록 일수: {2}</value>
+  </data>
+  <data name="HourRangeFormat" xml:space="preserve">
+    <value>{0:00}:00 - {1:00}:00</value>
+  </data>
+  <data name="TimeRangeFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="ActivePercentFormat" xml:space="preserve">
+    <value>활동 {0:P0}</value>
+  </data>
+  <data name="HourRankingExplanation" xml:space="preserve">
+    <value>미기록 및 절전·전원 꺼짐 시간은 제외하며 같은 비율에는 순위를 매기지 않습니다.</value>
+  </data>
+  <data name="ObservedIntervalsOnly" xml:space="preserve">
+    <value>관측된 구간만 계산합니다.</value>
+  </data>
+  <data name="StretchGapExplanation" xml:space="preserve">
+    <value>3초보다 긴 공백은 연속 시간을 끊습니다.</value>
+  </data>
+  <data name="WeekdayComparison" xml:space="preserve">
+    <value>28일 비교</value>
+  </data>
+  <data name="WeekdayShareFormat" xml:space="preserve">
+    <value>활동 {0:P0} | 기록 일수: {1}</value>
+  </data>
+  <data name="WeekdayRankingExplanation" xml:space="preserve">
+    <value>깨어 있는 기록 일수가 더 많거나 활동 비율이 달라야 합니다.</value>
+  </data>
+  <data name="WeekdayAverageFormat" xml:space="preserve">
+    <value>평균 활동 {0} / 깨어 있는 기록 {1}</value>
+  </data>
+  <data name="AllDaysRecorded" xml:space="preserve">
+    <value>7일 모두 기록이 있습니다.</value>
+  </data>
+  <data name="MissingDaysFormat" xml:space="preserve">
+    <value>기록 없음: {0}.</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="WeeklyChartAutomationFormat" xml:space="preserve">
+    <value>{0:D}까지 7일간 활동 및 비활동 시간</value>
+  </data>
+  <data name="HourlyChartAutomationFormat" xml:space="preserve">
+    <value>{0:D}의 시간대별 활동 및 비활동 분</value>
+  </data>
+  <data name="WeekEndingFormat" xml:space="preserve">
+    <value>{0}까지 7일</value>
+  </data>
+  <data name="EmptyDayChartFormat" xml:space="preserve">
+    <value>{0}에 기록된 활동이 없습니다</value>
+  </data>
+  <data name="EmptyWeekChart" xml:space="preserve">
+    <value>이 7일 범위에 기록이 없습니다</value>
+  </data>
+  <data name="HourlyFootnote" xml:space="preserve">
+    <value>공백은 미기록을 뜻합니다. 일광 절약 시간제로 반복되는 시간은 합산됩니다.</value>
+  </data>
+  <data name="DurationHoursFormat" xml:space="preserve">
+    <value>{0}시간 {1}분</value>
+  </data>
+  <data name="DurationMinutesFormat" xml:space="preserve">
+    <value>{0}분 {1}초</value>
+  </data>
+  <data name="DurationSecondsFormat" xml:space="preserve">
+    <value>{0}초</value>
+  </data>
+  <data name="SelectedDayNotificationFormat" xml:space="preserve">
+    <value>{0:D}. 기록된 세션: {1}.</value>
+  </data>
+  <data name="StartupUpdateFailed" xml:space="preserve">
+    <value>로그인 시 시작 설정을 변경할 수 없습니다</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>알 수 없음</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>바탕 화면</value>
+  </data>
+  <data name="ModernWindowsApp" xml:space="preserve">
+    <value>Windows 앱</value>
+  </data>
+  <data name="WindowsExplorer" xml:space="preserve">
+    <value>Windows 탐색기</value>
+  </data>
+  <data name="Notepad" xml:space="preserve">
+    <value>메모장</value>
+  </data>
+  <data name="WindowsShell" xml:space="preserve">
+    <value>Windows 셸</value>
+  </data>
+  <data name="StartMenu" xml:space="preserve">
+    <value>시작 메뉴</value>
+  </data>
+  <data name="WindowsSearch" xml:space="preserve">
+    <value>Windows 검색</value>
+  </data>
+  <data name="LockScreen" xml:space="preserve">
+    <value>잠금 화면</value>
+  </data>
+  <data name="SaveDataErrorFormat" xml:space="preserve">
+    <value>사용 데이터를 저장할 수 없습니다: {0}</value>
+  </data>
+  <data name="ReadDataErrorFormat" xml:space="preserve">
+    <value>사용 데이터를 읽을 수 없습니다: {0}</value>
+  </data>
+  <data name="MissingSegmentsError" xml:space="preserve">
+    <value>사용 데이터에 구간 모음이 없습니다.</value>
+  </data>
+  <data name="ExecutableNotFound" xml:space="preserve">
+    <value>현재 앱 실행 파일을 찾을 수 없습니다.</value>
+  </data>
+  <data name="StartupAlreadyDisabled" xml:space="preserve">
+    <value>로그인 시 실행이 이미 꺼져 있습니다.</value>
+  </data>
+  <data name="StartupFallbackCreatedFormat" xml:space="preserve">
+    <value>예약 작업 생성이 차단되어 현재 사용자의 시작프로그램 실행기를 대신 만들었습니다: {0}</value>
+  </data>
+  <data name="StartupFallbackFailedFormat" xml:space="preserve">
+    <value>{0} 대체 시작프로그램 실행기도 실패했습니다: {1}</value>
+  </data>
+  <data name="TaskSchedulerNotStarted" xml:space="preserve">
+    <value>Windows 작업 스케줄러를 시작할 수 없습니다.</value>
+  </data>
+  <data name="TaskSchedulerExitCodeFormat" xml:space="preserve">
+    <value>작업 스케줄러가 종료 코드 {0}을 반환했습니다.</value>
+  </data>
+  <data name="TaskSchedulerAccessErrorFormat" xml:space="preserve">
+    <value>Windows 작업 스케줄러에 액세스할 수 없습니다: {0}</value>
+  </data>
+  <data name="SystemNotificationsUnavailable" xml:space="preserve">
+    <value>시스템 상태 알림을 사용할 수 없습니다.</value>
+  </data>
+  <data name="PowerHistoryUnavailable" xml:space="preserve">
+    <value>Windows 전원 이력을 사용할 수 없어 원인을 알 수 없는 공백은 미기록으로 남습니다.</value>
+  </data>
+  <data name="DashboardDateFormat" xml:space="preserve">
+    <value>yyyy년 M월 d일 ddd</value>
+  </data>
+  <data name="MonthDayFormat" xml:space="preserve">
+    <value>M월 d일</value>
+  </data>
+  <data name="ChartDayFormat" xml:space="preserve">
+    <value>M/d ddd</value>
+  </data>
+  <data name="DayDetailFormat" xml:space="preserve">
+    <value>M월 d일 dddd</value>
+  </data>
+  <data name="BrandTitle.Text" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>이전 날짜</value>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>이전 날짜 (Alt+왼쪽)</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>다음 날짜</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>다음 날짜 (Alt+오른쪽)</value>
+  </data>
+  <data name="UsageDatePicker.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>선택한 날짜</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>활동 새로 고침</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>새로 고침 (F5)</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>추적 설정</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>추적 설정</value>
+  </data>
+  <data name="SettingsHeading.Text" xml:space="preserve">
+    <value>추적 설정</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>인사이트 정보</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>활동 인사이트 계산 방법</value>
+  </data>
+  <data name="Dashboard.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>활동 대시보드</value>
+  </data>
+  <data name="SelectedDayHeading.Text" xml:space="preserve">
+    <value>선택한 날짜</value>
+  </data>
+  <data name="ChartRange.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>차트 범위</value>
+  </data>
+  <data name="ActiveTrend.Title" xml:space="preserve">
+    <value>활동</value>
+  </data>
+  <data name="InactiveTrend.Title" xml:space="preserve">
+    <value>비활동</value>
+  </data>
+  <data name="ActiveHourly.Title" xml:space="preserve">
+    <value>활동</value>
+  </data>
+  <data name="InactiveHourly.Title" xml:space="preserve">
+    <value>비활동</value>
+  </data>
+  <data name="TimelineHeading.Text" xml:space="preserve">
+    <value>활동 타임라인</value>
+  </data>
+  <data name="ActivityTable.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>활동 타임라인</value>
+  </data>
+  <data name="LanguageTag" xml:space="preserve">
+    <value>ko-KR</value>
+  </data>
+  <data name="Root.Language" xml:space="preserve">
+    <value>ko-KR</value>
+  </data>
+  <data name="Root.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="MostUsedAppTitle" xml:space="preserve"><value>가장 많이 사용한 앱</value></data>
+  <data name="AppActiveTimeFormat" xml:space="preserve"><value>활동 {0}</value></data>
+  <data name="AppActiveShareFormat" xml:space="preserve"><value>활동 시간의 {0:P0}</value></data>
+  <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+</root>

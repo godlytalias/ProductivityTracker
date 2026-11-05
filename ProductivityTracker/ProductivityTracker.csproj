@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>ProductivityTracker</RootNamespace>
+    <AssemblyName>ProductivityTracker</AssemblyName>
+    <AssemblyTitle>Productivity Tracker</AssemblyTitle>
+    <Product>Productivity Tracker</Product>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\ProductivityTracker.ico</ApplicationIcon>
+    <Platforms>x64;ARM64;x86</Platforms>
+    <Platform Condition="'$(Platform)' == '' or '$(Platform)' == 'AnyCPU'">x64</Platform>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifier Condition="'$(Platform)' == 'x64'">win-x64</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(Platform)' == 'x86'">win-x86</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(Platform)' == 'ARM64'">win-arm64</RuntimeIdentifier>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <WindowsPackageType>None</WindowsPackageType>
+    <Configurations>Debug;Release</Configurations>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
+    <WindowsAppSDKVersion Condition="'$(UseExperimentalActivityControls)' != 'true'">2.6.5</WindowsAppSDKVersion>
+    <WindowsAppSDKVersion Condition="'$(UseExperimentalActivityControls)' == 'true'">2.5.4-experimental</WindowsAppSDKVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(UseExperimentalActivityControls)' == 'true'">
+    <NoWarn>$(NoWarn);CS8305</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4654" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="$(WindowsAppSDKVersion)" />
+    <PackageReference Include="Microsoft.Win32.SystemEvents" Version="8.0.0" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests\**\*.cs" />
+    <Compile Remove="MainWindow.ExperimentalControls.cs" Condition="'$(UseExperimentalActivityControls)' != 'true'" />
+    <Compile Remove="MainWindow.StableControls.cs" Condition="'$(UseExperimentalActivityControls)' == 'true'" />
+    <Content Include="Assets\ProductivityTracker.ico" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="Assets\ProductivityTracker-64.png" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseExperimentalActivityControls)' == 'true' and '$(WindowsAppSDKSelfContained)' == 'false'">
+    <!-- Split-control dictionaries use app-relative URIs, so WAPP must fold their PRIs into the app index. -->
+    <Content Include="$(NuGetPackageRoot)microsoft.windowsappsdk.winui\2.3.10-experimental\runtimes-framework\$(RuntimeIdentifier)\native\Microsoft.UI.Xaml.Controls.Tabular.pri"
+             Link="Microsoft.UI.Xaml.Controls.Tabular.pri" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="$(NuGetPackageRoot)microsoft.windowsappsdk.winui\2.3.10-experimental\runtimes-framework\$(RuntimeIdentifier)\native\Microsoft.UI.Xaml.Controls.Charts.pri"
+             Link="Microsoft.UI.Xaml.Controls.Charts.pri" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

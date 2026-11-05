@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>פעיל</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>לא פעיל</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>ללא פעילות</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>נעול</value>
+  </data>
+  <data name="Sleeping" xml:space="preserve">
+    <value>במצב שינה</value>
+  </data>
+  <data name="PoweredOff" xml:space="preserve">
+    <value>כבוי</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>השהיה</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>המשך</value>
+  </data>
+  <data name="NotRecorded" xml:space="preserve">
+    <value>לא תועד</value>
+  </data>
+  <data name="NoAwakeData" xml:space="preserve">
+    <value>אין תיעוד בזמן ערות</value>
+  </data>
+  <data name="SelectedDay" xml:space="preserve">
+    <value>היום שנבחר</value>
+  </data>
+  <data name="Today.Content" xml:space="preserve">
+    <value>היום</value>
+  </data>
+  <data name="PreviousDayName" xml:space="preserve">
+    <value>היום הקודם</value>
+  </data>
+  <data name="PreviousDayTooltip" xml:space="preserve">
+    <value>היום הקודם (Alt+Left)</value>
+  </data>
+  <data name="NextDayName" xml:space="preserve">
+    <value>היום הבא</value>
+  </data>
+  <data name="NextDayTooltip" xml:space="preserve">
+    <value>היום הבא (Alt+Right)</value>
+  </data>
+  <data name="RefreshName" xml:space="preserve">
+    <value>רענון הפעילות</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>רענון (F5)</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>הגדרות מעקב</value>
+  </data>
+  <data name="IdleThreshold.Header" xml:space="preserve">
+    <value>חוסר פעילות לאחר (שניות)</value>
+  </data>
+  <data name="RunAtSignIn.Header" xml:space="preserve">
+    <value>הפעלה בכניסה למערכת</value>
+  </data>
+  <data name="RunAtSignIn.OnContent" xml:space="preserve">
+    <value>מופעל</value>
+  </data>
+  <data name="RunAtSignIn.OffContent" xml:space="preserve">
+    <value>מושבת</value>
+  </data>
+  <data name="StartupExplanation.Text" xml:space="preserve">
+    <value>מפעיל את האוסף ללא חלון בכניסה למערכת. סגירת לוח הבקרה אינה עוצרת אותו.</value>
+  </data>
+  <data name="OpenDataFolder.Content" xml:space="preserve">
+    <value>פתיחת תיקיית הנתונים המקומית</value>
+  </data>
+  <data name="AboutName" xml:space="preserve">
+    <value>על התובנות האלה</value>
+  </data>
+  <data name="AboutTooltip" xml:space="preserve">
+    <value>איך מחושבות תובנות הפעילות</value>
+  </data>
+  <data name="AboutHeading.Text" xml:space="preserve">
+    <value>הבנת הפעילות שלך</value>
+  </data>
+  <data name="AboutActive.Text" xml:space="preserve">
+    <value>פעילות משמעה קלט לאחרונה בזמן המעקב. זהו מדד לזמן אינטראקציה, לא לתפוקה.</value>
+  </data>
+  <data name="AboutMissing.Text" xml:space="preserve">
+    <value>פערים בלתי מוסברים נשארים ללא תיעוד ואינם נחשבים לחוסר פעילות. הדירוג משווה אחוזי פעילות מתוך זמן הערות המתועד; פרטי הכרטיס מציגים את הבסיס.</value>
+  </data>
+  <data name="AboutPeriods.Text" xml:space="preserve">
+    <value>כרטיסי השעות והרצפים מתייחסים ליום שנבחר. דפוסי ימי השבוע מתייחסים ל־28 הימים המסתיימים בו. תיעוד חלקי עשוי להשפיע על ההשוואה.</value>
+  </data>
+  <data name="AboutTime.Text" xml:space="preserve">
+    <value>השעות מוצגות בזמן מקומי ונשמרות ב־UTC. מעבר בין יישומים ופערי דגימה של עד 3 שניות יכולים להשתייך לרצף אחד, אך חוסר פעילות שנצפה מסיים רצף פעיל.</value>
+  </data>
+  <data name="AboutPrivacy.Text" xml:space="preserve">
+    <value>הנתונים נשארים במחשב הזה. כותרות חלונות, כתובות אתרים, הקשות, צילומי מסך ותוכן הלוח אינם מתועדים.</value>
+  </data>
+  <data name="AboutSystemTime.Text" xml:space="preserve">
+    <value>זמן נעילה, שינה וכיבוי מאומת נכלל בזמן הלא פעיל בסיכומים ובתרשימים. זמן שינה וכיבוי אינו נכלל באחוזי הפעילות ובדירוג השעות וימי השבוע. היסטוריית החשמל מבוססת על אירועי Windows; אירועים חסרים או לא ברורים נשארים לא ידועים.</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>לוח הפעילות</value>
+  </data>
+  <data name="PatternsHeading.Text" xml:space="preserve">
+    <value>דפוסים לאורך 28 ימים</value>
+  </data>
+  <data name="PatternsDisclaimer.Text" xml:space="preserve">
+    <value>פעילות אינה תפוקה. זמן שינה וכיבוי אינו נכלל בדירוג.</value>
+  </data>
+  <data name="ActivityHeading.Text" xml:space="preserve">
+    <value>פעילות</value>
+  </data>
+  <data name="ChartRangeName" xml:space="preserve">
+    <value>טווח התרשים</value>
+  </data>
+  <data name="WeekMode.Text" xml:space="preserve">
+    <value>7 ימים</value>
+  </data>
+  <data name="HourlyMode.Text" xml:space="preserve">
+    <value>לפי שעה</value>
+  </data>
+  <data name="DayAxis.Label" xml:space="preserve">
+    <value>יום</value>
+  </data>
+  <data name="HoursAxis.Label" xml:space="preserve">
+    <value>שעות</value>
+  </data>
+  <data name="LocalHourAxis.Label" xml:space="preserve">
+    <value>שעה מקומית</value>
+  </data>
+  <data name="MinutesAxis.Label" xml:space="preserve">
+    <value>דקות</value>
+  </data>
+  <data name="ChartEmptyExplanation.Text" xml:space="preserve">
+    <value>רק פעילות שנדגמה ואירועי חשמל מאומתים של Windows מתועדים.</value>
+  </data>
+  <data name="ShowWeek.Content" xml:space="preserve">
+    <value>הצגת מגמת 7 ימים</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>ציר זמן של פעילות</value>
+  </data>
+  <data name="TimelineEmptyTitle.Text" xml:space="preserve">
+    <value>אין מקטעים מתועדים בתאריך זה</value>
+  </data>
+  <data name="TimelineEmptyExplanation.Text" xml:space="preserve">
+    <value>זמן חסר אינו נספר כחוסר פעילות.</value>
+  </data>
+  <data name="StartColumn.Header" xml:space="preserve">
+    <value>התחלה</value>
+  </data>
+  <data name="EndColumn.Header" xml:space="preserve">
+    <value>סיום</value>
+  </data>
+  <data name="ApplicationColumn.Header" xml:space="preserve">
+    <value>יישום</value>
+  </data>
+  <data name="DurationColumn.Header" xml:space="preserve">
+    <value>משך</value>
+  </data>
+  <data name="StateColumn.Header" xml:space="preserve">
+    <value>מצב</value>
+  </data>
+  <data name="ActiveShareTitle" xml:space="preserve">
+    <value>שיעור הפעילות</value>
+  </data>
+  <data name="MostActiveHourTitle" xml:space="preserve">
+    <value>השעה הפעילה ביותר</value>
+  </data>
+  <data name="LeastActiveHourTitle" xml:space="preserve">
+    <value>השעה הפחות פעילה</value>
+  </data>
+  <data name="LongestActiveTitle" xml:space="preserve">
+    <value>רצף הפעילות הארוך ביותר</value>
+  </data>
+  <data name="LongestInactiveTitle" xml:space="preserve">
+    <value>רצף חוסר הפעילות הארוך ביותר</value>
+  </data>
+  <data name="MostActiveWeekdayTitle" xml:space="preserve">
+    <value>היום הפעיל ביותר בשבוע</value>
+  </data>
+  <data name="LeastActiveWeekdayTitle" xml:space="preserve">
+    <value>היום הפחות פעיל בשבוע</value>
+  </data>
+  <data name="CardAutomationSummary" xml:space="preserve">
+    <value>{0}: {1}. {2}. {3}</value>
+  </data>
+  <data name="SessionCountFormat" xml:space="preserve">
+    <value>מקטעים: {0}</value>
+  </data>
+  <data name="SelectedDayRecordedFormat" xml:space="preserve">
+    <value>{0} | {1} מתועדים | {2}</value>
+  </data>
+  <data name="SelectedDayUnrecordedFormat" xml:space="preserve">
+    <value>{0} | לא תועד</value>
+  </data>
+  <data name="NoTopApp" xml:space="preserve">
+    <value>לא תועד יישום פעיל בחזית.</value>
+  </data>
+  <data name="TopAppFormat" xml:space="preserve">
+    <value>היישום המוביל: {0} ({1} פעילות)</value>
+  </data>
+  <data name="InactiveBreakdownFormat" xml:space="preserve">
+    <value>ללא פעילות {0} | המתנה {1} | נעילה {2} | שינה {3} | כיבוי {4}</value>
+  </data>
+  <data name="BackgroundPaused" xml:space="preserve">
+    <value>המעקב ברקע מושהה</value>
+  </data>
+  <data name="BackgroundActive" xml:space="preserve">
+    <value>המעקב ברקע פעיל</value>
+  </data>
+  <data name="TrackingHere" xml:space="preserve">
+    <value>המעקב פועל ביישום הזה</value>
+  </data>
+  <data name="TrackingPaused" xml:space="preserve">
+    <value>המעקב מושהה</value>
+  </data>
+  <data name="NoActiveInteraction" xml:space="preserve">
+    <value>ללא אינטראקציה פעילה</value>
+  </data>
+  <data name="ActiveAwakeFormat" xml:space="preserve">
+    <value>{0} פעילות / {1} ערות מתועדת</value>
+  </data>
+  <data name="PowerExcluded" xml:space="preserve">
+    <value>זמן שינה וכיבוי אינו נכלל.</value>
+  </data>
+  <data name="NoActiveHour" xml:space="preserve">
+    <value>אין שעה פעילה</value>
+  </data>
+  <data name="NoDifference" xml:space="preserve">
+    <value>אין הבדל ברור</value>
+  </data>
+  <data name="NoActiveStretch" xml:space="preserve">
+    <value>אין רצף פעילות</value>
+  </data>
+  <data name="NoInactiveStretch" xml:space="preserve">
+    <value>אין רצף חוסר פעילות</value>
+  </data>
+  <data name="NoActiveWeekday" xml:space="preserve">
+    <value>אין יום פעיל בשבוע</value>
+  </data>
+  <data name="InsightPeriodFormat" xml:space="preserve">
+    <value>{0} - {1} | ימים עם תיעוד ערות: {2}</value>
+  </data>
+  <data name="HourRangeFormat" xml:space="preserve">
+    <value>{0:00}:00 - {1:00}:00</value>
+  </data>
+  <data name="TimeRangeFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="ActivePercentFormat" xml:space="preserve">
+    <value>{0:P0} פעילות</value>
+  </data>
+  <data name="HourRankingExplanation" xml:space="preserve">
+    <value>שעות חסרות ושעות שינה וכיבוי אינן נכללות; שיעורים זהים אינם מדורגים.</value>
+  </data>
+  <data name="ObservedIntervalsOnly" xml:space="preserve">
+    <value>רק פרקי זמן שנצפו נספרים.</value>
+  </data>
+  <data name="StretchGapExplanation" xml:space="preserve">
+    <value>פערים ארוכים מ־3 שניות מסיימים רצף.</value>
+  </data>
+  <data name="WeekdayComparison" xml:space="preserve">
+    <value>השוואה לאורך 28 ימים</value>
+  </data>
+  <data name="WeekdayShareFormat" xml:space="preserve">
+    <value>{0:P0} פעילות | ימים מתועדים: {1}</value>
+  </data>
+  <data name="WeekdayRankingExplanation" xml:space="preserve">
+    <value>נדרשים יותר ימים עם תיעוד ערות או שיעורי פעילות שונים.</value>
+  </data>
+  <data name="WeekdayAverageFormat" xml:space="preserve">
+    <value>ממוצע {0} פעילות / {1} ערות מתועדת</value>
+  </data>
+  <data name="AllDaysRecorded" xml:space="preserve">
+    <value>לכל שבעת הימים יש תיעוד.</value>
+  </data>
+  <data name="MissingDaysFormat" xml:space="preserve">
+    <value>ללא תיעוד: {0}.</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="WeeklyChartAutomationFormat" xml:space="preserve">
+    <value>שעות פעילות וחוסר פעילות בשבעת הימים המסתיימים ב־{0:D}</value>
+  </data>
+  <data name="HourlyChartAutomationFormat" xml:space="preserve">
+    <value>דקות פעילות וחוסר פעילות לפי שעה ב־{0:D}</value>
+  </data>
+  <data name="WeekEndingFormat" xml:space="preserve">
+    <value>7 ימים עד {0}</value>
+  </data>
+  <data name="EmptyDayChartFormat" xml:space="preserve">
+    <value>לא תועדה פעילות ב־{0}</value>
+  </data>
+  <data name="EmptyWeekChart" xml:space="preserve">
+    <value>אין תיעוד בטווח של שבעת הימים</value>
+  </data>
+  <data name="HourlyFootnote" xml:space="preserve">
+    <value>פערים = ללא תיעוד. שעות חוזרות עקב שעון קיץ מאוחדות.</value>
+  </data>
+  <data name="DurationHoursFormat" xml:space="preserve">
+    <value>{0}ש׳ {1}ד׳</value>
+  </data>
+  <data name="DurationMinutesFormat" xml:space="preserve">
+    <value>{0}ד׳ {1}שנ׳</value>
+  </data>
+  <data name="DurationSecondsFormat" xml:space="preserve">
+    <value>{0}שנ׳</value>
+  </data>
+  <data name="SelectedDayNotificationFormat" xml:space="preserve">
+    <value>{0:D}. מקטעים מתועדים: {1}.</value>
+  </data>
+  <data name="StartupUpdateFailed" xml:space="preserve">
+    <value>לא ניתן לעדכן הפעלה בכניסה למערכת</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>אישור</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>לא ידוע</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>שולחן העבודה</value>
+  </data>
+  <data name="ModernWindowsApp" xml:space="preserve">
+    <value>יישום Windows</value>
+  </data>
+  <data name="WindowsExplorer" xml:space="preserve">
+    <value>סייר Windows</value>
+  </data>
+  <data name="Notepad" xml:space="preserve">
+    <value>פנקס רשימות</value>
+  </data>
+  <data name="WindowsShell" xml:space="preserve">
+    <value>מעטפת Windows</value>
+  </data>
+  <data name="StartMenu" xml:space="preserve">
+    <value>תפריט התחלה</value>
+  </data>
+  <data name="WindowsSearch" xml:space="preserve">
+    <value>חיפוש Windows</value>
+  </data>
+  <data name="LockScreen" xml:space="preserve">
+    <value>מסך נעילה</value>
+  </data>
+  <data name="SaveDataErrorFormat" xml:space="preserve">
+    <value>לא ניתן לשמור את נתוני השימוש: {0}</value>
+  </data>
+  <data name="ReadDataErrorFormat" xml:space="preserve">
+    <value>לא ניתן לקרוא את נתוני השימוש: {0}</value>
+  </data>
+  <data name="MissingSegmentsError" xml:space="preserve">
+    <value>נתוני השימוש אינם מכילים אוסף מקטעים.</value>
+  </data>
+  <data name="ExecutableNotFound" xml:space="preserve">
+    <value>קובץ ההפעלה של היישום לא נמצא.</value>
+  </data>
+  <data name="StartupAlreadyDisabled" xml:space="preserve">
+    <value>הפעלה בכניסה למערכת כבר מושבתת.</value>
+  </data>
+  <data name="StartupFallbackCreatedFormat" xml:space="preserve">
+    <value>יצירת המשימה המתוזמנת נחסמה. במקומה נוצר מפעיל אתחול למשתמש הנוכחי: {0}</value>
+  </data>
+  <data name="StartupFallbackFailedFormat" xml:space="preserve">
+    <value>{0} גם מפעיל האתחול החלופי נכשל: {1}</value>
+  </data>
+  <data name="TaskSchedulerNotStarted" xml:space="preserve">
+    <value>לא ניתן להפעיל את מתזמן המשימות של Windows.</value>
+  </data>
+  <data name="TaskSchedulerExitCodeFormat" xml:space="preserve">
+    <value>מתזמן המשימות החזיר קוד יציאה {0}.</value>
+  </data>
+  <data name="TaskSchedulerAccessErrorFormat" xml:space="preserve">
+    <value>לא ניתן לגשת למתזמן המשימות של Windows: {0}</value>
+  </data>
+  <data name="SystemNotificationsUnavailable" xml:space="preserve">
+    <value>הודעות מצב המערכת אינן זמינות.</value>
+  </data>
+  <data name="PowerHistoryUnavailable" xml:space="preserve">
+    <value>היסטוריית החשמל של Windows אינה זמינה; פערים בלתי מוסברים נשארים ללא תיעוד.</value>
+  </data>
+  <data name="DashboardDateFormat" xml:space="preserve">
+    <value>ddd, d MMM yyyy</value>
+  </data>
+  <data name="MonthDayFormat" xml:space="preserve">
+    <value>d MMM</value>
+  </data>
+  <data name="ChartDayFormat" xml:space="preserve">
+    <value>ddd d/M</value>
+  </data>
+  <data name="DayDetailFormat" xml:space="preserve">
+    <value>dddd, d MMM</value>
+  </data>
+  <data name="BrandTitle.Text" xml:space="preserve">
+    <value>Productivity Tracker</value>
+    <comment>Product name: keep the Productivity Tracker brand unchanged.</comment>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>היום הקודם</value>
+  </data>
+  <data name="PreviousDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>היום הקודם (Alt+Left)</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>היום הבא</value>
+  </data>
+  <data name="NextDay.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>היום הבא (Alt+Right)</value>
+  </data>
+  <data name="UsageDatePicker.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>היום שנבחר</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>רענון הפעילות</value>
+  </data>
+  <data name="Refresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>רענון (F5)</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>הגדרות מעקב</value>
+  </data>
+  <data name="Settings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>הגדרות מעקב</value>
+  </data>
+  <data name="SettingsHeading.Text" xml:space="preserve">
+    <value>הגדרות מעקב</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>על התובנות האלה</value>
+  </data>
+  <data name="About.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>איך מחושבות תובנות הפעילות</value>
+  </data>
+  <data name="Dashboard.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>לוח הפעילות</value>
+  </data>
+  <data name="SelectedDayHeading.Text" xml:space="preserve">
+    <value>היום שנבחר</value>
+  </data>
+  <data name="ChartRange.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>טווח התרשים</value>
+  </data>
+  <data name="ActiveTrend.Title" xml:space="preserve">
+    <value>פעיל</value>
+  </data>
+  <data name="InactiveTrend.Title" xml:space="preserve">
+    <value>לא פעיל</value>
+  </data>
+  <data name="ActiveHourly.Title" xml:space="preserve">
+    <value>פעיל</value>
+  </data>
+  <data name="InactiveHourly.Title" xml:space="preserve">
+    <value>לא פעיל</value>
+  </data>
+  <data name="TimelineHeading.Text" xml:space="preserve">
+    <value>ציר זמן של פעילות</value>
+  </data>
+  <data name="ActivityTable.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>ציר זמן של פעילות</value>
+  </data>
+  <data name="LanguageTag" xml:space="preserve">
+    <value>he-IL</value>
+  </data>
+  <data name="Root.Language" xml:space="preserve">
+    <value>he-IL</value>
+  </data>
+  <data name="Root.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="MostUsedAppTitle" xml:space="preserve"><value>היישום הנפוץ ביותר</value></data>
+  <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} פעילות</value></data>
+  <data name="AppActiveShareFormat" xml:space="preserve"><value>{0:P0} מזמן הפעילות</value></data>
+  <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+</root>

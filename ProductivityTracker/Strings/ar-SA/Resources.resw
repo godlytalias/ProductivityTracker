@@ -343,27 +343,6 @@
   <data name="Desktop" xml:space="preserve">
     <value>سطح المكتب</value>
   </data>
-  <data name="ModernWindowsApp" xml:space="preserve">
-    <value>تطبيق Windows</value>
-  </data>
-  <data name="WindowsExplorer" xml:space="preserve">
-    <value>مستكشف Windows</value>
-  </data>
-  <data name="Notepad" xml:space="preserve">
-    <value>المفكرة</value>
-  </data>
-  <data name="WindowsShell" xml:space="preserve">
-    <value>واجهة Windows</value>
-  </data>
-  <data name="StartMenu" xml:space="preserve">
-    <value>قائمة ابدأ</value>
-  </data>
-  <data name="WindowsSearch" xml:space="preserve">
-    <value>بحث Windows</value>
-  </data>
-  <data name="LockScreen" xml:space="preserve">
-    <value>شاشة القفل</value>
-  </data>
   <data name="SaveDataErrorFormat" xml:space="preserve">
     <value>تعذّر حفظ بيانات الاستخدام: {0}</value>
   </data>
@@ -503,6 +482,4 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>هناك إصدار قديم من أداة الجمع قيد التشغيل. أوقفه من «إدارة المهام»، ثم حاول مجددًا.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>لم تتوقف أداة الجمع في الخلفية في الوقت المحدد.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>ستبقى لوحة المعلومات مفتوحة لمتابعة التتبع. حاول مجددًا أو غيّر إعداد التتبع في الخلفية. {0}</value></data>
-  <data name="RemoteDesktop" xml:space="preserve"><value>سطح المكتب البعيد</value></data>
-  <data name="RemoteDesktopConnection" xml:space="preserve"><value>الاتصال بسطح المكتب البعيد</value></data>
 </root>

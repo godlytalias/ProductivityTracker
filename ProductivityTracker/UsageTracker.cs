@@ -172,8 +172,9 @@ namespace ProductivityTracker
                         idleSeconds < UsageTrackerSettings.GetIdleThresholdSeconds();
                     if (isActive)
                     {
-                        processName = GetForegroundProcessName();
-                        appName = ApplicationNames.FromProcessName(processName);
+                        var application = GetForegroundApplication();
+                        processName = application.ProcessName;
+                        appName = _store.ApplicationNames.Resolve(application);
                     }
                     else
                     {
@@ -320,18 +321,18 @@ namespace ProductivityTracker
             return elapsedMilliseconds / 1000;
         }
 
-        private static string GetForegroundProcessName()
+        private static ApplicationIdentity GetForegroundApplication()
         {
             var foregroundWindow = GetForegroundWindow();
             if (foregroundWindow == IntPtr.Zero)
             {
-                return "desktop";
+                return new ApplicationIdentity("desktop");
             }
 
             _ = GetWindowThreadProcessId(foregroundWindow, out var processId);
             if (processId == 0)
             {
-                return "desktop";
+                return new ApplicationIdentity("desktop");
             }
 
             var processHandle = OpenProcess(
@@ -355,7 +356,8 @@ namespace ProductivityTracker
                         var fileName = Path.GetFileName(path);
                         if (!string.IsNullOrWhiteSpace(fileName))
                         {
-                            return fileName;
+                            return new ApplicationIdentity(fileName, path,
+                                GetProcessPackageName(processHandle), GetProcessAppUserModelId(processHandle));
                         }
                     }
                 }
@@ -367,20 +369,44 @@ namespace ProductivityTracker
 
             try
             {
-                return Path.GetFileName(Process.GetProcessById((int)processId).MainModule?.FileName ?? "Unknown.exe");
+                using var process = Process.GetProcessById((int)processId);
+                var path = process.MainModule?.FileName;
+                return new ApplicationIdentity(Path.GetFileName(path ?? "Unknown.exe"), path);
             }
             catch (ArgumentException)
             {
-                return "desktop";
+                return new ApplicationIdentity("desktop");
             }
             catch (InvalidOperationException)
             {
-                return "desktop";
+                return new ApplicationIdentity("desktop");
             }
             catch (System.ComponentModel.Win32Exception)
             {
-                return "desktop";
+                return new ApplicationIdentity("desktop");
             }
+        }
+
+        private static string? GetProcessPackageName(IntPtr process)
+        {
+            uint size = 0;
+            if (GetPackageFullName(process, ref size, null) != 122)
+            {
+                return null;
+            }
+            var buffer = new StringBuilder((int)size);
+            return GetPackageFullName(process, ref size, buffer) == 0 ? buffer.ToString() : null;
+        }
+
+        private static string? GetProcessAppUserModelId(IntPtr process)
+        {
+            uint size = 0;
+            if (GetApplicationUserModelId(process, ref size, null) != 122)
+            {
+                return null;
+            }
+            var buffer = new StringBuilder((int)size);
+            return GetApplicationUserModelId(process, ref size, buffer) == 0 ? buffer.ToString() : null;
         }
 
         [StructLayout(LayoutKind.Sequential)]
@@ -422,5 +448,11 @@ namespace ProductivityTracker
             uint flags,
             StringBuilder name,
             ref int size);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+        private static extern int GetPackageFullName(IntPtr process, ref uint length, StringBuilder? name);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+        private static extern int GetApplicationUserModelId(IntPtr process, ref uint length, StringBuilder? appId);
     }
 }

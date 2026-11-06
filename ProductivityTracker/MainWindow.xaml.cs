@@ -753,15 +753,6 @@ namespace ProductivityTracker
         {
             "Unknown" => AppStrings.Get("UnknownApp"),
             "desktop" => AppStrings.Get("Desktop"),
-            "Modern Windows App" => AppStrings.Get("ModernWindowsApp"),
-            "Windows Explorer" => AppStrings.Get("WindowsExplorer"),
-            "Notepad" => AppStrings.Get("Notepad"),
-            "Windows Shell" => AppStrings.Get("WindowsShell"),
-            "Start Menu" => AppStrings.Get("StartMenu"),
-            "Windows Search" => AppStrings.Get("WindowsSearch"),
-            "Lock Screen" => AppStrings.Get("LockScreen"),
-            "Remote Desktop" => AppStrings.Get("RemoteDesktop"),
-            "Remote Desktop Connection" => AppStrings.Get("RemoteDesktopConnection"),
             _ => name,
         };
 

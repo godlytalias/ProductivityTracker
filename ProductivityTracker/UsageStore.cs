@@ -20,8 +20,9 @@ namespace ProductivityTracker
         {
         }
 
-        internal UsageStore(string dataFolder)
+        internal UsageStore(string dataFolder, ApplicationNameResolver? applicationNames = null)
         {
+            ApplicationNames = applicationNames ?? ProductivityTracker.ApplicationNames.Current;
             DataFolder = dataFolder;
             DataFilePath = Path.Combine(DataFolder, "usage.json");
             Load();
@@ -32,6 +33,7 @@ namespace ProductivityTracker
         public string DataFilePath { get; }
 
         public string? LastError { get; private set; }
+        internal ApplicationNameResolver ApplicationNames { get; }
 
         internal FileStream? TryAcquireCollectorLease()
         {

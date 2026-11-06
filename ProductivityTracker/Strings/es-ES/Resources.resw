@@ -343,27 +343,6 @@
   <data name="Desktop" xml:space="preserve">
     <value>Escritorio</value>
   </data>
-  <data name="ModernWindowsApp" xml:space="preserve">
-    <value>Aplicación de Windows</value>
-  </data>
-  <data name="WindowsExplorer" xml:space="preserve">
-    <value>Explorador de Windows</value>
-  </data>
-  <data name="Notepad" xml:space="preserve">
-    <value>Bloc de notas</value>
-  </data>
-  <data name="WindowsShell" xml:space="preserve">
-    <value>Shell de Windows</value>
-  </data>
-  <data name="StartMenu" xml:space="preserve">
-    <value>Menú Inicio</value>
-  </data>
-  <data name="WindowsSearch" xml:space="preserve">
-    <value>Búsqueda de Windows</value>
-  </data>
-  <data name="LockScreen" xml:space="preserve">
-    <value>Pantalla de bloqueo</value>
-  </data>
   <data name="SaveDataErrorFormat" xml:space="preserve">
     <value>No se pudieron guardar los datos de uso: {0}</value>
   </data>
@@ -503,6 +482,4 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>Se está ejecutando una versión anterior del recopilador. Detenla en el Administrador de tareas y vuelve a intentarlo.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>El recopilador en segundo plano no se detuvo a tiempo.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>El panel seguirá abierto para continuar el registro. Vuelve a intentarlo o cambia la configuración de registro en segundo plano. {0}</value></data>
-  <data name="RemoteDesktop" xml:space="preserve"><value>Escritorio remoto</value></data>
-  <data name="RemoteDesktopConnection" xml:space="preserve"><value>Conexión a Escritorio remoto</value></data>
 </root>

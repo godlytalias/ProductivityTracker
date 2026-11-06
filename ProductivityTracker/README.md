@@ -8,6 +8,7 @@ Productivity Tracker is a standalone WinUI desktop app that tracks foreground ap
 - Canvas-based seven-day column and selected-day hourly line charts, with gaps for unrecorded periods
 - A native chart-range selector in the same chart area
 - A read-only ListView timeline with start time, end time, application, duration, and state
+- App names from installed package metadata or executable descriptions, without a per-app alias list
 - Responsive dashboard cards grouped into selected-day insights and 28-day weekday patterns
 - Activity-based insights: active share, peak and quiet recorded hours, longest active/inactive stretches, and peak/quiet weekdays
 - A most-used-app card with selected-day active duration and share of active time
@@ -78,6 +79,12 @@ The original clock-and-checkmark artwork is in `Assets`, including an editable S
 taskbar, and dashboard.
 
 ## Privacy and tracking behavior
+
+Application names are resolved asynchronously from Windows package app entries
+and executable version information. Historical raw names are resolved through
+installed package registrations, running executables, and Windows App Paths.
+Cached misses are retried; inaccessible or removed apps keep their recorded name.
+Executable paths and package identities used for lookup are not stored in history.
 
 The app uses Windows idle-input and foreground-window APIs. It stores process names, activity state, and timestamps under `%LOCALAPPDATA%\ProductivityTracker`. It does not record window titles, keystrokes, typed content, URLs, screenshots, or clipboard data.
 

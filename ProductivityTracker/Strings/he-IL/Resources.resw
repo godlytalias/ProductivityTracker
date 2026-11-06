@@ -343,27 +343,6 @@
   <data name="Desktop" xml:space="preserve">
     <value>שולחן העבודה</value>
   </data>
-  <data name="ModernWindowsApp" xml:space="preserve">
-    <value>יישום Windows</value>
-  </data>
-  <data name="WindowsExplorer" xml:space="preserve">
-    <value>סייר Windows</value>
-  </data>
-  <data name="Notepad" xml:space="preserve">
-    <value>פנקס רשימות</value>
-  </data>
-  <data name="WindowsShell" xml:space="preserve">
-    <value>מעטפת Windows</value>
-  </data>
-  <data name="StartMenu" xml:space="preserve">
-    <value>תפריט התחלה</value>
-  </data>
-  <data name="WindowsSearch" xml:space="preserve">
-    <value>חיפוש Windows</value>
-  </data>
-  <data name="LockScreen" xml:space="preserve">
-    <value>מסך נעילה</value>
-  </data>
   <data name="SaveDataErrorFormat" xml:space="preserve">
     <value>לא ניתן לשמור את נתוני השימוש: {0}</value>
   </data>
@@ -503,6 +482,4 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>גרסה ישנה של האוסף פועלת. עצור אותה במנהל המשימות ונסה שוב.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>האוסף ברקע לא נעצר בזמן.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>לוח הבקרה יישאר פתוח כדי שהמעקב יוכל להימשך. נסה שוב או שנה את הגדרת המעקב ברקע. {0}</value></data>
-  <data name="RemoteDesktop" xml:space="preserve"><value>שולחן עבודה מרוחק</value></data>
-  <data name="RemoteDesktopConnection" xml:space="preserve"><value>חיבור לשולחן עבודה מרוחק</value></data>
 </root>

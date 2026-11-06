@@ -343,27 +343,6 @@
   <data name="Desktop" xml:space="preserve">
     <value>桌面</value>
   </data>
-  <data name="ModernWindowsApp" xml:space="preserve">
-    <value>Windows应用</value>
-  </data>
-  <data name="WindowsExplorer" xml:space="preserve">
-    <value>Windows资源管理器</value>
-  </data>
-  <data name="Notepad" xml:space="preserve">
-    <value>记事本</value>
-  </data>
-  <data name="WindowsShell" xml:space="preserve">
-    <value>Windows外壳</value>
-  </data>
-  <data name="StartMenu" xml:space="preserve">
-    <value>开始菜单</value>
-  </data>
-  <data name="WindowsSearch" xml:space="preserve">
-    <value>Windows搜索</value>
-  </data>
-  <data name="LockScreen" xml:space="preserve">
-    <value>锁屏</value>
-  </data>
   <data name="SaveDataErrorFormat" xml:space="preserve">
     <value>无法保存使用数据：{0}</value>
   </data>
@@ -503,6 +482,4 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>旧版采集器正在运行。请在任务管理器中将其停止，然后重试。</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>后台采集器未能及时停止。</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>仪表板将保持打开，以便继续跟踪。请重试或更改后台跟踪设置。{0}</value></data>
-  <data name="RemoteDesktop" xml:space="preserve"><value>远程桌面</value></data>
-  <data name="RemoteDesktopConnection" xml:space="preserve"><value>远程桌面连接</value></data>
 </root>

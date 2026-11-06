@@ -343,27 +343,6 @@
   <data name="Desktop" xml:space="preserve">
     <value>Bureau</value>
   </data>
-  <data name="ModernWindowsApp" xml:space="preserve">
-    <value>Application Windows</value>
-  </data>
-  <data name="WindowsExplorer" xml:space="preserve">
-    <value>Explorateur Windows</value>
-  </data>
-  <data name="Notepad" xml:space="preserve">
-    <value>Bloc-notes</value>
-  </data>
-  <data name="WindowsShell" xml:space="preserve">
-    <value>Interface Windows</value>
-  </data>
-  <data name="StartMenu" xml:space="preserve">
-    <value>Menu Démarrer</value>
-  </data>
-  <data name="WindowsSearch" xml:space="preserve">
-    <value>Recherche Windows</value>
-  </data>
-  <data name="LockScreen" xml:space="preserve">
-    <value>Écran de verrouillage</value>
-  </data>
   <data name="SaveDataErrorFormat" xml:space="preserve">
     <value>Impossible d’enregistrer les données d’utilisation : {0}</value>
   </data>
@@ -503,6 +482,4 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>Une ancienne version du collecteur est en cours d’exécution. Arrêtez-la dans le Gestionnaire des tâches, puis réessayez.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>Le collecteur en arrière-plan ne s’est pas arrêté à temps.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>Le tableau de bord restera ouvert pour poursuivre le suivi. Réessayez ou modifiez le paramètre de suivi en arrière-plan. {0}</value></data>
-  <data name="RemoteDesktop" xml:space="preserve"><value>Bureau à distance</value></data>
-  <data name="RemoteDesktopConnection" xml:space="preserve"><value>Connexion Bureau à distance</value></data>
 </root>

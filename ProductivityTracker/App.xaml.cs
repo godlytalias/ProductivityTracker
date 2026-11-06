@@ -48,6 +48,7 @@ namespace ProductivityTracker
             {
                 Log("OnLaunched.");
                 AppStrings.Initialize();
+                ApplicationNames.Initialize(new WindowsApplicationMetadata().LookupAsync);
                 if (Environment.GetCommandLineArgs().Concat(
                     args.Arguments.Split(' ', StringSplitOptions.RemoveEmptyEntries)).Any(argument =>
                         string.Equals(argument, "--worker", StringComparison.OrdinalIgnoreCase)))

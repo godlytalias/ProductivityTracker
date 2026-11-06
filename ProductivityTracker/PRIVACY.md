@@ -28,7 +28,9 @@ The app runs with normal desktop-user permissions, declared as `runFullTrust` in
 
 Usage history, preferences, and diagnostic logs are stored locally, normally in `%LOCALAPPDATA%\ProductivityTracker`. Use **Tracking settings > Open local data folder** to find the app's data.
 
-There is no automatic expiration period. Information remains until you delete it. The app does not apply additional encryption to these files; protection depends on your Windows account, file permissions, and device security. Other software or users with sufficient access to your device may be able to read them.
+Detailed activity history is retained for one calendar month, starting at local midnight on the corresponding date in the previous month. Older intervals are automatically removed; intervals crossing that boundary are clipped to the retained period. This also applies to previously stored history when the app loads it and next saves it with exclusive storage access.
+
+Diagnostic logs rotate at 1 MiB per file, with at most three archived files in addition to the current log. Preferences remain until you change or delete them. The app does not apply additional encryption to these files; protection depends on your Windows account, file permissions, and device security. Other software or users with sufficient access to your device may be able to read them.
 
 ## Background tracking and your controls
 

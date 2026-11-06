@@ -49,12 +49,26 @@ namespace ProductivityTracker
         private bool _preparingToClose;
         private bool _closeApproved;
         private Task _startupUpdateTask = Task.CompletedTask;
+        private Task _refreshTask = Task.CompletedTask;
+        private bool _refreshing;
+        private bool _refreshAgain;
+        private bool _historyReady;
         private bool _restoringDate;
         private bool _hasDayData;
         private bool _hasWeekData;
         private string _weekFootnote = string.Empty;
         private FrameworkElement _weeklyChart = null!;
         private FrameworkElement _hourlyChart = null!;
+
+        private sealed record HistorySnapshot(
+            bool Paused,
+            bool WorkerRunning,
+            DailyUsageSummary Summary,
+            IReadOnlyList<UsageSegment> Sessions,
+            ActivityInsights Insights,
+            DailyUsageSummary[] Week,
+            string? Error,
+            string? Warning);
 
         public ObservableCollection<ActivityRow> Sessions { get; } = new();
 
@@ -69,7 +83,7 @@ namespace ProductivityTracker
             AppWindow.Closing += AppWindow_Closing;
             SynchronizeSettings();
 
-            _store = new UsageStore();
+            _store = new UsageStore(loadImmediately: false);
             _tracker = new UsageTracker(_store)
             {
                 IdleThresholdSeconds = UsageTrackerSettings.GetIdleThresholdSeconds(),
@@ -77,6 +91,7 @@ namespace ProductivityTracker
             _tracker.UsageChanged += Tracker_UsageChanged;
             _userPaused = UsageTrackerSettings.IsPaused();
             _backgroundWorkerRunning = BackgroundWorkerManager.IsRunning();
+            TrackingButton.Content = AppStrings.Get(_userPaused ? "Resume" : "Pause");
 
             _refreshTimer = DispatcherQueue.CreateTimer();
             _refreshTimer.Interval = TimeSpan.FromSeconds(2);
@@ -92,6 +107,7 @@ namespace ProductivityTracker
             CreateCards(WeekdayCardsGrid, _weekdayCards);
             InitializeActivityControls();
             UsageDatePicker.MaxDate = new DateTimeOffset(DateTime.Today);
+            UsageDatePicker.MinDate = new DateTimeOffset(DateTime.Today.AddMonths(-1));
             UsageDatePicker.Date = new DateTimeOffset(_selectedDate);
             _viewReady = true;
             ApplyChartBrushes();
@@ -124,85 +140,131 @@ namespace ProductivityTracker
             RefreshData();
         }
 
-        private void RefreshTrackingState()
+        private HistorySnapshot ReadHistorySnapshot(DateTime selectedDate)
         {
-            _userPaused = UsageTrackerSettings.IsPaused();
-            _backgroundWorkerRunning = BackgroundWorkerManager.IsRunning();
-            if (_backgroundWorkerRunning)
+            var paused = UsageTrackerSettings.IsPaused();
+            var workerRunning = BackgroundWorkerManager.IsRunning();
+            if (workerRunning || paused)
             {
                 _tracker.Stop();
+                if (!_tracker.HasCollectorLease)
+                {
+                    _store.ReloadFromDisk();
+                    if (!workerRunning)
+                    {
+                        _store.SaveRetentionIfIdle();
+                    }
+                }
             }
-            else if (_userPaused)
+            else
             {
-                _tracker.Stop();
+                if (!_tracker.IsTracking)
+                {
+                    _tracker.Start();
+                }
+                if (!_tracker.IsTracking)
+                {
+                    _store.ReloadFromDisk();
+                }
             }
-            else if (!_tracker.IsTracking)
-            {
-                _tracker.Start();
-            }
-            TrackingButton.Content = AppStrings.Get(_userPaused ? "Resume" : "Pause");
+            var week = Enumerable.Range(0, 7)
+                .Select(index => _store.GetDailySummary(selectedDate.AddDays(index - 6)))
+                .ToArray();
+            return new HistorySnapshot(paused, workerRunning,
+                _store.GetDailySummary(selectedDate),
+                _store.GetSessions(selectedDate),
+                UsageAnalytics.Analyze(_store.GetSessions(
+                    selectedDate.AddDays(1 - UsageAnalytics.HistoryDays), selectedDate.AddDays(1)), selectedDate),
+                week, _store.LastError, _tracker.SystemHistoryWarning);
         }
 
-        private void RefreshData()
+        private async void RefreshData()
         {
             if (!_viewReady || _isClosing || _preparingToClose)
             {
                 return;
             }
-
+            if (_refreshing)
+            {
+                _refreshAgain = true;
+                return;
+            }
+            _refreshing = true;
+            _refreshAgain = false;
             try
             {
-                RefreshTrackingState();
-                if (_backgroundWorkerRunning)
-                {
-                    _store.ReloadFromDisk();
-                }
-
-                var summary = _store.GetDailySummary(_selectedDate);
-                var sessions = _store.GetSessions(_selectedDate);
-                var recordedSeconds = summary.ActiveSeconds + summary.InactiveSeconds;
-                SelectedDateText.Text = recordedSeconds > 0
-                    ? AppStrings.Format("SelectedDayRecordedFormat",
-                        AppStrings.Date(_selectedDate, "DashboardDateFormat"), FormatDuration(recordedSeconds),
-                        AppStrings.Format("SessionCountFormat", summary.SessionCount))
-                    : AppStrings.Format("SelectedDayUnrecordedFormat",
-                        AppStrings.Date(_selectedDate, "DashboardDateFormat"));
-                InactiveBreakdownText.Text = recordedSeconds > 0
-                    ? AppStrings.Format("InactiveBreakdownFormat", FormatDuration(summary.InactiveSeconds),
-                        FormatDuration(summary.IdleSeconds), FormatDuration(summary.LockedSeconds),
-                        FormatDuration(summary.SleepSeconds), FormatDuration(summary.PoweredOffSeconds))
-                    : string.Empty;
-                InactiveBreakdownText.Visibility = recordedSeconds > 0 ? Visibility.Visible : Visibility.Collapsed;
-                SessionCountText.Text = summary.SessionCount > 0
-                    ? AppStrings.Format("SessionCountFormat", summary.SessionCount) : AppStrings.Get("NotRecorded");
-                UpdateSessions(sessions);
-
-                StatusText.Text = _backgroundWorkerRunning
-                    ? AppStrings.Get(_userPaused ? "BackgroundPaused" : "BackgroundActive")
-                    : AppStrings.Get(_tracker.IsTracking ? "TrackingHere" : "TrackingPaused");
-                if (!string.IsNullOrWhiteSpace(_store.LastError))
-                {
-                    StatusText.Text += " - " + _store.LastError;
-                }
-                if (!string.IsNullOrWhiteSpace(_tracker.SystemHistoryWarning))
-                {
-                    StatusText.Text += " - " + _tracker.SystemHistoryWarning;
-                }
-
-                var insights = UsageAnalytics.Analyze(
-                    _store.GetSessions(
-                        _selectedDate.AddDays(1 - UsageAnalytics.HistoryDays),
-                        _selectedDate.AddDays(1)),
-                    _selectedDate);
-                UpdateCards(insights, summary);
-                UpdateCharts(insights);
-                UpdateDateNavigation();
+                _refreshTask = RefreshDataAsync(_selectedDate);
+                await _refreshTask;
             }
             catch (Exception ex)
             {
                 App.Log("RefreshData failed: " + ex);
                 throw;
             }
+            finally
+            {
+                _refreshing = false;
+                if (_refreshAgain && !_isClosing && !_preparingToClose)
+                {
+                    DispatcherQueue.TryEnqueue(RefreshData);
+                }
+            }
+        }
+
+        private async Task RefreshDataAsync(DateTime selectedDate)
+        {
+            if (!_historyReady || _sessionDate != selectedDate)
+            {
+                StatusText.Text = AppStrings.Get("LoadingHistory");
+            }
+            var snapshot = await Task.Run(() => ReadHistorySnapshot(selectedDate));
+            if (_isClosing || _preparingToClose)
+            {
+                return;
+            }
+            _historyReady = true;
+            if (selectedDate != _selectedDate)
+            {
+                _refreshAgain = true;
+                return;
+            }
+            _userPaused = snapshot.Paused;
+            _backgroundWorkerRunning = snapshot.WorkerRunning;
+            TrackingButton.Content = AppStrings.Get(_userPaused ? "Resume" : "Pause");
+            var summary = snapshot.Summary;
+            var recordedSeconds = summary.ActiveSeconds + summary.InactiveSeconds;
+            SelectedDateText.Text = recordedSeconds > 0
+                ? AppStrings.Format("SelectedDayRecordedFormat",
+                    AppStrings.Date(_selectedDate, "DashboardDateFormat"), FormatDuration(recordedSeconds),
+                    AppStrings.Format("SessionCountFormat", summary.SessionCount))
+                : AppStrings.Format("SelectedDayUnrecordedFormat",
+                    AppStrings.Date(_selectedDate, "DashboardDateFormat"));
+            InactiveBreakdownText.Text = recordedSeconds > 0
+                ? AppStrings.Format("InactiveBreakdownFormat", FormatDuration(summary.InactiveSeconds),
+                    FormatDuration(summary.IdleSeconds), FormatDuration(summary.LockedSeconds),
+                    FormatDuration(summary.SleepSeconds), FormatDuration(summary.PoweredOffSeconds))
+                : string.Empty;
+            InactiveBreakdownText.Visibility = recordedSeconds > 0 ? Visibility.Visible : Visibility.Collapsed;
+            SessionCountText.Text = summary.SessionCount > 0
+                ? AppStrings.Format("SessionCountFormat", summary.SessionCount) : AppStrings.Get("NotRecorded");
+            UpdateSessions(snapshot.Sessions);
+
+            StatusText.Text = _backgroundWorkerRunning
+                ? AppStrings.Get(_userPaused ? "BackgroundPaused" : "BackgroundActive")
+                : AppStrings.Get(_tracker.IsTracking ? "TrackingHere" : "TrackingPaused");
+            if (!string.IsNullOrWhiteSpace(snapshot.Error))
+            {
+                StatusText.Text += " - " + snapshot.Error;
+            }
+            if (!string.IsNullOrWhiteSpace(snapshot.Warning))
+            {
+                StatusText.Text += " - " + snapshot.Warning;
+            }
+
+            var insights = snapshot.Insights;
+            UpdateCards(insights, summary);
+            UpdateCharts(insights, snapshot.Week);
+            UpdateDateNavigation();
         }
 
         private void UpdateSessions(IReadOnlyList<UsageSegment> sessions)
@@ -330,7 +392,7 @@ namespace ProductivityTracker
                 weekday != null);
         }
 
-        private void UpdateCharts(ActivityInsights insights)
+        private void UpdateCharts(ActivityInsights insights, IReadOnlyList<DailyUsageSummary> week)
         {
             var days = new string[7];
             var active = new double[7];
@@ -341,7 +403,7 @@ namespace ProductivityTracker
             for (var index = 0; index < days.Length; index++)
             {
                 var day = _selectedDate.AddDays(index - 6);
-                var summary = _store.GetDailySummary(day);
+                var summary = week[index];
                 days[index] = AppStrings.Date(day, "ChartDayFormat");
                 active[index] = summary.ActiveSeconds / 3600;
                 inactive[index] = summary.InactiveSeconds / 3600;
@@ -469,6 +531,7 @@ namespace ProductivityTracker
             }
             var scale = Math.Max(1, _uiSettings.TextScaleFactor);
             var width = Math.Min(1800, PageScroller.ActualWidth);
+            DashboardWorkspace.Width = width;
             var effectiveWidth = width / scale;
             var wide = effectiveWidth >= 1600;
             var sideGroups = effectiveWidth >= 1050;
@@ -604,7 +667,8 @@ namespace ProductivityTracker
 
         private void SetSelectedDate(DateTime date)
         {
-            var next = date.Date > DateTime.Today ? DateTime.Today : date.Date;
+            var next = date.Date > DateTime.Today ? DateTime.Today
+                : date.Date < DateTime.Today.AddMonths(-1) ? DateTime.Today.AddMonths(-1) : date.Date;
             if (UsageDatePicker.Date?.Date != next)
             {
                 UsageDatePicker.Date = new DateTimeOffset(next);
@@ -613,6 +677,8 @@ namespace ProductivityTracker
 
         private void UpdateDateNavigation()
         {
+            UsageDatePicker.MinDate = new DateTimeOffset(DateTime.Today.AddMonths(-1));
+            PreviousDayButton.IsEnabled = _selectedDate > DateTime.Today.AddMonths(-1);
             NextDayButton.IsEnabled = _selectedDate < DateTime.Today;
             TodayButton.IsEnabled = _selectedDate != DateTime.Today;
             UsageDatePicker.MaxDate = new DateTimeOffset(DateTime.Today);
@@ -805,9 +871,10 @@ namespace ProductivityTracker
             _refreshTimer.Stop();
             try
             {
+                await _refreshTask;
                 await _startupUpdateTask;
-                var wasTrackingHere = _tracker.IsTracking;
-                _tracker.Stop();
+                var wasTrackingHere = _tracker.IsTracking || _tracker.HasCollectorLease;
+                await Task.Run(_tracker.Stop);
                 var error = wasTrackingHere && _store.LastError != null
                     ? _store.LastError
                     : UsageTrackerSettings.GetKeepTrackingAfterClosing()

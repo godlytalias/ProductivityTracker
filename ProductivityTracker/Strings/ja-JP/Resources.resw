@@ -40,6 +40,9 @@
   <data name="Resume" xml:space="preserve">
     <value>再開</value>
   </data>
+  <data name="LoadingHistory" xml:space="preserve">
+    <value>アクティビティ履歴を読み込んでいます...</value>
+  </data>
   <data name="NotRecorded" xml:space="preserve">
     <value>記録なし</value>
   </data>

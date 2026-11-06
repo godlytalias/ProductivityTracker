@@ -33,6 +33,7 @@
 **/screenshots/
 **/logs/
 *.log
+*.log.*
 *.dmp
 *.mdmp
 *.hdmp

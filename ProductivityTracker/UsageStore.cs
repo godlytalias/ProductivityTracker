@@ -10,22 +10,33 @@ namespace ProductivityTracker
     {
         private readonly object _gate = new();
         private readonly List<UsageSegment> _segments = new();
+        private readonly TimeProvider _clock;
         private UsageSegment? _currentSegment;
         private bool _storageBlocked;
-        public DateTime TrackingStartedUtc { get; private set; } = DateTime.UtcNow;
+        private bool _historyLoaded;
+        private bool _retentionChanged;
+        private DateTime _loadedWriteTimeUtc;
+        private long _loadedLength = -1;
+        public DateTime TrackingStartedUtc { get; private set; }
 
-        public UsageStore() : this(Path.Combine(
+        public UsageStore(bool loadImmediately = true) : this(Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "ProductivityTracker"))
+            "ProductivityTracker"), loadImmediately: loadImmediately)
         {
         }
 
-        internal UsageStore(string dataFolder, ApplicationNameResolver? applicationNames = null)
+        internal UsageStore(string dataFolder, ApplicationNameResolver? applicationNames = null,
+            TimeProvider? clock = null, bool loadImmediately = true)
         {
             ApplicationNames = applicationNames ?? ProductivityTracker.ApplicationNames.Current;
+            _clock = clock ?? TimeProvider.System;
+            TrackingStartedUtc = _clock.GetUtcNow().UtcDateTime;
             DataFolder = dataFolder;
             DataFilePath = Path.Combine(DataFolder, "usage.json");
-            Load();
+            if (loadImmediately)
+            {
+                ReloadFromDisk(true);
+            }
         }
 
         public string DataFolder { get; }
@@ -44,7 +55,17 @@ namespace ProductivityTracker
                 lease = new FileStream(Path.Combine(DataFolder, "collector.lock"),
                     FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
                 // Reload only after the previous writer has flushed and released its lease.
-                ReloadFromDisk();
+                ReloadFromDisk(true);
+                if (_storageBlocked || !_historyLoaded)
+                {
+                    lease.Dispose();
+                    return null;
+                }
+                if (_retentionChanged && !Flush())
+                {
+                    lease.Dispose();
+                    return null;
+                }
                 EndCurrentAtLastSample();
                 return lease;
             }
@@ -128,13 +149,14 @@ namespace ProductivityTracker
         {
             lock (_gate)
             {
-                if (_storageBlocked)
+                if (_storageBlocked || !_historyLoaded)
                 {
                     return false;
                 }
 
                 try
                 {
+                    PruneHistory();
                     Directory.CreateDirectory(DataFolder);
                     var data = new UsageDataFile
                     {
@@ -151,6 +173,10 @@ namespace ProductivityTracker
                     File.WriteAllText(tempPath, json);
 
                     File.Move(tempPath, DataFilePath, true);
+                    var saved = new FileInfo(DataFilePath);
+                    _loadedWriteTimeUtc = saved.LastWriteTimeUtc;
+                    _loadedLength = saved.Length;
+                    _retentionChanged = false;
                     LastError = null;
                     return true;
                 }
@@ -171,6 +197,7 @@ namespace ProductivityTracker
         {
             lock (_gate)
             {
+                PruneHistory();
                 var clipped = intervals.Select(interval => interval with
                 {
                     StartUtc = interval.StartUtc < TrackingStartedUtc ? TrackingStartedUtc : interval.StartUtc,
@@ -195,22 +222,38 @@ namespace ProductivityTracker
             }
         }
 
-        public void ReloadFromDisk()
+        public void ReloadFromDisk(bool force = false)
         {
             lock (_gate)
             {
                 try
                 {
-                    if (!File.Exists(DataFilePath))
+                    var file = new FileInfo(DataFilePath);
+                    if (!file.Exists)
                     {
+                        _historyLoaded = true;
+                        _storageBlocked = false;
+                        _loadedLength = -1;
+                        _loadedWriteTimeUtc = default;
+                        PruneHistory();
+                        LastError = null;
                         return;
                     }
 
-                    var json = File.ReadAllText(DataFilePath);
-                    var data = JsonSerializer.Deserialize(json, StorageJsonContext.Default.UsageDataFile);
+                    var writeTime = file.LastWriteTimeUtc;
+                    var length = file.Length;
+                    if (!force && _historyLoaded && !_storageBlocked &&
+                        writeTime == _loadedWriteTimeUtc && length == _loadedLength)
+                    {
+                        PruneHistory();
+                        return;
+                    }
+                    using var stream = new FileStream(DataFilePath, FileMode.Open, FileAccess.Read,
+                        FileShare.ReadWrite | FileShare.Delete);
+                    var data = JsonSerializer.Deserialize(stream, StorageJsonContext.Default.UsageDataFile);
                     if (data?.Segments == null)
                     {
-                        return;
+                        throw new JsonException(AppStrings.Get("MissingSegmentsError"));
                     }
 
                     _segments.Clear();
@@ -221,18 +264,27 @@ namespace ProductivityTracker
                     _storageBlocked = false;
                     TrackingStartedUtc = data.TrackingStartedUtc ??
                         (_segments.Count > 0 ? _segments.Min(segment => segment.StartUtc) : TrackingStartedUtc);
+                    _currentSegment = null;
+                    _historyLoaded = true;
+                    _retentionChanged = false;
+                    _loadedWriteTimeUtc = writeTime;
+                    _loadedLength = length;
+                    PruneHistory();
                     LastError = null;
                 }
                 catch (IOException ex)
                 {
+                    _storageBlocked = true;
                     LastError = AppStrings.Format("ReadDataErrorFormat", ex.Message);
                 }
                 catch (UnauthorizedAccessException ex)
                 {
+                    _storageBlocked = true;
                     LastError = AppStrings.Format("ReadDataErrorFormat", ex.Message);
                 }
                 catch (JsonException ex)
                 {
+                    _storageBlocked = true;
                     LastError = AppStrings.Format("ReadDataErrorFormat", ex.Message);
                 }
             }
@@ -360,47 +412,51 @@ namespace ProductivityTracker
                 .ToList();
         }
 
-        private void Load()
+        internal void SaveRetentionIfIdle()
         {
-            try
+            lock (_gate)
             {
-                Directory.CreateDirectory(DataFolder);
-                if (!File.Exists(DataFilePath))
+                PruneHistory();
+                if (!_historyLoaded || !_retentionChanged)
                 {
                     return;
                 }
+            }
+            using var lease = TryAcquireCollectorLease();
+        }
 
-                var json = File.ReadAllText(DataFilePath);
-                var data = JsonSerializer.Deserialize(json, StorageJsonContext.Default.UsageDataFile);
-                if (data?.Segments == null)
+        private void PruneHistory()
+        {
+            var localCutoff = _clock.GetLocalNow().Date.AddMonths(-1);
+            while (_clock.LocalTimeZone.IsInvalidTime(localCutoff))
+            {
+                localCutoff = localCutoff.AddMinutes(1);
+            }
+            var cutoff = _clock.LocalTimeZone.IsAmbiguousTime(localCutoff)
+                ? new DateTimeOffset(localCutoff, _clock.LocalTimeZone.GetAmbiguousTimeOffsets(localCutoff).Max()).UtcDateTime
+                : TimeZoneInfo.ConvertTimeToUtc(localCutoff, _clock.LocalTimeZone);
+            _segments.RemoveAll(segment =>
+            {
+                if (segment.EndUtc <= cutoff)
                 {
-                    throw new JsonException(AppStrings.Get("MissingSegmentsError"));
+                    if (ReferenceEquals(segment, _currentSegment))
+                    {
+                        _currentSegment = null;
+                    }
+                    _retentionChanged = true;
+                    return true;
                 }
-
-                lock (_gate)
+                if (segment.StartUtc < cutoff)
                 {
-                    _segments.AddRange(
-                        data.Segments.Where(segment =>
-                            segment.StartUtc != default &&
-                            segment.EndUtc >= segment.StartUtc));
-                    TrackingStartedUtc = data.TrackingStartedUtc ??
-                        (_segments.Count > 0 ? _segments.Min(segment => segment.StartUtc) : TrackingStartedUtc);
+                    segment.StartUtc = cutoff;
+                    _retentionChanged = true;
                 }
-            }
-            catch (IOException ex)
+                return false;
+            });
+            if (TrackingStartedUtc < cutoff)
             {
-                _storageBlocked = true;
-                LastError = AppStrings.Format("ReadDataErrorFormat", ex.Message);
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                _storageBlocked = true;
-                LastError = AppStrings.Format("ReadDataErrorFormat", ex.Message);
-            }
-            catch (JsonException ex)
-            {
-                _storageBlocked = true;
-                LastError = AppStrings.Format("ReadDataErrorFormat", ex.Message);
+                TrackingStartedUtc = cutoff;
+                _retentionChanged = true;
             }
         }
     }

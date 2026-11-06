@@ -35,6 +35,16 @@ namespace ProductivityTracker
         }
 
         public bool IsTracking { get; private set; }
+        internal bool HasCollectorLease
+        {
+            get
+            {
+                lock (_stateGate)
+                {
+                    return _collectorLease != null;
+                }
+            }
+        }
         private string? _notificationWarning;
         private string? _historyWarning;
         public string? SystemHistoryWarning => _notificationWarning ?? _historyWarning;
@@ -111,6 +121,11 @@ namespace ProductivityTracker
             {
                 if (!IsTracking)
                 {
+                    if (_collectorLease != null && (!flush || _store.Flush()))
+                    {
+                        _collectorLease.Dispose();
+                        _collectorLease = null;
+                    }
                     return;
                 }
 

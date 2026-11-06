@@ -40,6 +40,9 @@
   <data name="Resume" xml:space="preserve">
     <value>फिर शुरू करें</value>
   </data>
+  <data name="LoadingHistory" xml:space="preserve">
+    <value>गतिविधि का इतिहास लोड हो रहा है...</value>
+  </data>
   <data name="NotRecorded" xml:space="preserve">
     <value>रिकॉर्ड नहीं किया गया</value>
   </data>

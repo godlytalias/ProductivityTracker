@@ -40,6 +40,9 @@
   <data name="Resume" xml:space="preserve">
     <value>Reprendre</value>
   </data>
+  <data name="LoadingHistory" xml:space="preserve">
+    <value>Chargement de l'historique d'activité...</value>
+  </data>
   <data name="NotRecorded" xml:space="preserve">
     <value>Non enregistré</value>
   </data>

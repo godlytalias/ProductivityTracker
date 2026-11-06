@@ -53,6 +53,46 @@ namespace ProductivityTracker.Tests
         }
 
         [TestMethod]
+        [SupportedOSPlatform("windows")]
+        public void PausedCollectorRetriesFailedSaveWithoutReloadingOrRestarting()
+        {
+            if (!OperatingSystem.IsWindows())
+            {
+                Assert.Inconclusive("Windows file-sharing behavior is required.");
+            }
+            var folder = Path.Combine(Path.GetTempPath(), "ProductivityTracker.Tests-" + Guid.NewGuid().ToString("N"));
+            try
+            {
+                var store = new UsageStore(folder);
+                using var tracker = new UsageTracker(store);
+                tracker.Start();
+                tracker.Stop();
+                var start = DateTime.UtcNow.AddMinutes(-1);
+                using (var blocked = new FileStream(store.DataFilePath, FileMode.Open,
+                    FileAccess.Read, FileShare.Read))
+                {
+                    tracker.Start();
+                    store.RecordSample(start, "Pending save", "fixture.exe", true);
+                    store.CloseCurrent(start.AddSeconds(10));
+                    tracker.Stop();
+                    Assert.IsFalse(tracker.IsTracking);
+                    Assert.IsTrue(tracker.HasCollectorLease);
+                    tracker.Stop();
+                    Assert.IsTrue(tracker.HasCollectorLease);
+                }
+                tracker.Stop();
+                Assert.IsFalse(tracker.HasCollectorLease);
+                Assert.IsNull(store.LastError);
+                Assert.IsTrue(new UsageStore(folder).GetSessions(start.ToLocalTime().Date)
+                    .Any(segment => segment.AppName == "Pending save"));
+            }
+            finally
+            {
+                Directory.Delete(folder, true);
+            }
+        }
+
+        [TestMethod]
         public void NewCollectorReloadsFinalHistoryOnlyAfterPreviousCollectorReleasesStorage()
         {
             var folder = Path.Combine(Path.GetTempPath(), "ProductivityTracker.Tests-" + Guid.NewGuid().ToString("N"));

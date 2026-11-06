@@ -22,5 +22,6 @@
     <Compile Include="..\..\UsageTracker.cs" Link="UsageTracker.cs" />
     <Compile Include="..\..\UsageTrackerSettings.cs" Link="UsageTrackerSettings.cs" />
     <Compile Include="..\..\ApplicationNames.cs" Link="ApplicationNames.cs" />
+    <Compile Include="..\..\RotatingLog.cs" Link="RotatingLog.cs" />
   </ItemGroup>
 </Project>

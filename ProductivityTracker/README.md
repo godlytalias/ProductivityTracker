@@ -88,6 +88,16 @@ Executable paths and package identities used for lookup are not stored in histor
 
 The app uses Windows idle-input and foreground-window APIs. It stores process names, activity state, and timestamps under `%LOCALAPPDATA%\ProductivityTracker`. It does not record window titles, keystrokes, typed content, URLs, screenshots, or clipboard data.
 
+Detailed history is automatically limited to one calendar month, beginning at local
+midnight on the corresponding date in the previous month. Intervals crossing the
+cutoff retain only their recent portion. Cleanup is saved only by an exclusive
+storage owner. Older history is deleted, not archived into daily summaries.
+
+The dashboard opens before history is loaded. File reads, JSON parsing, collector
+startup and insight calculations run in the background with a loading status;
+repeated refresh requests are coalesced and unchanged files are not reread.
+Diagnostics are bounded to a 1 MiB current log and three 1 MiB rotated archives.
+
 Tracking begins when the dashboard launches if the windowless collector is not
 already running. Pause or resume foreground-application collection from the toolbar.
 **Keep tracking after closing** is enabled by default: closing the dashboard

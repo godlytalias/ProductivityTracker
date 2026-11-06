@@ -40,6 +40,9 @@
   <data name="Resume" xml:space="preserve">
     <value>继续</value>
   </data>
+  <data name="LoadingHistory" xml:space="preserve">
+    <value>正在加载活动历史记录...</value>
+  </data>
   <data name="NotRecorded" xml:space="preserve">
     <value>未记录</value>
   </data>

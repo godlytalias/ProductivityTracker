@@ -85,7 +85,7 @@ namespace ProductivityTracker
                 BackgroundWorkerManager.ReadyEventName);
             stop.Reset();
             ready.Reset();
-            var store = new UsageStore();
+            var store = new UsageStore(loadImmediately: false);
             using var tracker = new UsageTracker(store);
             try
             {
@@ -128,18 +128,7 @@ namespace ProductivityTracker
 
         public static void Log(string message)
         {
-            try
-            {
-                File.AppendAllText(
-                    LogFilePath,
-                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + " " + message + Environment.NewLine);
-            }
-            catch (IOException)
-            {
-            }
-            catch (UnauthorizedAccessException)
-            {
-            }
+            RotatingLog.Write(LogFilePath, message);
         }
     }
 }

@@ -40,6 +40,9 @@
   <data name="Resume" xml:space="preserve">
     <value>המשך</value>
   </data>
+  <data name="LoadingHistory" xml:space="preserve">
+    <value>טוען היסטוריית פעילות...</value>
+  </data>
   <data name="NotRecorded" xml:space="preserve">
     <value>לא תועד</value>
   </data>

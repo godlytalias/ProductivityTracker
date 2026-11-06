@@ -30,7 +30,7 @@ that implementation and the pinned `2.5.4-experimental` SDK. When these controls
 reach GA, update that SDK selection before enabling the native implementation
 for production. Rebuild when switching paths to replace stale runtime binaries.
 
-Install the .NET 8 SDK or newer and the Visual Studio Windows app development tools.
+Install the .NET 10 SDK or newer and the Visual Studio Windows app development tools.
 Build the unpackaged C# project from its own directory; the WinUI repository is not required:
 
 ```powershell
@@ -42,7 +42,7 @@ dotnet build .\ProductivityTracker.csproj -p:Platform=x64
 Run the dashboard:
 
 ```powershell
-.\bin\stable\self-contained\x64\Debug\net8.0-windows10.0.17763.0\win-x64\ProductivityTracker.exe
+.\bin\stable\self-contained\x64\Debug\net10.0-windows10.0.17763.0\win-x64\ProductivityTracker.exe
 ```
 
 Packaged, framework-dependent and self-contained builds have separate `bin` and
@@ -57,7 +57,7 @@ dotnet publish .\ProductivityTracker.csproj -c Release -r win-x64 -p:Platform=x6
 ```
 
 The standalone native executable is under
-`bin\stable\self-contained\aot\x64\Release\net8.0-windows10.0.17763.0\win-x64\publish`.
+`bin\stable\self-contained\aot\x64\Release\net10.0-windows10.0.17763.0\win-x64\publish`.
 Native AOT and managed outputs are isolated. Debug builds remain managed for
 debugging; x86 remains managed because .NET Native AOT does not support Windows x86.
 Use `-p:PublishAot=false` for a managed Release publish.

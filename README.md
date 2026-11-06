@@ -30,14 +30,14 @@ Microsoft Store account association files.
 
 ## Build and run
 
-Use Windows with the .NET 8 SDK or newer and Visual Studio Windows application
+Use Windows with the .NET 10 SDK or newer and Visual Studio Windows application
 development tools.
 
 ```powershell
 git clone https://github.com/godlytalias/ProductivityTracker.git
 Set-Location .\ProductivityTracker
 dotnet build .\ProductivityTracker\ProductivityTracker.csproj -p:Platform=x64
-.\ProductivityTracker\bin\stable\self-contained\x64\Debug\net8.0-windows10.0.17763.0\win-x64\ProductivityTracker.exe
+.\ProductivityTracker\bin\stable\self-contained\x64\Debug\net10.0-windows10.0.17763.0\win-x64\ProductivityTracker.exe
 ```
 
 Open `ProductivityTrackerPackage\ProductivityTrackerPackage.slnx` in Visual Studio

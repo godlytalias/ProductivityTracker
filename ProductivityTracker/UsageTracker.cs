@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Diagnostics.Eventing.Reader;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 using System.Security;
 using System.Text;
 using System.Threading;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace ProductivityTracker
 {
+    [SupportedOSPlatform("windows")]
     internal sealed class UsageTracker : IDisposable
     {
         private const uint ProcessQueryLimitedInformation = 0x1000;
@@ -24,6 +26,7 @@ namespace ProductivityTracker
         private bool _sessionEnding;
         private Timer? _sampleTimer;
         private Timer? _flushTimer;
+        private FileStream? _collectorLease;
         private int _sampleCount;
         private int _idleThresholdSeconds = 60;
 
@@ -80,6 +83,11 @@ namespace ProductivityTracker
                     return;
                 }
 
+                _collectorLease ??= _store.TryAcquireCollectorLease();
+                if (_collectorLease == null)
+                {
+                    return;
+                }
                 IsTracking = true;
                 _sessionEnding = false;
                 _generation++;
@@ -145,9 +153,10 @@ namespace ProductivityTracker
                 }
                 _suspendStartedUtc = null;
                 _store.CloseCurrent(DateTime.UtcNow);
-                if (flush)
+                if (!flush || _store.Flush())
                 {
-                    _store.Flush();
+                    _collectorLease?.Dispose();
+                    _collectorLease = null;
                 }
             }
             monitor?.Dispose();
@@ -156,6 +165,8 @@ namespace ProductivityTracker
         public void Dispose()
         {
             Stop();
+            _collectorLease?.Dispose();
+            _collectorLease = null;
         }
 
         private void Sample(object? state)

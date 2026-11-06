@@ -1,6 +1,6 @@
 # Productivity Tracker Privacy Policy
 
-**Effective date: November 5, 2026**
+**Effective date: November 6, 2026**
 
 Productivity Tracker is maintained in the godlytalias/ProductivityTracker GitHub repository. This policy explains how the app handles information when you use it.
 
@@ -32,11 +32,11 @@ There is no automatic expiration period. Information remains until you delete it
 
 ## Background tracking and your controls
 
-Tracking runs while the dashboard or windowless collector is running. Enabling **Run at sign-in** allows the collector to start automatically and continue after the dashboard closes.
+Tracking runs while the dashboard or windowless collector is running. **Keep tracking after closing** and **Run at sign-in** are enabled by default and can be changed independently in **Tracking settings**. The first keeps a windowless collector running after the dashboard closes. The second starts the collector automatically at sign-in without opening a window.
 
 **Pause** stops foreground-application tracking. Inactive, lock, and power-state timing may still be recorded while the background collector remains running.
 
-To stop all app recording, disable **Run at sign-in**, close the dashboard, and stop any remaining Productivity Tracker collector process in Windows Task Manager. Disabling sign-in startup does not terminate an already-running collector.
+To stop all app recording, turn off both **Keep tracking after closing** and **Run at sign-in**, then close the dashboard. Closing with background tracking disabled stops the collector. Disabling sign-in startup alone does not terminate an already-running collector. If an older collector cannot be stopped by the app, stop that Productivity Tracker process in Windows Task Manager.
 
 You can review your history in the app. To delete locally stored information, first stop the dashboard and collector, then delete the files in the local data folder. Uninstalling the app may leave this folder behind.
 

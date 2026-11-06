@@ -10,7 +10,8 @@ daily timelines, charts, and activity insights.
 - Dashboard cards for active share, most-used app, active hours, weekday patterns,
   and longest active/inactive stretches.
 - Separate idle, locked, sleeping, and confirmed powered-off intervals.
-- Optional windowless collection at sign-in and a configurable inactivity threshold.
+- Default-on background collection after closing and at sign-in, with separate
+  switches and a configurable inactivity threshold.
 - English, Hindi, Simplified Chinese, Arabic, Hebrew, Spanish, French, Korean,
   and Japanese, including right-to-left layouts.
 - Stable Windows App SDK 2.6.5 with Native AOT Release publishing.
@@ -77,6 +78,11 @@ dotnet test .\ProductivityTracker\Tests\ProductivityTracker.Tests\ProductivityTr
 Activity history is stored on the device. The app does not record window titles,
 typed text, URLs, screenshots, or clipboard contents, and does not provide a
 usage-history upload or cloud-sync service.
+
+**Keep tracking after closing** and **Run at sign-in** are enabled by default.
+Change them independently in **Tracking settings**. To stop collection when the
+dashboard closes and prevent it restarting at sign-in, turn both off and close
+the dashboard.
 
 See the [privacy policy](ProductivityTracker/PRIVACY.md) and
 [app documentation](ProductivityTracker/README.md) for collection controls,

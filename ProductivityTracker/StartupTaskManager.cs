@@ -41,7 +41,7 @@ namespace ProductivityTracker
             return result.Success;
         }
 
-        public static async Task<StartupTaskResult> EnableAsync()
+        internal static string? GetCollectorExecutablePath()
         {
             var executablePath = Environment.ProcessPath;
             var packageNameLength = 0;
@@ -51,6 +51,12 @@ namespace ProductivityTracker
                     Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                     "Microsoft", "WindowsApps", "ProductivityTracker.exe");
             }
+            return executablePath;
+        }
+
+        public static async Task<StartupTaskResult> EnableAsync()
+        {
+            var executablePath = GetCollectorExecutablePath();
             if (string.IsNullOrWhiteSpace(executablePath) ||
                 !File.Exists(executablePath))
             {

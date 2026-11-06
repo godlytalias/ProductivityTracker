@@ -86,7 +86,7 @@
     <value>معطّل</value>
   </data>
   <data name="StartupExplanation.Text" xml:space="preserve">
-    <value>يشغّل أداة الجمع دون نافذة عند تسجيل الدخول. إغلاق لوحة المعلومات لا يوقفها.</value>
+    <value>يشغّل أداة الجمع تلقائيًا عند تسجيل الدخول دون فتح لوحة المعلومات. مفعّل افتراضيًا.</value>
   </data>
   <data name="OpenDataFolder.Content" xml:space="preserve">
     <value>فتح مجلد البيانات المحلي</value>
@@ -492,4 +492,15 @@
   <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} نشاط</value></data>
   <data name="AppActiveShareFormat" xml:space="preserve"><value>{0:P0} من وقت النشاط</value></data>
   <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+  <data name="KeepTrackingAfterClosing.Header" xml:space="preserve"><value>متابعة التتبع بعد الإغلاق</value></data>
+  <data name="KeepTrackingAfterClosing.OnContent" xml:space="preserve"><value>مفعّل</value></data>
+  <data name="KeepTrackingAfterClosing.OffContent" xml:space="preserve"><value>معطّل</value></data>
+  <data name="BackgroundExplanation.Text" xml:space="preserve"><value>تبقى أداة الجمع قيد التشغيل دون نافذة بعد إغلاق لوحة المعلومات. عطّل هذا الخيار لإيقاف التتبع عند الإغلاق. مفعّل افتراضيًا.</value></data>
+  <data name="BackgroundUpdateFailed" xml:space="preserve"><value>تعذّر تحديث التتبع في الخلفية</value></data>
+  <data name="SettingsSaveFailed" xml:space="preserve"><value>تعذّر حفظ إعدادات التتبع. تحقّق من إمكانية الوصول إلى مجلد البيانات المحلي.</value></data>
+  <data name="BackgroundStartFailedFormat" xml:space="preserve"><value>تعذّر تشغيل أداة الجمع في الخلفية: {0}</value></data>
+  <data name="BackgroundStartTimedOut" xml:space="preserve"><value>لم تصبح أداة الجمع في الخلفية جاهزة في الوقت المحدد.</value></data>
+  <data name="BackgroundStopUnavailable" xml:space="preserve"><value>هناك إصدار قديم من أداة الجمع قيد التشغيل. أوقفه من «إدارة المهام»، ثم حاول مجددًا.</value></data>
+  <data name="BackgroundStopTimedOut" xml:space="preserve"><value>لم تتوقف أداة الجمع في الخلفية في الوقت المحدد.</value></data>
+  <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>ستبقى لوحة المعلومات مفتوحة لمتابعة التتبع. حاول مجددًا أو غيّر إعداد التتبع في الخلفية. {0}</value></data>
 </root>

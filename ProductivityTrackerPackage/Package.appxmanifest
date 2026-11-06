@@ -10,7 +10,7 @@
   <Identity
     Name="ProductivityTracker.Development"
     Publisher="CN=ProductivityTracker.Development"
-    Version="1.0.15.0" />
+    Version="1.0.17.0" />
 
   <Properties>
     <DisplayName>Productivity Tracker</DisplayName>

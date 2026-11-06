@@ -86,7 +86,7 @@
     <value>बंद</value>
   </data>
   <data name="StartupExplanation.Text" xml:space="preserve">
-    <value>साइन-इन पर बिना विंडो वाला डेटा संग्राहक शुरू होता है। डैशबोर्ड बंद करने पर वह चलता रहता है।</value>
+    <value>साइन-इन पर डैशबोर्ड खोले बिना संग्राहक अपने आप शुरू होता है। डिफ़ॉल्ट रूप से चालू है।</value>
   </data>
   <data name="OpenDataFolder.Content" xml:space="preserve">
     <value>स्थानीय डेटा फ़ोल्डर खोलें</value>
@@ -492,4 +492,15 @@
   <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} सक्रिय</value></data>
   <data name="AppActiveShareFormat" xml:space="preserve"><value>सक्रिय समय का {0:P0}</value></data>
   <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+  <data name="KeepTrackingAfterClosing.Header" xml:space="preserve"><value>बंद करने के बाद भी ट्रैक करें</value></data>
+  <data name="KeepTrackingAfterClosing.OnContent" xml:space="preserve"><value>चालू</value></data>
+  <data name="KeepTrackingAfterClosing.OffContent" xml:space="preserve"><value>बंद</value></data>
+  <data name="BackgroundExplanation.Text" xml:space="preserve"><value>डैशबोर्ड बंद करने के बाद भी संग्राहक बिना विंडो के चलता रहता है। बंद करते समय ट्रैकिंग रोकने के लिए इसे बंद करें। डिफ़ॉल्ट रूप से चालू है।</value></data>
+  <data name="BackgroundUpdateFailed" xml:space="preserve"><value>बैकग्राउंड ट्रैकिंग अपडेट नहीं हो सकी</value></data>
+  <data name="SettingsSaveFailed" xml:space="preserve"><value>ट्रैकिंग सेटिंग्स सहेजी नहीं जा सकीं। स्थानीय डेटा फ़ोल्डर की पहुँच जाँचें।</value></data>
+  <data name="BackgroundStartFailedFormat" xml:space="preserve"><value>बैकग्राउंड संग्राहक शुरू नहीं हो सका: {0}</value></data>
+  <data name="BackgroundStartTimedOut" xml:space="preserve"><value>बैकग्राउंड संग्राहक समय पर तैयार नहीं हुआ।</value></data>
+  <data name="BackgroundStopUnavailable" xml:space="preserve"><value>संग्राहक का पुराना संस्करण चल रहा है। उसे कार्य प्रबंधक में रोकें, फिर दोबारा प्रयास करें।</value></data>
+  <data name="BackgroundStopTimedOut" xml:space="preserve"><value>बैकग्राउंड संग्राहक समय पर बंद नहीं हुआ।</value></data>
+  <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>ट्रैकिंग जारी रखने के लिए डैशबोर्ड खुला रहेगा। दोबारा प्रयास करें या बैकग्राउंड ट्रैकिंग सेटिंग बदलें। {0}</value></data>
 </root>

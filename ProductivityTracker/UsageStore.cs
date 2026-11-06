@@ -14,11 +14,15 @@ namespace ProductivityTracker
         private bool _storageBlocked;
         public DateTime TrackingStartedUtc { get; private set; } = DateTime.UtcNow;
 
-        public UsageStore()
+        public UsageStore() : this(Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "ProductivityTracker"))
         {
-            DataFolder = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                "ProductivityTracker");
+        }
+
+        internal UsageStore(string dataFolder)
+        {
+            DataFolder = dataFolder;
             DataFilePath = Path.Combine(DataFolder, "usage.json");
             Load();
         }
@@ -28,6 +32,32 @@ namespace ProductivityTracker
         public string DataFilePath { get; }
 
         public string? LastError { get; private set; }
+
+        internal FileStream? TryAcquireCollectorLease()
+        {
+            FileStream? lease = null;
+            try
+            {
+                Directory.CreateDirectory(DataFolder);
+                lease = new FileStream(Path.Combine(DataFolder, "collector.lock"),
+                    FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+                // Reload only after the previous writer has flushed and released its lease.
+                ReloadFromDisk();
+                EndCurrentAtLastSample();
+                return lease;
+            }
+            catch (IOException ex) when ((ex.HResult & 0xFFFF) is 32 or 33)
+            {
+                lease?.Dispose();
+                return null;
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                lease?.Dispose();
+                LastError = AppStrings.Format("ReadDataErrorFormat", ex.Message);
+                return null;
+            }
+        }
 
         public void RecordSample(
             DateTime sampleTimeUtc,

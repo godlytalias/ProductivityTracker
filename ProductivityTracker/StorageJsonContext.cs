@@ -14,6 +14,8 @@ namespace ProductivityTracker
     internal sealed class SettingsData
     {
         public int IdleThresholdSeconds { get; set; } = 60;
+        public bool KeepTrackingAfterClosing { get; set; } = true;
+        public bool RunAtSignIn { get; set; } = true;
     }
 
     [JsonSerializable(typeof(UsageDataFile))]

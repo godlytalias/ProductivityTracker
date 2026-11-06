@@ -86,7 +86,7 @@
     <value>מושבת</value>
   </data>
   <data name="StartupExplanation.Text" xml:space="preserve">
-    <value>מפעיל את האוסף ללא חלון בכניסה למערכת. סגירת לוח הבקרה אינה עוצרת אותו.</value>
+    <value>מפעיל את האוסף אוטומטית בכניסה למערכת, בלי לפתוח את לוח הבקרה. מופעל כברירת מחדל.</value>
   </data>
   <data name="OpenDataFolder.Content" xml:space="preserve">
     <value>פתיחת תיקיית הנתונים המקומית</value>
@@ -492,4 +492,15 @@
   <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} פעילות</value></data>
   <data name="AppActiveShareFormat" xml:space="preserve"><value>{0:P0} מזמן הפעילות</value></data>
   <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+  <data name="KeepTrackingAfterClosing.Header" xml:space="preserve"><value>המשך מעקב לאחר הסגירה</value></data>
+  <data name="KeepTrackingAfterClosing.OnContent" xml:space="preserve"><value>מופעל</value></data>
+  <data name="KeepTrackingAfterClosing.OffContent" xml:space="preserve"><value>מושבת</value></data>
+  <data name="BackgroundExplanation.Text" xml:space="preserve"><value>האוסף ממשיך לפעול ללא חלון לאחר סגירת לוח הבקרה. כבה אפשרות זו כדי להפסיק את המעקב בסגירה. מופעל כברירת מחדל.</value></data>
+  <data name="BackgroundUpdateFailed" xml:space="preserve"><value>לא ניתן לעדכן את המעקב ברקע</value></data>
+  <data name="SettingsSaveFailed" xml:space="preserve"><value>לא ניתן לשמור את הגדרות המעקב. בדוק את הרשאות הגישה לתיקיית הנתונים המקומית.</value></data>
+  <data name="BackgroundStartFailedFormat" xml:space="preserve"><value>לא ניתן להפעיל את האוסף ברקע: {0}</value></data>
+  <data name="BackgroundStartTimedOut" xml:space="preserve"><value>האוסף ברקע לא היה מוכן בזמן.</value></data>
+  <data name="BackgroundStopUnavailable" xml:space="preserve"><value>גרסה ישנה של האוסף פועלת. עצור אותה במנהל המשימות ונסה שוב.</value></data>
+  <data name="BackgroundStopTimedOut" xml:space="preserve"><value>האוסף ברקע לא נעצר בזמן.</value></data>
+  <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>לוח הבקרה יישאר פתוח כדי שהמעקב יוכל להימשך. נסה שוב או שנה את הגדרת המעקב ברקע. {0}</value></data>
 </root>

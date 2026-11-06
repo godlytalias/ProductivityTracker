@@ -18,5 +18,8 @@
     <Compile Include="..\..\SystemInactivity.cs" Link="SystemInactivity.cs" />
     <Compile Include="..\..\SystemActivityMonitor.cs" Link="SystemActivityMonitor.cs" />
     <Compile Include="..\..\SystemEventHistory.cs" Link="SystemEventHistory.cs" />
+    <Compile Include="..\..\UsageStore.cs" Link="UsageStore.cs" />
+    <Compile Include="..\..\UsageTracker.cs" Link="UsageTracker.cs" />
+    <Compile Include="..\..\UsageTrackerSettings.cs" Link="UsageTrackerSettings.cs" />
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
@@ -45,6 +46,9 @@ namespace ProductivityTracker
         private bool _userPaused;
         private bool _viewReady;
         private bool _isClosing;
+        private bool _preparingToClose;
+        private bool _closeApproved;
+        private Task _startupUpdateTask = Task.CompletedTask;
         private bool _restoringDate;
         private bool _hasDayData;
         private bool _hasWeekData;
@@ -62,6 +66,8 @@ namespace ProductivityTracker
             ApplyRoundedWindowCorners();
             Activated += MainWindow_Activated;
             AppWindow.Changed += AppWindow_Changed;
+            AppWindow.Closing += AppWindow_Closing;
+            SynchronizeSettings();
 
             _store = new UsageStore();
             _tracker = new UsageTracker(_store)
@@ -107,7 +113,7 @@ namespace ProductivityTracker
 
         private void Tracker_UsageChanged(object? sender, EventArgs e)
         {
-            if (!_isClosing)
+            if (!_isClosing && !_preparingToClose)
             {
                 DispatcherQueue.TryEnqueue(RefreshData);
             }
@@ -124,7 +130,7 @@ namespace ProductivityTracker
             _backgroundWorkerRunning = BackgroundWorkerManager.IsRunning();
             if (_backgroundWorkerRunning)
             {
-                _tracker.StopWithoutFlush();
+                _tracker.Stop();
             }
             else if (_userPaused)
             {
@@ -139,7 +145,7 @@ namespace ProductivityTracker
 
         private void RefreshData()
         {
-            if (!_viewReady || _isClosing)
+            if (!_viewReady || _isClosing || _preparingToClose)
             {
                 return;
             }
@@ -407,7 +413,7 @@ namespace ProductivityTracker
             ChartModeBar.SelectedItem = WeekModeItem;
         }
 
-        private void RootGrid_Loaded(object sender, RoutedEventArgs e)
+        private async void RootGrid_Loaded(object sender, RoutedEventArgs e)
         {
             RootGrid.Loaded -= RootGrid_Loaded;
             DispatcherQueue.TryEnqueue(DispatcherQueuePriority.Low, () =>
@@ -418,6 +424,8 @@ namespace ProductivityTracker
                     PageScroller.ChangeView(null, 0, null, true);
                 }
             });
+            _startupUpdateTask = UpdateStartupSettingAsync(UsageTrackerSettings.GetRunAtSignIn());
+            await _startupUpdateTask;
         }
 
         private void Layout_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -627,27 +635,36 @@ namespace ProductivityTracker
             AnnounceSelectedDay();
         }
 
-        private async void SettingsFlyout_Opened(object sender, object args)
+        private void SynchronizeSettings()
         {
             _syncingSettings = true;
             IdleThresholdNumberBox.Value = UsageTrackerSettings.GetIdleThresholdSeconds();
+            KeepTrackingAfterClosingToggle.IsOn = UsageTrackerSettings.GetKeepTrackingAfterClosing();
+            RunAtSignInToggle.IsOn = UsageTrackerSettings.GetRunAtSignIn();
             _syncingSettings = false;
-            RunAtSignInToggle.IsEnabled = false;
-            var enabled = await StartupTaskManager.IsEnabledAsync();
-            if (_isClosing)
+        }
+
+        private void SettingsFlyout_Opened(object sender, object args)
+        {
+            SynchronizeSettings();
+        }
+
+        private async void KeepTrackingAfterClosingToggle_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!_viewReady || _syncingSettings || _isClosing || _preparingToClose)
             {
                 return;
             }
-            _syncingSettings = true;
-            RunAtSignInToggle.IsOn = enabled;
-            _syncingSettings = false;
-            _startupSettingInitialized = true;
-            RunAtSignInToggle.IsEnabled = true;
+            if (!UsageTrackerSettings.SetKeepTrackingAfterClosing(KeepTrackingAfterClosingToggle.IsOn))
+            {
+                SynchronizeSettings();
+                await ShowSettingsErrorAsync("BackgroundUpdateFailed", AppStrings.Get("SettingsSaveFailed"));
+            }
         }
 
         private void IdleThresholdNumberBox_ValueChanged(NumberBox sender, NumberBoxValueChangedEventArgs args)
         {
-            if (!_viewReady || _isClosing || _syncingSettings || double.IsNaN(args.NewValue))
+            if (!_viewReady || _isClosing || _preparingToClose || _syncingSettings || double.IsNaN(args.NewValue))
             {
                 return;
             }
@@ -658,44 +675,70 @@ namespace ProductivityTracker
 
         private async void RunAtSignInToggle_Toggled(object sender, RoutedEventArgs e)
         {
-            if (!_startupSettingInitialized || _syncingSettings || _isClosing)
+            if (!_startupSettingInitialized || _syncingSettings || _isClosing || _preparingToClose)
             {
                 return;
             }
-            var desired = RunAtSignInToggle.IsOn;
+            _startupUpdateTask = UpdateStartupSettingAsync(RunAtSignInToggle.IsOn);
+            await _startupUpdateTask;
+        }
+
+        private async Task UpdateStartupSettingAsync(bool desired)
+        {
+            var previous = UsageTrackerSettings.GetRunAtSignIn();
             RunAtSignInToggle.IsEnabled = false;
             try
             {
+                if (!UsageTrackerSettings.SetRunAtSignIn(desired))
+                {
+                    SynchronizeSettings();
+                    await ShowSettingsErrorAsync("StartupUpdateFailed", AppStrings.Get("SettingsSaveFailed"));
+                    return;
+                }
                 var result = desired
                     ? await StartupTaskManager.EnableAsync()
                     : await StartupTaskManager.DisableAsync();
-                if (!result.Success && !_isClosing)
+                if (!result.Success)
                 {
+                    UsageTrackerSettings.SetRunAtSignIn(previous);
                     _syncingSettings = true;
-                    RunAtSignInToggle.IsOn = !desired;
+                    RunAtSignInToggle.IsOn = await StartupTaskManager.IsEnabledAsync();
                     _syncingSettings = false;
-                    await new ContentDialog
-                    {
-                        Title = AppStrings.Get("StartupUpdateFailed"),
-                        Content = result.Message,
-                        CloseButtonText = AppStrings.Get("OK"),
-                        FlowDirection = RootGrid.FlowDirection,
-                        Language = RootGrid.Language,
-                        XamlRoot = RootGrid.XamlRoot,
-                    }.ShowAsync();
+                    await ShowSettingsErrorAsync("StartupUpdateFailed", result.Message);
                 }
             }
             finally
             {
                 if (!_isClosing)
                 {
+                    _startupSettingInitialized = true;
                     RunAtSignInToggle.IsEnabled = true;
                 }
             }
         }
 
+        private async Task ShowSettingsErrorAsync(string titleKey, string message)
+        {
+            if (!_isClosing)
+            {
+                await new ContentDialog
+                {
+                    Title = AppStrings.Get(titleKey),
+                    Content = message,
+                    CloseButtonText = AppStrings.Get("OK"),
+                    FlowDirection = RootGrid.FlowDirection,
+                    Language = RootGrid.Language,
+                    XamlRoot = RootGrid.XamlRoot,
+                }.ShowAsync();
+            }
+        }
+
         private void TrackingButton_Click(object sender, RoutedEventArgs e)
         {
+            if (_preparingToClose)
+            {
+                return;
+            }
             _userPaused = !_userPaused;
             UsageTrackerSettings.SetPaused(_userPaused);
             RefreshData();
@@ -754,11 +797,62 @@ namespace ProductivityTracker
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr window, int attribute, ref int value, int size);
 
+        private async void AppWindow_Closing(AppWindow sender, AppWindowClosingEventArgs args)
+        {
+            if (_closeApproved)
+            {
+                return;
+            }
+            args.Cancel = true;
+            if (_preparingToClose)
+            {
+                return;
+            }
+            _preparingToClose = true;
+            _refreshTimer.Stop();
+            try
+            {
+                await _startupUpdateTask;
+                var wasTrackingHere = _tracker.IsTracking;
+                _tracker.Stop();
+                var error = wasTrackingHere && _store.LastError != null
+                    ? _store.LastError
+                    : UsageTrackerSettings.GetKeepTrackingAfterClosing()
+                        ? await BackgroundWorkerManager.StartAsync()
+                        : await BackgroundWorkerManager.StopAsync();
+                if (error != null)
+                {
+                    await ShowSettingsErrorAsync("BackgroundUpdateFailed",
+                        AppStrings.Format("BackgroundCloseFailedFormat", error));
+                    return;
+                }
+                _closeApproved = true;
+                Close();
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or
+                InvalidOperationException or System.ComponentModel.Win32Exception)
+            {
+                App.Log("Background collector hand-off failed: " + ex);
+                await ShowSettingsErrorAsync("BackgroundUpdateFailed",
+                    AppStrings.Format("BackgroundCloseFailedFormat", ex.Message));
+            }
+            finally
+            {
+                if (!_closeApproved)
+                {
+                    _preparingToClose = false;
+                    RefreshData();
+                    _refreshTimer.Start();
+                }
+            }
+        }
+
         private void MainWindow_Closed(object sender, WindowEventArgs args)
         {
             _isClosing = true;
             Activated -= MainWindow_Activated;
             AppWindow.Changed -= AppWindow_Changed;
+            AppWindow.Closing -= AppWindow_Closing;
             App.Log("Main window closed.");
             _refreshTimer.Stop();
             _tracker.UsageChanged -= Tracker_UsageChanged;
@@ -766,10 +860,6 @@ namespace ProductivityTracker
             _uiSettings.ColorValuesChanged -= ChartThemeChanged;
             RootGrid.ActualThemeChanged -= ChartThemeChanged;
             _tracker.Stop();
-            if (!_backgroundWorkerRunning)
-            {
-                _store.Flush();
-            }
             _tracker.Dispose();
             Application.Current.Exit();
         }

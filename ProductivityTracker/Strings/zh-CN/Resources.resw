@@ -86,7 +86,7 @@
     <value>已禁用</value>
   </data>
   <data name="StartupExplanation.Text" xml:space="preserve">
-    <value>登录时启动无窗口采集器。关闭仪表板不会停止采集器。</value>
+    <value>登录时自动启动采集器，不打开仪表板。默认启用。</value>
   </data>
   <data name="OpenDataFolder.Content" xml:space="preserve">
     <value>打开本地数据文件夹</value>
@@ -492,4 +492,15 @@
   <data name="AppActiveTimeFormat" xml:space="preserve"><value>活跃{0}</value></data>
   <data name="AppActiveShareFormat" xml:space="preserve"><value>占活跃时间的{0:P0}</value></data>
   <data name="ChartPointFormat" xml:space="preserve"><value>{0}：{1} {2:0.#} / {3} {4:0.#}（{5}）</value></data>
+  <data name="KeepTrackingAfterClosing.Header" xml:space="preserve"><value>关闭后继续跟踪</value></data>
+  <data name="KeepTrackingAfterClosing.OnContent" xml:space="preserve"><value>已启用</value></data>
+  <data name="KeepTrackingAfterClosing.OffContent" xml:space="preserve"><value>已禁用</value></data>
+  <data name="BackgroundExplanation.Text" xml:space="preserve"><value>关闭仪表板后，采集器仍在后台无窗口运行。若要在关闭时停止跟踪，请禁用此选项。默认启用。</value></data>
+  <data name="BackgroundUpdateFailed" xml:space="preserve"><value>无法更新后台跟踪设置</value></data>
+  <data name="SettingsSaveFailed" xml:space="preserve"><value>无法保存跟踪设置。请检查本地数据文件夹的访问权限。</value></data>
+  <data name="BackgroundStartFailedFormat" xml:space="preserve"><value>无法启动后台采集器：{0}</value></data>
+  <data name="BackgroundStartTimedOut" xml:space="preserve"><value>后台采集器未能及时就绪。</value></data>
+  <data name="BackgroundStopUnavailable" xml:space="preserve"><value>旧版采集器正在运行。请在任务管理器中将其停止，然后重试。</value></data>
+  <data name="BackgroundStopTimedOut" xml:space="preserve"><value>后台采集器未能及时停止。</value></data>
+  <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>仪表板将保持打开，以便继续跟踪。请重试或更改后台跟踪设置。{0}</value></data>
 </root>

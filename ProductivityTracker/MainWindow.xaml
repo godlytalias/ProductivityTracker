@@ -151,22 +151,30 @@
                         <FontIcon Glyph="&#xE713;" FontSize="16" />
                         <Button.Flyout>
                             <Flyout x:Name="SettingsFlyout" Opened="SettingsFlyout_Opened">
-                                <StackPanel Spacing="12" MaxWidth="300">
-                                    <TextBlock x:Uid="SettingsHeading" FontWeight="SemiBold" FontSize="18"
-                                               AutomationProperties.HeadingLevel="Level2" />
-                                    <NumberBox x:Name="IdleThresholdNumberBox" x:Uid="IdleThreshold"
-                                               Minimum="5" Maximum="3600" SmallChange="5" LargeChange="60"
-                                               SpinButtonPlacementMode="Inline"
-                                               ValueChanged="IdleThresholdNumberBox_ValueChanged" />
-                                    <ToggleSwitch x:Name="RunAtSignInToggle" x:Uid="RunAtSignIn"
-                                                  IsEnabled="False"
-                                                  Toggled="RunAtSignInToggle_Toggled" />
-                                    <TextBlock x:Uid="StartupExplanation"
-                                               FontSize="12" TextWrapping="Wrap"
-                                               Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
-                                    <HyperlinkButton x:Uid="OpenDataFolder" Padding="0"
-                                                     Click="OpenDataFolder_Click" />
-                                </StackPanel>
+                                <ScrollViewer MaxHeight="480" VerticalScrollBarVisibility="Auto"
+                                              HorizontalScrollBarVisibility="Disabled">
+                                    <StackPanel Spacing="12" MaxWidth="300">
+                                        <TextBlock x:Uid="SettingsHeading" FontWeight="SemiBold" FontSize="18"
+                                                   AutomationProperties.HeadingLevel="Level2" />
+                                        <NumberBox x:Name="IdleThresholdNumberBox" x:Uid="IdleThreshold"
+                                                   Minimum="5" Maximum="3600" SmallChange="5" LargeChange="60"
+                                                   SpinButtonPlacementMode="Inline"
+                                                   ValueChanged="IdleThresholdNumberBox_ValueChanged" />
+                                        <ToggleSwitch x:Name="KeepTrackingAfterClosingToggle" x:Uid="KeepTrackingAfterClosing"
+                                                      Toggled="KeepTrackingAfterClosingToggle_Toggled" />
+                                        <TextBlock x:Uid="BackgroundExplanation"
+                                                   FontSize="12" TextWrapping="Wrap"
+                                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                        <ToggleSwitch x:Name="RunAtSignInToggle" x:Uid="RunAtSignIn"
+                                                      IsEnabled="False"
+                                                      Toggled="RunAtSignInToggle_Toggled" />
+                                        <TextBlock x:Uid="StartupExplanation"
+                                                   FontSize="12" TextWrapping="Wrap"
+                                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                        <HyperlinkButton x:Uid="OpenDataFolder" Padding="0"
+                                                         Click="OpenDataFolder_Click" />
+                                    </StackPanel>
+                                </ScrollViewer>
                             </Flyout>
                         </Button.Flyout>
                     </Button>

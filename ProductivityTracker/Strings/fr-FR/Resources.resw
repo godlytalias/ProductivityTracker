@@ -86,7 +86,7 @@
     <value>Désactivé</value>
   </data>
   <data name="StartupExplanation.Text" xml:space="preserve">
-    <value>Démarre le collecteur sans fenêtre à l’ouverture de session. Fermer le tableau de bord ne l’arrête pas.</value>
+    <value>Démarre automatiquement le collecteur à l’ouverture de session, sans ouvrir le tableau de bord. Activé par défaut.</value>
   </data>
   <data name="OpenDataFolder.Content" xml:space="preserve">
     <value>Ouvrir le dossier des données locales</value>
@@ -492,4 +492,15 @@
   <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} d’activité</value></data>
   <data name="AppActiveShareFormat" xml:space="preserve"><value>{0:P0} du temps actif</value></data>
   <data name="ChartPointFormat" xml:space="preserve"><value>{0} : {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+  <data name="KeepTrackingAfterClosing.Header" xml:space="preserve"><value>Continuer le suivi après fermeture</value></data>
+  <data name="KeepTrackingAfterClosing.OnContent" xml:space="preserve"><value>Activé</value></data>
+  <data name="KeepTrackingAfterClosing.OffContent" xml:space="preserve"><value>Désactivé</value></data>
+  <data name="BackgroundExplanation.Text" xml:space="preserve"><value>Laisse le collecteur fonctionner sans fenêtre après la fermeture du tableau de bord. Désactivez cette option pour arrêter le suivi à la fermeture. Activé par défaut.</value></data>
+  <data name="BackgroundUpdateFailed" xml:space="preserve"><value>Impossible de modifier le suivi en arrière-plan</value></data>
+  <data name="SettingsSaveFailed" xml:space="preserve"><value>Impossible d’enregistrer vos paramètres de suivi. Vérifiez l’accès au dossier de données local.</value></data>
+  <data name="BackgroundStartFailedFormat" xml:space="preserve"><value>Impossible de démarrer le collecteur en arrière-plan : {0}</value></data>
+  <data name="BackgroundStartTimedOut" xml:space="preserve"><value>Le collecteur en arrière-plan n’a pas été prêt à temps.</value></data>
+  <data name="BackgroundStopUnavailable" xml:space="preserve"><value>Une ancienne version du collecteur est en cours d’exécution. Arrêtez-la dans le Gestionnaire des tâches, puis réessayez.</value></data>
+  <data name="BackgroundStopTimedOut" xml:space="preserve"><value>Le collecteur en arrière-plan ne s’est pas arrêté à temps.</value></data>
+  <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>Le tableau de bord restera ouvert pour poursuivre le suivi. Réessayez ou modifiez le paramètre de suivi en arrière-plan. {0}</value></data>
 </root>

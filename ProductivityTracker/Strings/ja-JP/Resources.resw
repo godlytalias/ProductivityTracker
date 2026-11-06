@@ -86,7 +86,7 @@
     <value>無効</value>
   </data>
   <data name="StartupExplanation.Text" xml:space="preserve">
-    <value>サインイン時にウィンドウなしの収集プロセスを起動します。ダッシュボードを閉じても収集は続きます。</value>
+    <value>サインイン時にダッシュボードを開かず、収集プロセスを自動的に起動します。既定で有効です。</value>
   </data>
   <data name="OpenDataFolder.Content" xml:space="preserve">
     <value>ローカルデータフォルダーを開く</value>
@@ -492,4 +492,15 @@
   <data name="AppActiveTimeFormat" xml:space="preserve"><value>アクティブ {0}</value></data>
   <data name="AppActiveShareFormat" xml:space="preserve"><value>アクティブ時間の{0:P0}</value></data>
   <data name="ChartPointFormat" xml:space="preserve"><value>{0}：{1} {2:0.#} / {3} {4:0.#}（{5}）</value></data>
+  <data name="KeepTrackingAfterClosing.Header" xml:space="preserve"><value>閉じた後も記録を続ける</value></data>
+  <data name="KeepTrackingAfterClosing.OnContent" xml:space="preserve"><value>有効</value></data>
+  <data name="KeepTrackingAfterClosing.OffContent" xml:space="preserve"><value>無効</value></data>
+  <data name="BackgroundExplanation.Text" xml:space="preserve"><value>ダッシュボードを閉じた後も、収集プロセスはウィンドウなしで動作します。閉じるときに記録を停止するには、この設定を無効にしてください。既定で有効です。</value></data>
+  <data name="BackgroundUpdateFailed" xml:space="preserve"><value>バックグラウンド記録を更新できませんでした</value></data>
+  <data name="SettingsSaveFailed" xml:space="preserve"><value>記録設定を保存できませんでした。ローカルデータフォルダーへのアクセス権を確認してください。</value></data>
+  <data name="BackgroundStartFailedFormat" xml:space="preserve"><value>バックグラウンドの収集プロセスを起動できませんでした：{0}</value></data>
+  <data name="BackgroundStartTimedOut" xml:space="preserve"><value>バックグラウンドの収集プロセスが時間内に準備できませんでした。</value></data>
+  <data name="BackgroundStopUnavailable" xml:space="preserve"><value>古いバージョンの収集プロセスが動作しています。タスクマネージャーで停止してから、もう一度お試しください。</value></data>
+  <data name="BackgroundStopTimedOut" xml:space="preserve"><value>バックグラウンドの収集プロセスが時間内に停止しませんでした。</value></data>
+  <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>記録を続けられるよう、ダッシュボードを開いたままにします。もう一度試すか、バックグラウンド記録の設定を変更してください。{0}</value></data>
 </root>

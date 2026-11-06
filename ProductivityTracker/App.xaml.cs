@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -9,10 +10,6 @@ namespace ProductivityTracker
     public partial class App : Application
     {
         private Window? _window;
-        private Mutex? _workerMutex;
-        private ManualResetEventSlim? _workerWaitHandle;
-        private UsageStore? _workerStore;
-        private UsageTracker? _workerTracker;
 
         public static string LogFilePath { get; } = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
@@ -71,23 +68,51 @@ namespace ProductivityTracker
 
         private void StartBackgroundWorker()
         {
-            _workerMutex = new Mutex(
+            using var workerMutex = new Mutex(
                 false,
                 BackgroundWorkerManager.MutexName,
                 out var createdNew);
             if (!createdNew)
             {
-                _workerMutex.Dispose();
-                _workerMutex = null;
+                Exit();
                 return;
             }
 
-            _workerStore = new UsageStore();
-            _workerTracker = new UsageTracker(_workerStore);
-            _workerTracker.Start();
-
-            _workerWaitHandle = new ManualResetEventSlim(false);
-            _workerWaitHandle.Wait();
+            using var stop = new EventWaitHandle(false, EventResetMode.ManualReset,
+                BackgroundWorkerManager.StopEventName);
+            using var ready = new EventWaitHandle(false, EventResetMode.ManualReset,
+                BackgroundWorkerManager.ReadyEventName);
+            stop.Reset();
+            ready.Reset();
+            var store = new UsageStore();
+            using var tracker = new UsageTracker(store);
+            try
+            {
+                var timer = Stopwatch.StartNew();
+                while (!tracker.IsTracking && timer.Elapsed < TimeSpan.FromSeconds(10))
+                {
+                    tracker.Start();
+                    if (!tracker.IsTracking && stop.WaitOne(100))
+                    {
+                        return;
+                    }
+                }
+                if (!tracker.IsTracking)
+                {
+                    Log("The background collector could not acquire usage storage.");
+                    return;
+                }
+                ready.Set();
+                Log("Background collector ready.");
+                stop.WaitOne();
+            }
+            finally
+            {
+                ready.Reset();
+                tracker.Stop();
+                Log("Background collector stopped.");
+                Exit();
+            }
         }
 
         private void App_UnhandledException(object sender, Microsoft.UI.Xaml.UnhandledExceptionEventArgs e)

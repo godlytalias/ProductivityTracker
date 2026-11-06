@@ -14,7 +14,7 @@ Productivity Tracker is a standalone WinUI desktop app that tracks foreground ap
 - A configurable inactive threshold
 - Separate idle, locked, sleeping and confirmed powered-off states, with an inactive-time breakdown
 - English, Hindi, Simplified Chinese, Arabic, Hebrew, Spanish, French, Korean and Japanese resources
-- An optional per-user Windows Task Scheduler entry that starts only the headless `--worker` mode at sign-in
+- Separate default-on settings to keep tracking after closing and start a headless collector at sign-in
 - Local JSON storage only
 
 ## Run
@@ -82,8 +82,12 @@ taskbar, and dashboard.
 The app uses Windows idle-input and foreground-window APIs. It stores process names, activity state, and timestamps under `%LOCALAPPDATA%\ProductivityTracker`. It does not record window titles, keystrokes, typed content, URLs, screenshots, or clipboard data.
 
 Tracking begins when the dashboard launches if the windowless collector is not
-already running. Pause or resume collection from the toolbar. Closing the dashboard
-stops in-app collection but does not stop a separately running `--worker` collector.
+already running. Pause or resume foreground-application collection from the toolbar.
+**Keep tracking after closing** is enabled by default: closing the dashboard
+flushes its final samples and hands recording to a windowless `--worker` collector.
+The dashboard waits for the collector to become ready before closing. If hand-off
+fails, it stays open and explains the error rather than silently stopping tracking.
+A storage lease prevents the dashboard and collector from writing competing history.
 
 While collection is running, Windows session notifications identify lock/unlock
 without treating recent input on the lock screen as active application time.
@@ -101,11 +105,19 @@ reconstructed from privileged Security logs. No administrator access or OS audit
 policy changes are requested.
 
 Open **Tracking settings** (the gear button) to change the inactivity threshold in
-seconds or enable **Run at sign-in**. This creates a per-user `ProductivityTracker`
+seconds and configure **Keep tracking after closing** and **Run at sign-in**.
+Both switches are enabled by default and are saved independently.
+**Run at sign-in** creates a per-user `ProductivityTracker`
 scheduled task. The task starts `ProductivityTracker.exe --worker` without opening
 the WinUI window. Installed packages use the registered Windows execution alias
 so the collector retains package identity and framework access. Turning the setting
-off removes the startup entry.
+off removes the startup entry without stopping an already-running collector.
+
+Turning **Keep tracking after closing** off makes closing the dashboard stop the
+collector as well. If **Run at sign-in** remains on, collection starts again at the
+next sign-in. Turn both off and close the dashboard to stop recording and prevent
+automatic restart. No Windows service or administrator privileges are required;
+the collector runs in your signed-in desktop session so foreground-app APIs work.
 
 If Windows denies scheduled-task creation, the app falls back to a per-user
 Startup-folder launcher named `ProductivityTrackerWorker.cmd`.

@@ -40,6 +40,7 @@
 **/usage.json*
 **/settings.json*
 **/paused
+**/collector.lock
 StoreListing*.csv
 listingData*.csv
 

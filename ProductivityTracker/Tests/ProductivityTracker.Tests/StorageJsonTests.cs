@@ -50,11 +50,26 @@ namespace ProductivityTracker.Tests
         {
             var defaults = JsonSerializer.Deserialize("{}", StorageJsonContext.Default.SettingsData)!;
             Assert.AreEqual(60, defaults.IdleThresholdSeconds);
+            Assert.IsTrue(defaults.KeepTrackingAfterClosing);
+            Assert.IsTrue(defaults.RunAtSignIn);
             var settings = JsonSerializer.Deserialize("{\"IdleThresholdSeconds\":120}",
                 StorageJsonContext.Default.SettingsData)!;
             Assert.AreEqual(120, settings.IdleThresholdSeconds);
-            Assert.AreEqual("{\"IdleThresholdSeconds\":120}",
-                JsonSerializer.Serialize(settings, StorageJsonContext.Default.SettingsData));
+            Assert.IsTrue(settings.KeepTrackingAfterClosing);
+            Assert.IsTrue(settings.RunAtSignIn);
+        }
+
+        [TestMethod]
+        public void GeneratedSettingsContextPreservesOptOutsAndIdleThreshold()
+        {
+            var settings = JsonSerializer.Deserialize(
+                "{\"IdleThresholdSeconds\":120,\"KeepTrackingAfterClosing\":false,\"RunAtSignIn\":false}",
+                StorageJsonContext.Default.SettingsData)!;
+            var json = JsonSerializer.Serialize(settings, StorageJsonContext.Default.SettingsData);
+            var restored = JsonSerializer.Deserialize(json, StorageJsonContext.Default.SettingsData)!;
+            Assert.AreEqual(120, restored.IdleThresholdSeconds);
+            Assert.IsFalse(restored.KeepTrackingAfterClosing);
+            Assert.IsFalse(restored.RunAtSignIn);
         }
     }
 }

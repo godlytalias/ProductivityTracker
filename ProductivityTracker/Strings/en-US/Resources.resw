@@ -86,7 +86,7 @@
     <value>Disabled</value>
   </data>
   <data name="StartupExplanation.Text" xml:space="preserve">
-    <value>Starts the windowless collector at sign-in. Closing the dashboard does not stop that collector.</value>
+    <value>Starts the collector automatically at sign-in, without opening the dashboard. Enabled by default.</value>
   </data>
   <data name="OpenDataFolder.Content" xml:space="preserve">
     <value>Open local data folder</value>
@@ -492,4 +492,15 @@
   <data name="AppActiveTimeFormat" xml:space="preserve"><value>{0} active</value></data>
   <data name="AppActiveShareFormat" xml:space="preserve"><value>{0:P0} of active time</value></data>
   <data name="ChartPointFormat" xml:space="preserve"><value>{0}: {1} {2:0.#} / {3} {4:0.#} ({5})</value></data>
+  <data name="KeepTrackingAfterClosing.Header" xml:space="preserve"><value>Keep tracking after closing</value></data>
+  <data name="KeepTrackingAfterClosing.OnContent" xml:space="preserve"><value>Enabled</value></data>
+  <data name="KeepTrackingAfterClosing.OffContent" xml:space="preserve"><value>Disabled</value></data>
+  <data name="BackgroundExplanation.Text" xml:space="preserve"><value>Keeps the collector running without a window after closing the dashboard. Turn off to stop tracking when closing. Enabled by default.</value></data>
+  <data name="BackgroundUpdateFailed" xml:space="preserve"><value>Could not update background tracking</value></data>
+  <data name="SettingsSaveFailed" xml:space="preserve"><value>Could not save your tracking settings. Check access to the local data folder.</value></data>
+  <data name="BackgroundStartFailedFormat" xml:space="preserve"><value>Could not start the background collector: {0}</value></data>
+  <data name="BackgroundStartTimedOut" xml:space="preserve"><value>The background collector did not become ready in time.</value></data>
+  <data name="BackgroundStopUnavailable" xml:space="preserve"><value>An older collector is running. Stop it in Task Manager, then try again.</value></data>
+  <data name="BackgroundStopTimedOut" xml:space="preserve"><value>The background collector did not stop in time.</value></data>
+  <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>The dashboard will stay open so tracking can continue. Try again or change the background tracking setting. {0}</value></data>
 </root>

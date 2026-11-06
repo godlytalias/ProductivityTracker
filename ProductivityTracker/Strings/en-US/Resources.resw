@@ -503,4 +503,6 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>An older collector is running. Stop it in Task Manager, then try again.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>The background collector did not stop in time.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>The dashboard will stay open so tracking can continue. Try again or change the background tracking setting. {0}</value></data>
+  <data name="RemoteDesktop" xml:space="preserve"><value>Remote Desktop</value></data>
+  <data name="RemoteDesktopConnection" xml:space="preserve"><value>Remote Desktop Connection</value></data>
 </root>

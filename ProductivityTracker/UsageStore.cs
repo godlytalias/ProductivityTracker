@@ -266,9 +266,7 @@ namespace ProductivityTracker
                     if (segment.IsActive)
                     {
                         activeSeconds += duration;
-                        var appName = string.IsNullOrWhiteSpace(segment.AppName)
-                            ? "Unknown"
-                            : segment.AppName;
+                        var appName = ApplicationNames.ForRecordedName(segment.AppName, segment.ProcessName);
                         applicationSeconds.TryGetValue(appName, out var existing);
                         applicationSeconds[appName] = existing + duration;
                     }
@@ -345,7 +343,9 @@ namespace ProductivityTracker
                     {
                         StartUtc = overlapStart,
                         EndUtc = overlapEnd,
-                        AppName = segment.AppName,
+                        AppName = segment.IsActive
+                            ? ApplicationNames.ForRecordedName(segment.AppName, segment.ProcessName)
+                            : segment.AppName,
                         ProcessName = segment.ProcessName,
                         IsActive = segment.IsActive,
                         InactiveReason = segment.InactiveReason,

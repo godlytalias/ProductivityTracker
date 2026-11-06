@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Diagnostics.Eventing.Reader;
@@ -29,30 +28,6 @@ namespace ProductivityTracker
         private FileStream? _collectorLease;
         private int _sampleCount;
         private int _idleThresholdSeconds = 60;
-
-        private static readonly IReadOnlyDictionary<string, string> FriendlyNames =
-            new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-            {
-                ["chrome"] = "Google Chrome",
-                ["msedge"] = "Microsoft Edge",
-                ["firefox"] = "Mozilla Firefox",
-                ["devenv"] = "Visual Studio",
-                ["code"] = "Visual Studio Code",
-                ["windowsTerminal"] = "Windows Terminal",
-                ["windowsterminal"] = "Windows Terminal",
-                ["OUTLOOK"] = "Microsoft Outlook",
-                ["WINWORD"] = "Microsoft Word",
-                ["EXCEL"] = "Microsoft Excel",
-                ["POWERPNT"] = "Microsoft PowerPoint",
-                ["Teams"] = "Microsoft Teams",
-                ["Teams2"] = "Microsoft Teams",
-                ["explorer"] = "Windows Explorer",
-                ["notepad"] = "Notepad",
-                ["ShellExperienceHost"] = "Windows Shell",
-                ["StartMenuExperienceHost"] = "Start Menu",
-                ["SearchHost"] = "Windows Search",
-                ["LockApp"] = "Lock Screen",
-            };
 
         public UsageTracker(UsageStore store)
         {
@@ -198,7 +173,7 @@ namespace ProductivityTracker
                     if (isActive)
                     {
                         processName = GetForegroundProcessName();
-                        appName = GetFriendlyName(processName);
+                        appName = ApplicationNames.FromProcessName(processName);
                     }
                     else
                     {
@@ -406,26 +381,6 @@ namespace ProductivityTracker
             {
                 return "desktop";
             }
-        }
-
-        private static string GetFriendlyName(string processName)
-        {
-            var nameWithoutExtension = Path.GetFileNameWithoutExtension(processName);
-            if (string.IsNullOrWhiteSpace(nameWithoutExtension))
-            {
-                return "Unknown";
-            }
-
-            if (FriendlyNames.TryGetValue(nameWithoutExtension, out var friendlyName))
-            {
-                return friendlyName;
-            }
-
-            return nameWithoutExtension switch
-            {
-                "ApplicationFrameHost" => "Modern Windows App",
-                _ => nameWithoutExtension,
-            };
         }
 
         [StructLayout(LayoutKind.Sequential)]

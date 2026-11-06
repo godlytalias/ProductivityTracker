@@ -503,4 +503,6 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>संग्राहक का पुराना संस्करण चल रहा है। उसे कार्य प्रबंधक में रोकें, फिर दोबारा प्रयास करें।</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>बैकग्राउंड संग्राहक समय पर बंद नहीं हुआ।</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>ट्रैकिंग जारी रखने के लिए डैशबोर्ड खुला रहेगा। दोबारा प्रयास करें या बैकग्राउंड ट्रैकिंग सेटिंग बदलें। {0}</value></data>
+  <data name="RemoteDesktop" xml:space="preserve"><value>रिमोट डेस्कटॉप</value></data>
+  <data name="RemoteDesktopConnection" xml:space="preserve"><value>रिमोट डेस्कटॉप कनेक्शन</value></data>
 </root>

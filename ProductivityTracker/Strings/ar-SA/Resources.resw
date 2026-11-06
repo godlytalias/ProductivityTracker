@@ -503,4 +503,6 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>هناك إصدار قديم من أداة الجمع قيد التشغيل. أوقفه من «إدارة المهام»، ثم حاول مجددًا.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>لم تتوقف أداة الجمع في الخلفية في الوقت المحدد.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>ستبقى لوحة المعلومات مفتوحة لمتابعة التتبع. حاول مجددًا أو غيّر إعداد التتبع في الخلفية. {0}</value></data>
+  <data name="RemoteDesktop" xml:space="preserve"><value>سطح المكتب البعيد</value></data>
+  <data name="RemoteDesktopConnection" xml:space="preserve"><value>الاتصال بسطح المكتب البعيد</value></data>
 </root>

@@ -503,4 +503,6 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>גרסה ישנה של האוסף פועלת. עצור אותה במנהל המשימות ונסה שוב.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>האוסף ברקע לא נעצר בזמן.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>לוח הבקרה יישאר פתוח כדי שהמעקב יוכל להימשך. נסה שוב או שנה את הגדרת המעקב ברקע. {0}</value></data>
+  <data name="RemoteDesktop" xml:space="preserve"><value>שולחן עבודה מרוחק</value></data>
+  <data name="RemoteDesktopConnection" xml:space="preserve"><value>חיבור לשולחן עבודה מרוחק</value></data>
 </root>

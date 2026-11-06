@@ -503,4 +503,6 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>古いバージョンの収集プロセスが動作しています。タスクマネージャーで停止してから、もう一度お試しください。</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>バックグラウンドの収集プロセスが時間内に停止しませんでした。</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>記録を続けられるよう、ダッシュボードを開いたままにします。もう一度試すか、バックグラウンド記録の設定を変更してください。{0}</value></data>
+  <data name="RemoteDesktop" xml:space="preserve"><value>リモート デスクトップ</value></data>
+  <data name="RemoteDesktopConnection" xml:space="preserve"><value>リモート デスクトップ接続</value></data>
 </root>

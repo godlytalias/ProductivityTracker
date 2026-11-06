@@ -760,6 +760,8 @@ namespace ProductivityTracker
             "Start Menu" => AppStrings.Get("StartMenu"),
             "Windows Search" => AppStrings.Get("WindowsSearch"),
             "Lock Screen" => AppStrings.Get("LockScreen"),
+            "Remote Desktop" => AppStrings.Get("RemoteDesktop"),
+            "Remote Desktop Connection" => AppStrings.Get("RemoteDesktopConnection"),
             _ => name,
         };
 

@@ -503,4 +503,6 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>Une ancienne version du collecteur est en cours d’exécution. Arrêtez-la dans le Gestionnaire des tâches, puis réessayez.</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>Le collecteur en arrière-plan ne s’est pas arrêté à temps.</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>Le tableau de bord restera ouvert pour poursuivre le suivi. Réessayez ou modifiez le paramètre de suivi en arrière-plan. {0}</value></data>
+  <data name="RemoteDesktop" xml:space="preserve"><value>Bureau à distance</value></data>
+  <data name="RemoteDesktopConnection" xml:space="preserve"><value>Connexion Bureau à distance</value></data>
 </root>

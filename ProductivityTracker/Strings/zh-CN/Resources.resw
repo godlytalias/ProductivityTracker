@@ -503,4 +503,6 @@
   <data name="BackgroundStopUnavailable" xml:space="preserve"><value>旧版采集器正在运行。请在任务管理器中将其停止，然后重试。</value></data>
   <data name="BackgroundStopTimedOut" xml:space="preserve"><value>后台采集器未能及时停止。</value></data>
   <data name="BackgroundCloseFailedFormat" xml:space="preserve"><value>仪表板将保持打开，以便继续跟踪。请重试或更改后台跟踪设置。{0}</value></data>
+  <data name="RemoteDesktop" xml:space="preserve"><value>远程桌面</value></data>
+  <data name="RemoteDesktopConnection" xml:space="preserve"><value>远程桌面连接</value></data>
 </root>
